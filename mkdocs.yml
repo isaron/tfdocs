@@ -1,0 +1,49 @@
+# Project information
+site_name: TensorFlow 文档中文翻译
+#site_url:
+repo_url: https://github.com/arborh/tfdocs.git
+#repo_name:
+#edit_uri:
+site_description: 非官方文档
+site_author: 黄传华(Arbor Huang)
+#copyright:
+#remote_branch: gh-pages
+#remote_name: origin
+
+# Documentation layout
+pages:
+    - '文档目录': 'index.md'
+    - '安装手册':
+        - '安装综述': 'install/install-index.md'
+    - '关于':
+        - '关于本文档': 'about/about.md'
+        - '更新记录': 'about/release-notes.md'
+        - 'Contributing': 'about/contributing.md'
+        - 'License': 'about/license.md'
+
+# Build directories
+theme: readthedocs
+theme_dir: custom_theme
+#docs_dir:
+#site_dir:
+extra_css: [extra.css]
+#extra_javascript:
+#extra_templates:
+extra:
+    version: 0.1
+    links:
+        - http://www.mkdocs.org
+        - https://docs.readthedocs.org/en/latest/builds.html#mkdocs
+        - http://huangch.me
+
+# Preview controls
+#use_directory_urls: true
+#strict: false
+#dev_addr: '127.0.0.1:8000'
+
+# Formatting options
+markdown_extensions:
+    - smarty
+    - toc:
+        permalink: True
+    - sane_lists
