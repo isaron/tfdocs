@@ -1,7 +1,7 @@
 # Project information
 site_name: TensorFlow 文档中文翻译
 #site_url:
-repo_url: https://github.com/arborh/tfdocs.git
+repo_url: https://github.com/isaron/tfdocs.git
 #repo_name:
 #edit_uri:
 site_description: 非官方文档
