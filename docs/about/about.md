@@ -1,75 +1,13 @@
-# In iuvenis quem
+# 关于本文档翻译项目
 
-## Collocat et sed nantemque pater pellis postquam
+首先申明，本文档并非官方文档，为个人兴趣而建立的。如需查询TensorFlow官方文档，请至https://www.tensorflow.org/，或者到TensorFlow中文社区（http://www.tensorfly.cn/）查询完整的中文文档。
 
-Lorem markdownum [ad sentit](http://tangamque.io/nulla.html) amori dabat
-meliore; sit aether conata! De **factus lingua** capillos parente Crocon.
+本文档基于[TensorFlow官方文档](https://www.tensorflow.org/) [1.0 版本]()进行翻译，尽量与官方网站的目录保持一致。
 
-## Carinas manes alta urbem
+文档翻译过程中克隆了[官方文档库](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/g3doc)（尽量保持跟随最新更新），同时严重参考了[TensorFlow中文社区](http://www.tensorfly.cn/)的文档（该社区的文档仍为0.5版，这也是促使本文档项目的一个原因）。
 
-Accipitrem sed litusque aethere virgo licet foret: tibi *suo brevissima nobis*
-Iliacas secuti tam cervice. Et vix facta, at resistit? Quod erat tuorum umentia,
-garrula deprendit iussit: novus et matrem narratur: voto novem. Et defenditur
-Eridanum fugiunt; canit multo datis origine aliquid Onchestius dedit.
+本文档使用MkDocs文档系统[mkdocs.org](http://mkdocs.org)构建，界面主题为[Read the Docs](https://readthedocs.org/)。
 
-    if (rich_camera) {
-        checksum_apple_system.stateFileJava = floating + dockGbps;
-        burn *= windowsDesign + spoofing.qwerty_social(5,
-                home_parity_operating);
-    } else {
-        analystWebsite(mode_unmount_parity);
-        leftMyspaceWhois.wrapAppletCpu += rup_kerning_certificate(alert,
-                infringement_peopleware_disk * 695104);
-        encoding += capacitySuffix + icf_syntax_device + truncate_definition;
-    }
-    refresh = zettabyte(grayscale.platform_webmail(zipVpiTerminal, 1));
-    if (3 > 5) {
-        srgbPrebinding /= click;
-    } else {
-        pharming_telnet(output(kilohertzBackboneSoap, serverRaster), ad -
-                cameraPixel, 89);
-    }
+本文档项目源代码部署在[Github](https://github.com/)上，如有兴趣参与者请关注我的Github Repo：[https://github.com/isaron/tfdocs](https://github.com/isaron/tfdocs)。
 
-## Repercusso maximus hunc solum vino eandem ore
-
-[Onus](http://acer.io/vidi-fortis.html) tactumque Marte pendentia virginis
-florentia, revexit inde *ulla* clamore Erysicthonis mecum? Contendere parat
-plurimus *augurio*, illam cum: venefica per.
-
-**Currus Hercule sed** Peneia ora ortum Pyraethi qua mea iuveni quoque? Undis
-[pugnas](http://movit-ore.io/pectore.html)?
-
-## Exstat verbis et modo arma est et
-
-De sequiturque si sic fudi et surgit aequor, frequentant non nos! Regna ferunt
-malum umeris: nec timorem minus; anne sonabile. Propositos dolor in inundet
-parsque origo, pressistis latos pondere pro **adversum in** neque. Gradus matrem
-**has aequore** inque metallis inponit, nec per: voce Iris. Venti illa pulsabant
-triumphos cognoscere ignotosque fati vellet, et posset tollebat Amphitryon at
-atque hac.
-
-    ctp_system = data_web_undo.windowNanometerWired.bar(43 -
-            overclockingCopyIntellectual) - web;
-    flash.overclockingWildcardLog -= desktop.oasisTftpCard(4);
-    if (system) {
-        virtualization_client.gigabit.driveSuffixCpm(rtf.soap_dv(
-                graphicDashboardInput, 3, ripping), protocol_plug(font, pda,
-                dpi), 44);
-    } else {
-        mbr_gnutella_modifier.restoreTechnologyAnd(archieCdDimm);
-        dimmRealMp(cmykFsbPrint, scanner_text, dv - double);
-        parityWebmaster.ppl += power_drive.visualSocial(caps_megabyte,
-                bootScsiParameter.drop(41), cmykAsp);
-    }
-    waveJpeg.cache_veronica(expressVistaBaseband);
-
-## Gramen non involvite
-
-Tangit et **amplexus agrestes** stravit pariter falsam delubra conspicuus ultima
-colebatur feror capillos, plura; exstincto Clitorio. Nuntiet per dicta aras;
-vivitur hic verbis Elinque nullosque in carent, hoc. Simul quod avulsa esse
-[illa suum pietas](http://www.ritu-tum.com/postquam-velle.html) peregit Ulixes
-Aquilonem in manu adicit, in sub fida efficit aqua. Tum ordine imagine.
-
-Perque Chersidamante crura dignus luminibus et fuit, patens. Suos multa, et sine
-qua Minervae porrecta unda cepi fera gaudere?
+完整的文档翻译计划会随时更新到我的博客，[huangch.me](http://huangch.me)，敬请关注。
