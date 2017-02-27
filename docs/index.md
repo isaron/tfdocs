@@ -9,20 +9,21 @@
 本文档使用MkDocs文档系统[mkdocs.org](http://mkdocs.org)构建，界面主题为[Read the Docs](https://readthedocs.org/)。
 
 
-## 文档目录（尽量与官方网站的文档目录保持一致）
+## 文档目录
+尽量与官方网站的文档目录保持一致，已翻译完成的章节会及时更新链接
 
-### 1.安装
+### 1. 安装
 
-* [安装综述](install/install-index.md)
+* [安装综述](install/install-index)
 * 在Ubuntu上安装TensorFlow
 * 在Mac OS X上安装TensorFlow
 * 在Windows上安装TensorFlow
 * 源代码安装TensorFlow
 * 迁移到TensorFlow 1.0
 
-### 2.开发
+### 2. 开发
 
-#### 2.1新手入门
+#### 2.1 新手入门
 
 * TensorFlow快速入门
 * MNIST入门
@@ -36,7 +37,7 @@
 * tf.contrib.learn: 日志和监控基础
 * TensorFlow版本
 
-#### 2.2程序员手册
+#### 2.2 程序员手册
 
 * 读取数据
 * 线程和队列
@@ -51,7 +52,7 @@
 * Tensor Ranks, Shapes, and Types
 * Variables: Creation, Initialization, Saving, and Loading
 
-#### 2.3教程
+#### 2.3 教程
 
 * Mandelbrot Set
 * Partial Differential Equations
@@ -67,7 +68,7 @@
 * TensorFlow Wide & Deep Learning Tutorial
 * Using GPUs
 
-#### 2.4性能优化
+#### 2.4 性能优化
 
 * Performance
 * XLA Overview
@@ -79,7 +80,7 @@
 * Using AOT compilation
 * How to Quantize Neural Networks with TensorFlow
 
-### 3.API r1.0
+### 3. API r1.0
 
 * Overview r1.0
 * Python API r1.0
@@ -87,13 +88,13 @@
 * Java API r1.0
 * Go API
 
-### 4.部署
+### 4. 部署
 
 * How to run TensorFlow on Hadoop
 * Distributed TensorFlow
 * TensorFlow Serving
 
-### 5.扩展
+### 5. 扩展
 
 * TensorFlow Architecture
 * Adding a New Op
@@ -103,20 +104,20 @@
 * Creating Estimators in tf.contrib.learn
 * A Tool Developer’s Guide to TensorFlow Model Files
 
-### 6.资源
+### 6. 资源
 
-#### 6.1社区
+#### 6.1 社区
 
 * Writing TensorFlow Documentation
 * TensorFlow Style Guide
 
-#### 6.2关于
+#### 6.2 关于
 
 * Additional Resources
 * TensorFlow White Papers
 * TensorFlow Uses
 
-### 7.版本
+### 7. TensorFlow版本
 
 * TensorFlow Versions
 * master
