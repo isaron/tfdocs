@@ -1,7 +1,7 @@
 # TensorFlow r1.0官方文档中文翻译
 Chinese translation for TensorFlow r1.0 documents.
 
-It's NOT official TensorFlow documents.
+It's NOT OFFICIAL TensorFlow documents.
 
 本文档并非官方文档，为个人兴趣而建立的。如需查询TensorFlow官方文档，请至[https://www.tensorflow.org](https://www.tensorflow.org/)，或者到[TensorFlow中文社区](http://www.tensorfly.cn/)查询完整的中文文档。
 
