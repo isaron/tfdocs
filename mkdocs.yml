@@ -34,7 +34,7 @@ extra:
     links:
         - http://www.mkdocs.org
         - https://docs.readthedocs.org/en/latest/builds.html#mkdocs
-        - http://huangch.me
+        - https://huangch.me
 
 # Preview controls
 #use_directory_urls: true
