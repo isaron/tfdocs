@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "TensorFlow 1.0 \u5b98\u65b9\u6587\u6863\u4e2d\u6587\u7ffb\u8bd1\n\n\n\u9996\u5148\u7533\u660e\uff0c\u672c\u6587\u6863\u5e76\u975e\u5b98\u65b9\u6587\u6863\uff0c\u4ec5\u4e3a\u4e2a\u4eba\u5174\u8da3\u800c\u5efa\u7acb\u7684\u3002\u5982\u9700\u67e5\u8be2TensorFlow\u5b98\u65b9\u6587\u6863\uff0c\u8bf7\u81f3https://www.tensorflow.org/\uff0c\u6216\u8005\u5230TensorFlow\u4e2d\u6587\u793e\u533a\uff08http://www.tensorfly.cn/\uff09\u67e5\u8be2\u5b8c\u6574\u7684\u4e2d\u6587\u6587\u6863\u3002\n\n\n\u672c\u6587\u6863\u57fa\u4e8e\nTensorFlow\u5b98\u65b9\u6587\u6863\n \n1.0 \u7248\u672c\n\u8fdb\u884c\u7ffb\u8bd1\uff0c\u5c3d\u91cf\u4e0e\u5b98\u65b9\u7f51\u7ad9\u7684\u6587\u6863\u76ee\u5f55\u4fdd\u6301\u4e00\u81f4\u3002\n\n\n\u6587\u6863\u7ffb\u8bd1\u8fc7\u7a0b\u4e2d\u514b\u9686\u4e86\n\u5b98\u65b9\u6587\u6863\u5e93\n\uff08\u5c3d\u91cf\u4fdd\u6301\u8ddf\u968f\u6700\u65b0\u66f4\u65b0\uff09\uff0c\u540c\u65f6\u4e25\u91cd\u53c2\u8003\u4e86\nTensorFlow\u4e2d\u6587\u793e\u533a\n\u7684\u6587\u6863\uff08\u8be5\u793e\u533a\u7684\u6587\u6863\u4ecd\u4e3a0.5\u7248\uff0c\u8fd9\u4e5f\u662f\u4fc3\u4f7f\u672c\u6587\u6863\u9879\u76ee\u7684\u4e00\u4e2a\u539f\u56e0\uff09\u3002\n\n\n\u672c\u6587\u6863\u4f7f\u7528MkDocs\u6587\u6863\u7cfb\u7edf\nmkdocs.org\n\u6784\u5efa\uff0c\u754c\u9762\u4e3b\u9898\u4e3a\nRead the Docs\n\u3002\n\n\n\u6587\u6863\u76ee\u5f55\uff08\u5c3d\u91cf\u4e0e\u5b98\u65b9\u7f51\u7ad9\u7684\u6587\u6863\u76ee\u5f55\u4fdd\u6301\u4e00\u81f4\uff09\n\n\n1.\u5b89\u88c5\n\n\n\n\n\u5b89\u88c5\u7efc\u8ff0\n\n\n\u5728Ubuntu\u4e0a\u5b89\u88c5TensorFlow\n\n\n\u5728Mac OS X\u4e0a\u5b89\u88c5TensorFlow\n\n\n\u5728Windows\u4e0a\u5b89\u88c5TensorFlow\n\n\n\u6e90\u4ee3\u7801\u5b89\u88c5TensorFlow\n\n\n\u8fc1\u79fb\u5230TensorFlow 1.0\n\n\n\n\n2.\u5f00\u53d1\n\n\n2.1\u65b0\u624b\u5165\u95e8\n\n\n\n\nTensorFlow\u5feb\u901f\u5165\u95e8\n\n\nMNIST\u5165\u95e8\n\n\nMNIST\u8fdb\u9636\n\n\nTensorFlow \u8fd0\u4f5c\u65b9\u5f0f 101\n\n\ntf.contrib.learn: \u5feb\u901f\u5f00\u59cb\n\n\ntf.contrib.learn: \u521b\u5efa\u8f93\u5165\u51fd\u6570\n\n\nTensorBoard: \u53ef\u89c6\u5316\u5b66\u4e60\n\n\nTensorBoard: \u5185\u5d4c\u53ef\u89c6\u5316\n\n\nTensorBoard: \u56fe\u8868\u53ef\u89c6\u5316\n\n\ntf.contrib.learn: \u65e5\u5fd7\u548c\u76d1\u63a7\u57fa\u7840\n\n\nTensorFlow\u7248\u672c\n\n\n\n\n2.2\u7a0b\u5e8f\u5458\u624b\u518c\n\n\n\n\n\u8bfb\u53d6\u6570\u636e\n\n\n\u7ebf\u7a0b\u548c\u961f\u5217\n\n\n\u5171\u4eab\u53c2\u6570\n\n\nTensorFlow\u7684\u7248\u672c\u8bed\u4e49\n\n\nTensorFlow\u6570\u636e\u7248\u672c\u5316: GraphDefs and Checkpoints\n\n\nSupervisor: Training Helper for Days-Long Trainings.\n\n\nTensorFlow Debugger (tfdbg) \u547d\u4ee4\u884c\u6307\u5357: MNIST\n\n\nTensorFlow Debugger (tfdbg) \u4e0e tf.contrib.learn \u7ed3\u5408\u4f7f\u7528\n\n\n\u5bfc\u5165\u5bfc\u51faMetaGraph\n\n\n\u5e38\u89c1\u95ee\u9898\n\n\nTensor Ranks, Shapes, and Types\n\n\nVariables: Creation, Initialization, Saving, and Loading\n\n\n\n\n2.3\u6559\u7a0b\n\n\n\n\nMandelbrot Set\n\n\nPartial Differential Equations\n\n\nConvolutional Neural Networks\n\n\nImage Recognition\n\n\nHow to Retrain Inception\u2019s Final Layer for New Categories\n\n\nVector Representations of Words\n\n\nRecurrent Neural Networks\n\n\nSequence-to-Sequence Models\n\n\nA Guide to TF Layers: Building a Convolutional Neural Network\n\n\nLarge-scale Linear Models with TensorFlow\n\n\nTensorFlow Linear Model Tutorial\n\n\nTensorFlow Wide \n Deep Learning Tutorial\n\n\nUsing GPUs\n\n\n\n\n2.4\u6027\u80fd\u4f18\u5316\n\n\n\n\nPerformance\n\n\nXLA Overview\n\n\nBroadcasting semantics\n\n\nDeveloping a new backend for XLA\n\n\nUsing JIT Compilation\n\n\nOperation Semantics\n\n\nShapes and Layout\n\n\nUsing AOT compilation\n\n\nHow to Quantize Neural Networks with TensorFlow\n\n\n\n\n3.API r1.0\n\n\n\n\nOverview r1.0\n\n\nPython API r1.0\n\n\nC++ API r1.0\n\n\nJava API r1.0\n\n\nGo API\n\n\n\n\n4.\u90e8\u7f72\n\n\n\n\nHow to run TensorFlow on Hadoop\n\n\nDistributed TensorFlow\n\n\nTensorFlow Serving\n\n\n\n\n5.\u6269\u5c55\n\n\n\n\nTensorFlow Architecture\n\n\nAdding a New Op\n\n\nAdding a Custom Filesystem Plugin\n\n\nTensorFlow in other languages\n\n\nCustom Data Readers\n\n\nCreating Estimators in tf.contrib.learn\n\n\nA Tool Developer\u2019s Guide to TensorFlow Model Files\n\n\n\n\n6.\u8d44\u6e90\n\n\n6.1\u793e\u533a\n\n\n\n\nWriting TensorFlow Documentation\n\n\nTensorFlow Style Guide\n\n\n\n\n6.2\u5173\u4e8e\n\n\n\n\nAdditional Resources\n\n\nTensorFlow White Papers\n\n\nTensorFlow Uses\n\n\n\n\n7.\u7248\u672c\n\n\n\n\nTensorFlow Versions\n\n\nmaster\n\n\nr1.0\n\n\nr0.12\n\n\nr0.11\n\n\nr0.10", 
+            "text": "TensorFlow 1.0 \u5b98\u65b9\u6587\u6863\u4e2d\u6587\u7ffb\u8bd1\n\n\n\u9996\u5148\u7533\u660e\uff0c\u672c\u6587\u6863\u5e76\u975e\u5b98\u65b9\u6587\u6863\uff0c\u4ec5\u4e3a\u4e2a\u4eba\u5174\u8da3\u800c\u5efa\u7acb\u7684\u3002\u5982\u9700\u67e5\u8be2TensorFlow\u5b98\u65b9\u6587\u6863\uff0c\u8bf7\u81f3https://www.tensorflow.org/\uff0c\u6216\u8005\u5230TensorFlow\u4e2d\u6587\u793e\u533a\uff08http://www.tensorfly.cn/\uff09\u67e5\u8be2\u5b8c\u6574\u7684\u4e2d\u6587\u6587\u6863\u3002\n\n\n\u672c\u6587\u6863\u57fa\u4e8e\nTensorFlow\u5b98\u65b9\u6587\u6863\n \n1.0 \u7248\u672c\n\u8fdb\u884c\u7ffb\u8bd1\uff0c\u5c3d\u91cf\u4e0e\u5b98\u65b9\u7f51\u7ad9\u7684\u6587\u6863\u76ee\u5f55\u4fdd\u6301\u4e00\u81f4\u3002\n\n\n\u6587\u6863\u7ffb\u8bd1\u8fc7\u7a0b\u4e2d\u514b\u9686\u4e86\n\u5b98\u65b9\u6587\u6863\u5e93\n\uff08\u5c3d\u91cf\u4fdd\u6301\u8ddf\u968f\u6700\u65b0\u66f4\u65b0\uff09\uff0c\u540c\u65f6\u4e25\u91cd\u53c2\u8003\u4e86\nTensorFlow\u4e2d\u6587\u793e\u533a\n\u7684\u6587\u6863\uff08\u8be5\u793e\u533a\u7684\u6587\u6863\u4ecd\u4e3a0.5\u7248\uff0c\u8fd9\u4e5f\u662f\u4fc3\u4f7f\u672c\u6587\u6863\u9879\u76ee\u7684\u4e00\u4e2a\u539f\u56e0\uff09\u3002\n\n\n\u672c\u6587\u6863\u4f7f\u7528MkDocs\u6587\u6863\u7cfb\u7edf\nmkdocs.org\n\u6784\u5efa\uff0c\u754c\u9762\u4e3b\u9898\u4e3a\nRead the Docs\n\u3002\n\n\n\u6587\u6863\u76ee\u5f55\n\n\n\u5c3d\u91cf\u4e0e\u5b98\u65b9\u7f51\u7ad9\u7684\u6587\u6863\u76ee\u5f55\u4fdd\u6301\u4e00\u81f4\uff0c\u5df2\u7ffb\u8bd1\u5b8c\u6210\u7684\u7ae0\u8282\u4f1a\u53ca\u65f6\u66f4\u65b0\u94fe\u63a5\n\n\n1. \u5b89\u88c5\n\n\n\n\n\u5b89\u88c5\u7efc\u8ff0\n\n\n\u5728Ubuntu\u4e0a\u5b89\u88c5TensorFlow\n\n\n\u5728Mac OS X\u4e0a\u5b89\u88c5TensorFlow\n\n\n\u5728Windows\u4e0a\u5b89\u88c5TensorFlow\n\n\n\u6e90\u4ee3\u7801\u5b89\u88c5TensorFlow\n\n\n\u8fc1\u79fb\u5230TensorFlow 1.0\n\n\n\n\n2. \u5f00\u53d1\n\n\n2.1 \u65b0\u624b\u5165\u95e8\n\n\n\n\nTensorFlow\u5feb\u901f\u5165\u95e8\n\n\nMNIST\u5165\u95e8\n\n\nMNIST\u8fdb\u9636\n\n\nTensorFlow \u8fd0\u4f5c\u65b9\u5f0f 101\n\n\ntf.contrib.learn: \u5feb\u901f\u5f00\u59cb\n\n\ntf.contrib.learn: \u521b\u5efa\u8f93\u5165\u51fd\u6570\n\n\nTensorBoard: \u53ef\u89c6\u5316\u5b66\u4e60\n\n\nTensorBoard: \u5185\u5d4c\u53ef\u89c6\u5316\n\n\nTensorBoard: \u56fe\u8868\u53ef\u89c6\u5316\n\n\ntf.contrib.learn: \u65e5\u5fd7\u548c\u76d1\u63a7\u57fa\u7840\n\n\nTensorFlow\u7248\u672c\n\n\n\n\n2.2 \u7a0b\u5e8f\u5458\u624b\u518c\n\n\n\n\n\u8bfb\u53d6\u6570\u636e\n\n\n\u7ebf\u7a0b\u548c\u961f\u5217\n\n\n\u5171\u4eab\u53c2\u6570\n\n\nTensorFlow\u7684\u7248\u672c\u8bed\u4e49\n\n\nTensorFlow\u6570\u636e\u7248\u672c\u5316: GraphDefs and Checkpoints\n\n\nSupervisor: Training Helper for Days-Long Trainings.\n\n\nTensorFlow Debugger (tfdbg) \u547d\u4ee4\u884c\u6307\u5357: MNIST\n\n\nTensorFlow Debugger (tfdbg) \u4e0e tf.contrib.learn \u7ed3\u5408\u4f7f\u7528\n\n\n\u5bfc\u5165\u5bfc\u51faMetaGraph\n\n\n\u5e38\u89c1\u95ee\u9898\n\n\nTensor Ranks, Shapes, and Types\n\n\nVariables: Creation, Initialization, Saving, and Loading\n\n\n\n\n2.3 \u6559\u7a0b\n\n\n\n\nMandelbrot Set\n\n\nPartial Differential Equations\n\n\nConvolutional Neural Networks\n\n\nImage Recognition\n\n\nHow to Retrain Inception\u2019s Final Layer for New Categories\n\n\nVector Representations of Words\n\n\nRecurrent Neural Networks\n\n\nSequence-to-Sequence Models\n\n\nA Guide to TF Layers: Building a Convolutional Neural Network\n\n\nLarge-scale Linear Models with TensorFlow\n\n\nTensorFlow Linear Model Tutorial\n\n\nTensorFlow Wide \n Deep Learning Tutorial\n\n\nUsing GPUs\n\n\n\n\n2.4 \u6027\u80fd\u4f18\u5316\n\n\n\n\nPerformance\n\n\nXLA Overview\n\n\nBroadcasting semantics\n\n\nDeveloping a new backend for XLA\n\n\nUsing JIT Compilation\n\n\nOperation Semantics\n\n\nShapes and Layout\n\n\nUsing AOT compilation\n\n\nHow to Quantize Neural Networks with TensorFlow\n\n\n\n\n3. API r1.0\n\n\n\n\nOverview r1.0\n\n\nPython API r1.0\n\n\nC++ API r1.0\n\n\nJava API r1.0\n\n\nGo API\n\n\n\n\n4. \u90e8\u7f72\n\n\n\n\nHow to run TensorFlow on Hadoop\n\n\nDistributed TensorFlow\n\n\nTensorFlow Serving\n\n\n\n\n5. \u6269\u5c55\n\n\n\n\nTensorFlow Architecture\n\n\nAdding a New Op\n\n\nAdding a Custom Filesystem Plugin\n\n\nTensorFlow in other languages\n\n\nCustom Data Readers\n\n\nCreating Estimators in tf.contrib.learn\n\n\nA Tool Developer\u2019s Guide to TensorFlow Model Files\n\n\n\n\n6. \u8d44\u6e90\n\n\n6.1 \u793e\u533a\n\n\n\n\nWriting TensorFlow Documentation\n\n\nTensorFlow Style Guide\n\n\n\n\n6.2 \u5173\u4e8e\n\n\n\n\nAdditional Resources\n\n\nTensorFlow White Papers\n\n\nTensorFlow Uses\n\n\n\n\n7. TensorFlow\u7248\u672c\n\n\n\n\nTensorFlow Versions\n\n\nmaster\n\n\nr1.0\n\n\nr0.12\n\n\nr0.11\n\n\nr0.10", 
             "title": "\u6587\u6863\u76ee\u5f55"
         }, 
         {
@@ -12,73 +12,73 @@
         }, 
         {
             "location": "/#_1", 
-            "text": "", 
-            "title": "\u6587\u6863\u76ee\u5f55\uff08\u5c3d\u91cf\u4e0e\u5b98\u65b9\u7f51\u7ad9\u7684\u6587\u6863\u76ee\u5f55\u4fdd\u6301\u4e00\u81f4\uff09"
+            "text": "\u5c3d\u91cf\u4e0e\u5b98\u65b9\u7f51\u7ad9\u7684\u6587\u6863\u76ee\u5f55\u4fdd\u6301\u4e00\u81f4\uff0c\u5df2\u7ffb\u8bd1\u5b8c\u6210\u7684\u7ae0\u8282\u4f1a\u53ca\u65f6\u66f4\u65b0\u94fe\u63a5", 
+            "title": "\u6587\u6863\u76ee\u5f55"
         }, 
         {
             "location": "/#1", 
             "text": "\u5b89\u88c5\u7efc\u8ff0  \u5728Ubuntu\u4e0a\u5b89\u88c5TensorFlow  \u5728Mac OS X\u4e0a\u5b89\u88c5TensorFlow  \u5728Windows\u4e0a\u5b89\u88c5TensorFlow  \u6e90\u4ee3\u7801\u5b89\u88c5TensorFlow  \u8fc1\u79fb\u5230TensorFlow 1.0", 
-            "title": "1.\u5b89\u88c5"
+            "title": "1. \u5b89\u88c5"
         }, 
         {
             "location": "/#2", 
             "text": "", 
-            "title": "2.\u5f00\u53d1"
+            "title": "2. \u5f00\u53d1"
         }, 
         {
             "location": "/#21", 
             "text": "TensorFlow\u5feb\u901f\u5165\u95e8  MNIST\u5165\u95e8  MNIST\u8fdb\u9636  TensorFlow \u8fd0\u4f5c\u65b9\u5f0f 101  tf.contrib.learn: \u5feb\u901f\u5f00\u59cb  tf.contrib.learn: \u521b\u5efa\u8f93\u5165\u51fd\u6570  TensorBoard: \u53ef\u89c6\u5316\u5b66\u4e60  TensorBoard: \u5185\u5d4c\u53ef\u89c6\u5316  TensorBoard: \u56fe\u8868\u53ef\u89c6\u5316  tf.contrib.learn: \u65e5\u5fd7\u548c\u76d1\u63a7\u57fa\u7840  TensorFlow\u7248\u672c", 
-            "title": "2.1\u65b0\u624b\u5165\u95e8"
+            "title": "2.1 \u65b0\u624b\u5165\u95e8"
         }, 
         {
             "location": "/#22", 
             "text": "\u8bfb\u53d6\u6570\u636e  \u7ebf\u7a0b\u548c\u961f\u5217  \u5171\u4eab\u53c2\u6570  TensorFlow\u7684\u7248\u672c\u8bed\u4e49  TensorFlow\u6570\u636e\u7248\u672c\u5316: GraphDefs and Checkpoints  Supervisor: Training Helper for Days-Long Trainings.  TensorFlow Debugger (tfdbg) \u547d\u4ee4\u884c\u6307\u5357: MNIST  TensorFlow Debugger (tfdbg) \u4e0e tf.contrib.learn \u7ed3\u5408\u4f7f\u7528  \u5bfc\u5165\u5bfc\u51faMetaGraph  \u5e38\u89c1\u95ee\u9898  Tensor Ranks, Shapes, and Types  Variables: Creation, Initialization, Saving, and Loading", 
-            "title": "2.2\u7a0b\u5e8f\u5458\u624b\u518c"
+            "title": "2.2 \u7a0b\u5e8f\u5458\u624b\u518c"
         }, 
         {
             "location": "/#23", 
             "text": "Mandelbrot Set  Partial Differential Equations  Convolutional Neural Networks  Image Recognition  How to Retrain Inception\u2019s Final Layer for New Categories  Vector Representations of Words  Recurrent Neural Networks  Sequence-to-Sequence Models  A Guide to TF Layers: Building a Convolutional Neural Network  Large-scale Linear Models with TensorFlow  TensorFlow Linear Model Tutorial  TensorFlow Wide   Deep Learning Tutorial  Using GPUs", 
-            "title": "2.3\u6559\u7a0b"
+            "title": "2.3 \u6559\u7a0b"
         }, 
         {
             "location": "/#24", 
             "text": "Performance  XLA Overview  Broadcasting semantics  Developing a new backend for XLA  Using JIT Compilation  Operation Semantics  Shapes and Layout  Using AOT compilation  How to Quantize Neural Networks with TensorFlow", 
-            "title": "2.4\u6027\u80fd\u4f18\u5316"
+            "title": "2.4 \u6027\u80fd\u4f18\u5316"
         }, 
         {
-            "location": "/#3api-r10", 
+            "location": "/#3-api-r10", 
             "text": "Overview r1.0  Python API r1.0  C++ API r1.0  Java API r1.0  Go API", 
-            "title": "3.API r1.0"
+            "title": "3. API r1.0"
         }, 
         {
             "location": "/#4", 
             "text": "How to run TensorFlow on Hadoop  Distributed TensorFlow  TensorFlow Serving", 
-            "title": "4.\u90e8\u7f72"
+            "title": "4. \u90e8\u7f72"
         }, 
         {
             "location": "/#5", 
             "text": "TensorFlow Architecture  Adding a New Op  Adding a Custom Filesystem Plugin  TensorFlow in other languages  Custom Data Readers  Creating Estimators in tf.contrib.learn  A Tool Developer\u2019s Guide to TensorFlow Model Files", 
-            "title": "5.\u6269\u5c55"
+            "title": "5. \u6269\u5c55"
         }, 
         {
             "location": "/#6", 
             "text": "", 
-            "title": "6.\u8d44\u6e90"
+            "title": "6. \u8d44\u6e90"
         }, 
         {
             "location": "/#61", 
             "text": "Writing TensorFlow Documentation  TensorFlow Style Guide", 
-            "title": "6.1\u793e\u533a"
+            "title": "6.1 \u793e\u533a"
         }, 
         {
             "location": "/#62", 
             "text": "Additional Resources  TensorFlow White Papers  TensorFlow Uses", 
-            "title": "6.2\u5173\u4e8e"
+            "title": "6.2 \u5173\u4e8e"
         }, 
         {
-            "location": "/#7", 
+            "location": "/#7-tensorflow", 
             "text": "TensorFlow Versions  master  r1.0  r0.12  r0.11  r0.10", 
-            "title": "7.\u7248\u672c"
+            "title": "7. TensorFlow\u7248\u672c"
         }, 
         {
             "location": "/install/install-index/", 
