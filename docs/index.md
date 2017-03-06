@@ -125,3 +125,14 @@
 * r0.12
 * r0.11
 * r0.10
+
+## 内容来源
+
+英文官方网站：
+    https://www.tensorflow.org/
+
+TensorFlow中文社区:
+    http://www.tensorfly.cn
+
+极客学院TensorFlow文档中文版翻译计划：
+    https://github.com/jikexueyuanwiki/tensorflow-zh

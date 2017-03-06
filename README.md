@@ -16,3 +16,15 @@ It's NOT OFFICIAL TensorFlow documents.
 
 
 本文档部署于[https://huangch.me/tfdocs](https://huangch.me/tfdocs)。
+
+
+## 内容来源
+
+英文官方网站：
+    https://www.tensorflow.org/
+
+TensorFlow中文社区:
+    http://www.tensorfly.cn
+
+极客学院TensorFlow文档中文版翻译计划：
+    https://github.com/jikexueyuanwiki/tensorflow-zh

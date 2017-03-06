@@ -11,3 +11,14 @@
 本文档项目源代码部署在[Github](https://github.com/)上，如有兴趣参与者请关注我的Github Repo：[https://github.com/isaron/tfdocs](https://github.com/isaron/tfdocs)。
 
 完整的文档翻译计划会随时更新到我的博客，[huangch.me](http://huangch.me)，敬请关注。
+
+## 内容来源
+
+英文官方网站：
+    https://www.tensorflow.org/
+
+TensorFlow中文社区:
+    http://www.tensorfly.cn
+
+极客学院TensorFlow文档中文版翻译计划：
+    https://github.com/jikexueyuanwiki/tensorflow-zh
