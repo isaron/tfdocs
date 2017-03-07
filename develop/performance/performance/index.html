@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="黄传华(Arbor Huang)">
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>2.4.1 总览 - TensorFlow 文档中文翻译</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/highlight.css">
+  <link href="../../../extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "2.4.1 \u603b\u89c8";
+    var mkdocs_page_input_path = "develop/performance/performance.md";
+    var mkdocs_page_url = "/develop/performance/performance/";
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> TensorFlow 文档中文翻译</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../..">0. 文档目录</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>1. 安装</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../install/installing-tensorflow/">1.1 综述</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../install/installing-on-ubuntu/">1.2 在Ubuntu上安装TensorFlow</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../install/installing-on-mac/">1.3 在Mac OS X上安装TensorFlow</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../install/installing-on-windows/">1.4 在Windows上安装TensorFlow</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../install/installing-from-sources/">1.5 源代码安装TensorFlow</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../install/transitioning-to-1.0/">1.6 迁移到TensorFlow 1.0</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>2. 开发</span></li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>2.1 新手入门</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../getstarted/getting-started-with-tensorflow/">2.1.1 TensorFlow快速入门</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../getstarted/mnist-for-ml-beginners/">2.1.2 MNIST入门</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../getstarted/deep-mnist-for-experts/">2.1.3 MNIST进阶</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../getstarted/mechanics101/">2.1.4 TensorFlow 运作方式 101</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../getstarted/tf-contrib-learn-quickstart/">2.1.5 tf.contrib.learn：快速开始</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../getstarted/tf-contrib-learn-function/">2.1.6 tf.contrib.learn：创建输入函数</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../getstarted/tensorboard-visualizing-learning/">2.1.7 TensorBoard：可视化学习</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../getstarted/tensorboard-embedding-visualization/">2.1.8 TensorBoard：内嵌可视化</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../getstarted/tensorboard-graph-visualization/">2.1.9 TensorBoard：图表可视化</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../getstarted/tf-contrib-learn-logging-and-monitoring/">2.1.10 tf.contrib.learn：日志和监控基础</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>2.2 程序员手册</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../programmer/reading-data/">2.2.1 读取数据</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../programmer/threading-and-queues/">2.2.2 线程和队列</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../programmer/sharing-variables/">2.2.3 共享参数</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../programmer/version-semantics/">2.2.4 TensorFlow的版本语义</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../programmer/data-versioning-graphdefs-and-checkpoints/">2.2.5 TensorFlow数据版本化：GraphDefs and Checkpoints</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../programmer/supervisor-training-helper/">2.2.6 Supervisor：Training Helper for Days-Long Trainings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../programmer/tfdbg-cli-tutorial/">2.2.7 TensorFlow Debugger (tfdbg) 命令行指南：MNIST</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../programmer/how-to-use-tfdbg-with-tf-contib-learn/">2.2.8 TensorFlow Debugger (tfdbg) 与 tf.contrib.learn 结合使用</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../programmer/exporting-and-importing-metagraph/">2.2.9 导入导出MetaGraph</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../programmer/frequently-asked-questions/">2.2.10 常见问题</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../programmer/tensor-ranks-shapes-and-types/">2.2.11 Tensor排名、形状和类型</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../programmer/variables-creation-initialization-saving-and-loading/">2.2.12 变量：创建、初始化、保存和加载</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>2.3 教程</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../tutorials/mandelbrot-set/">2.3.1 曼德布洛特(Mandelbrot)集合</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../tutorials/partial-differential-equations/">2.3.2 偏微分方程(PDEs)</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../tutorials/convolutional-neural-networks/">2.3.3 卷积神经网络</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../tutorials/image-recognition/">2.3.4 图像识别</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../tutorials/how-to-retrain-inceptions-final-layer-for-new-categories/">2.3.5 如何训练 Inception’s Final Layer for New Categories</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../tutorials/vector-representations-of-words/">2.3.6 字词的向量表示</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../tutorials/recurrent-neural-networks/">2.3.7 递归神经网络</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../tutorials/sequence-to-sequence-models/">2.3.8 Sequence-to-Sequence 模型</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../tutorials/a-guide-to-tf-layers-buiding-a-convolutional-neural-network/">2.3.9 TF Layers 指南：创建卷积神经网络</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../tutorials/large-scale-linear-models-with-tensorflow/">2.3.10 大规模线性模型与 TensorFlow</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../tutorials/tensorflow-linear-model-tutorial/">2.3.11 TensorFlow 线性模型指导</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../tutorials/tensorflow-wide-deep-learning-tutorial/">2.3.12 TensorFlow 广度与深度学习指导</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../tutorials/using-gpus/">2.3.13 使用 GPU</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>2.4 性能优化</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">2.4.1 总览</a>
+        
+            <ul>
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../xla-overview/">2.4.2 XLA 概览</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../broadcasting-semantics/">2.4.3 广播语义</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../developing-a-new-backend-for-xla/">2.4.4 开发新的 XLA 后端</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../using-jit-compilation/">2.4.5 使用 JIT 编译</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../operation-semantics/">2.4.6 运算语义</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../shapes-and-layout/">2.4.7 Shapes and Layout</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../using-aot-compilation/">2.4.8 使用 AOT 编译</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../how-to-quantize-neural-networks-with-tensorflow/">2.4.9 如何量化神经网络</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>3. API r1.0</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../apidoc/overview/">3.1 概览 r1.0</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../apidoc/python-api/">3.2 Python API r1.0</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../apidoc/cpp-api/">3.3 C++ API r1.0</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../apidoc/java-api/">3.4 Java API r1.0</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../apidoc/go-api/">3.5 Go API</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>4. 部署</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../deploy/how-to-run-tensorflow-on-hadoop/">4.1 在Hadoop上运行TensorFlow</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../deploy/distributed-tensorflow/">4.2 分布式部署TensorFlow</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../deploy/tensorflow-serving/">4.3 TensorFlow服务</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>5. 扩展</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/architecture/">5.1 TensorFlow架构</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/adding-a-new-op/">5.2 添加新的 Op</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/adding-a-custom-filesystem-plugin/">5.3 添加自定义文件系统插件</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/tensorflow-in-other-languages/">5.4 TensorFlow翻译</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/custom-data-readers/">5.5 自定义数据读取</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/creating-estimators-in-tf-contrib.learn/">5.6 用 tf.contrib.learn 建立估量</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../extend/a-tool-developers-guide-to-tensorflow-model-files/">5.7 TensorFlow模型文件的工具开发者指南</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>6. 资源</span></li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>6.1 社区</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../resource/community/writing-tensorflow-docs/">6.1.1 编写TensorFlow文档</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../resource/community/tensorflow-style-guide/">6.1.2 TensorFlow风格指南</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>6.2 关于</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../resource/about/additional/">6.2.1 更多TF相关资源</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../resource/about/whitepaper/">6.2.2 TensorFlow白皮书</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../resource/about/tfuses/">6.2.3 TensorFlow Uses</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>7. 版本</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../version/">7.1 TensorFlow版本列表</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../version/master/">7.2 master</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../version/r1.0/">7.3 r1.0</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../version/r0.12/">7.4 r0.12</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../version/r0.11/">7.5 r0.11</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../version/r0.10/">7.6 r0.10</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>8. 本项目的说明</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../about/about/">8.1 关于本文档</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../about/release-notes/">8.2 更新记录</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../about/contributing/">8.3 Contributing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../about/license/">8.4 License</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">TensorFlow 文档中文翻译</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>2. 开发 &raquo;</li>
+        
+      
+        
+          <li>2.4 性能优化 &raquo;</li>
+        
+      
+    
+    <li>2.4.1 总览</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/isaron/tfdocs.git/edit/master/docs/develop/performance/performance.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../xla-overview/" class="btn btn-neutral float-right" title="2.4.2 XLA 概览">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../tutorials/using-gpus/" class="btn btn-neutral" title="2.3.13 使用 GPU"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/isaron/tfdocs.git" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../../tutorials/using-gpus/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../xla-overview/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../../js/theme.js"></script>
+
+</body>
+</html>
