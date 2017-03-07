@@ -10,7 +10,7 @@
 
 本文档项目源代码部署在[Github](https://github.com/)上，如有兴趣参与者请关注我的Github Repo：[https://github.com/isaron/tfdocs](https://github.com/isaron/tfdocs)。
 
-完整的文档翻译计划会随时更新到我的博客，[huangch.me](http://huangch.me)，敬请关注。
+完整的文档翻译计划会随时更新到我的博客，链接在这里：[https://huangch.me/2017/02/23/TensorFlow-1-0-文档翻译计划/](https://huangch.me/2017/02/23/TensorFlow-1-0-%E6%96%87%E6%A1%A3%E7%BF%BB%E8%AF%91%E8%AE%A1%E5%88%92/)，敬请关注。
 
 ## 内容来源
 
