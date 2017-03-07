@@ -14,7 +14,7 @@
 
 ### 1. 安装
 
-* [安装综述](install/install-index)
+* [安装综述](install/installing-tensorflow)
 * 在Ubuntu上安装TensorFlow
 * 在Mac OS X上安装TensorFlow
 * 在Windows上安装TensorFlow
