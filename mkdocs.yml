@@ -12,7 +12,7 @@ site_author: 黄传华(Arbor Huang)
 
 # Documentation layout
 pages:
-    - 0. 文档目录: index.md
+    - 0. 首页: index.md
     - 1. 安装:
         - 1.1 综述: install/installing-tensorflow.md
         - 1.2 在Ubuntu上安装TensorFlow: install/installing-on-ubuntu.md
