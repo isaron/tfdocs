@@ -103,7 +103,7 @@ pages:
         - 7.5 r0.11: version/r0.11.md
         - 7.6 r0.10: version/r0.10.md
     - 8. 本项目的说明:
-        - 8.1 关于本文档: about/about.md
+        - 8.1 关于本文档: about/about-project.md
         - 8.2 更新记录: about/release-notes.md
         - 8.3 Contributing: about/contributing.md
         - 8.4 License: about/license.md
