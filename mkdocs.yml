@@ -115,7 +115,7 @@ theme_dir: custom_theme
 # theme_dir: cinder
 #docs_dir:
 #site_dir:
-extra_css: [extra.css]
+#extra_css: [extra.css]
 #extra_javascript:
 #extra_templates:
 extra:
