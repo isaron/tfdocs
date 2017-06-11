@@ -14,12 +14,15 @@
 
 ### 1. 安装
 
-* [安装综述](install/installing-tensorflow)
-* 在Ubuntu上安装TensorFlow
-* 在Mac OS X上安装TensorFlow
-* 在Windows上安装TensorFlow
-* 源代码安装TensorFlow
-* 迁移到TensorFlow 1.0
+* [安装综述](install)
+* [在Ubuntu上安装TensorFlow](install/install_linux)
+* [在Mac OS X上安装TensorFlow](install/install_mac)
+* [在Windows上安装TensorFlow](install/install_windows)
+* [源代码安装TensorFlow](install/install_sources)
+* [迁移到TensorFlow 1.0](install/migration)
+* [安装TensorFlow for Java](install/install_java)
+* [安装TensorFlow for C](install/install_c)
+* [安装TensorFlow for Go](install/install_go)
 
 ### 2. 开发
 

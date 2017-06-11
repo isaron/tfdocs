@@ -14,12 +14,15 @@ site_author: 黄传华(Arbor Huang)
 pages:
     - 0. 首页: index.md
     - 1. 安装:
-        - 1.1 综述: install/installing-tensorflow.md
-        - 1.2 在Ubuntu上安装TensorFlow: install/installing-on-ubuntu.md
-        - 1.3 在Mac OS X上安装TensorFlow: install/installing-on-mac.md
-        - 1.4 在Windows上安装TensorFlow: install/installing-on-windows.md
-        - 1.5 源代码安装TensorFlow: install/installing-from-sources.md
-        - 1.6 迁移到TensorFlow 1.0: install/transitioning-to-1.0.md
+        - 1.1 综述: install/index.md
+        - 1.2 在Ubuntu上安装TensorFlow: install/install_linux.md
+        - 1.3 在Mac OS X上安装TensorFlow: install/install_mac.md
+        - 1.4 在Windows上安装TensorFlow: install/install_windows.md
+        - 1.5 源代码安装TensorFlow: install/install_sources.md
+        - 1.6 迁移到TensorFlow 1.0: install/migration.md
+        - 1.7 安装TensorFlow for Java: install/install_java.md
+        - 1.8 安装TensorFlow for C: install/install_c.md
+        - 1.9 安装TensorFlow for Go: install/install_go.md
     - 2. 开发:
         - 2.1 新手入门:
             - 2.1.1 TensorFlow快速入门: develop/getstarted/getting-started-with-tensorflow.md
