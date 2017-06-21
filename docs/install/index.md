@@ -1,6 +1,6 @@
 # 安装 TensorFlow
 
-下面的手册讲解了如何安装一个可快速开始编写 Python 应用程序的 TensorFlow 版本：
+这一章详细讲解了如何安装一个可快速开始编写 Python 应用程序的 TensorFlow 版本：
 
   * [在 Ubuntu 上安装 TensorFlow](install_linux)
   * [在 Mac OS X 上安装 TensorFlow](install_mac)
@@ -11,7 +11,7 @@
 
   * [迁移到 TensorFlow 1.0](migration)
 
-下面的手册讲解了如何安装其它编程语言的 TensorFlow 库文件。这些 API 库列之所以在这里，主要目的是在不同语言编写的应用程序中部署 TensorFlow 模型，所以并不如 Python API 的全面。
+这一章同时还讲解了如何安装其它编程语言的 TensorFlow 库文件。这些 API 库列之所以在这里，主要目的是在不同语言编写的应用程序中部署 TensorFlow 模型，所以并不如 Python API 的全面。
 
   * [安装 TensorFlow for Java](install_java)
   * [安装 TensorFlow for C](install_c)
