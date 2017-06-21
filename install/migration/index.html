@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="黄传华(Arbor Huang)">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>1.6 迁移到TensorFlow 1.0 - TensorFlow 文档中文翻译</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "1.6 \u8fc1\u79fb\u5230TensorFlow 1.0";
+    var mkdocs_page_input_path = "install/migration.md";
+    var mkdocs_page_url = "/install/migration/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> TensorFlow 文档中文翻译</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">0. 首页</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">1. 安装</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../">1.1 综述</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../install_linux/">1.2 在Ubuntu上安装TensorFlow</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../install_mac/">1.3 在Mac OS X上安装TensorFlow</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../install_windows/">1.4 在Windows上安装TensorFlow</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../install_sources/">1.5 源代码安装TensorFlow</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">1.6 迁移到TensorFlow 1.0</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#transitioning-to-tensorflow-10">Transitioning to TensorFlow 1.0</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#how-to-upgrade">How to upgrade</a></li>
+        
+            <li><a class="toctree-l4" href="#upgrading-your-code-manually">Upgrading your code manually</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../install_java/">1.7 安装TensorFlow for Java</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../install_c/">1.8 安装TensorFlow for C</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../install_go/">1.9 安装TensorFlow for Go</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">2. 开发</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <span class="caption-text">2.1 新手入门</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/getstarted/getting-started-with-tensorflow/">2.1.1 TensorFlow快速入门</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/getstarted/mnist-for-ml-beginners/">2.1.2 MNIST入门</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/getstarted/deep-mnist-for-experts/">2.1.3 MNIST进阶</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/getstarted/mechanics101/">2.1.4 TensorFlow 运作方式 101</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/getstarted/tf-contrib-learn-quickstart/">2.1.5 tf.contrib.learn：快速开始</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/getstarted/tf-contrib-learn-function/">2.1.6 tf.contrib.learn：创建输入函数</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/getstarted/tensorboard-visualizing-learning/">2.1.7 TensorBoard：可视化学习</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/getstarted/tensorboard-embedding-visualization/">2.1.8 TensorBoard：内嵌可视化</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/getstarted/tensorboard-graph-visualization/">2.1.9 TensorBoard：图表可视化</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/getstarted/tf-contrib-learn-logging-and-monitoring/">2.1.10 tf.contrib.learn：日志和监控基础</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">2.2 程序员手册</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/programmer/reading-data/">2.2.1 读取数据</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/programmer/threading-and-queues/">2.2.2 线程和队列</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/programmer/sharing-variables/">2.2.3 共享参数</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/programmer/version-semantics/">2.2.4 TensorFlow的版本语义</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/programmer/data-versioning-graphdefs-and-checkpoints/">2.2.5 TensorFlow数据版本化：GraphDefs and Checkpoints</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/programmer/supervisor-training-helper/">2.2.6 Supervisor：Training Helper for Days-Long Trainings</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/programmer/tfdbg-cli-tutorial/">2.2.7 TensorFlow Debugger (tfdbg) 命令行指南：MNIST</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/programmer/how-to-use-tfdbg-with-tf-contib-learn/">2.2.8 TensorFlow Debugger (tfdbg) 与 tf.contrib.learn 结合使用</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/programmer/exporting-and-importing-metagraph/">2.2.9 导入导出MetaGraph</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/programmer/frequently-asked-questions/">2.2.10 常见问题</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/programmer/tensor-ranks-shapes-and-types/">2.2.11 Tensor排名、形状和类型</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/programmer/variables-creation-initialization-saving-and-loading/">2.2.12 变量：创建、初始化、保存和加载</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">2.3 教程</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/tutorials/mandelbrot-set/">2.3.1 曼德布洛特(Mandelbrot)集合</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/tutorials/partial-differential-equations/">2.3.2 偏微分方程(PDEs)</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/tutorials/convolutional-neural-networks/">2.3.3 卷积神经网络</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/tutorials/image-recognition/">2.3.4 图像识别</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/tutorials/how-to-retrain-inceptions-final-layer-for-new-categories/">2.3.5 如何训练 Inception’s Final Layer for New Categories</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/tutorials/vector-representations-of-words/">2.3.6 字词的向量表示</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/tutorials/recurrent-neural-networks/">2.3.7 递归神经网络</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/tutorials/sequence-to-sequence-models/">2.3.8 Sequence-to-Sequence 模型</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/tutorials/a-guide-to-tf-layers-buiding-a-convolutional-neural-network/">2.3.9 TF Layers 指南：创建卷积神经网络</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/tutorials/large-scale-linear-models-with-tensorflow/">2.3.10 大规模线性模型与 TensorFlow</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/tutorials/tensorflow-linear-model-tutorial/">2.3.11 TensorFlow 线性模型指导</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/tutorials/tensorflow-wide-deep-learning-tutorial/">2.3.12 TensorFlow 广度与深度学习指导</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/tutorials/using-gpus/">2.3.13 使用 GPU</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">2.4 性能优化</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/performance/performance/">2.4.1 总览</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/performance/xla-overview/">2.4.2 XLA 概览</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/performance/broadcasting-semantics/">2.4.3 广播语义</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/performance/developing-a-new-backend-for-xla/">2.4.4 开发新的 XLA 后端</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/performance/using-jit-compilation/">2.4.5 使用 JIT 编译</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/performance/operation-semantics/">2.4.6 运算语义</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/performance/shapes-and-layout/">2.4.7 Shapes and Layout</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/performance/using-aot-compilation/">2.4.8 使用 AOT 编译</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/performance/how-to-quantize-neural-networks-with-tensorflow/">2.4.9 如何量化神经网络</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">3. API r1.0</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../apidoc/overview/">3.1 概览 r1.0</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apidoc/python-api/">3.2 Python API r1.0</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apidoc/cpp-api/">3.3 C++ API r1.0</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apidoc/java-api/">3.4 Java API r1.0</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../apidoc/go-api/">3.5 Go API</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">4. 部署</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../deploy/how-to-run-tensorflow-on-hadoop/">4.1 在Hadoop上运行TensorFlow</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../deploy/distributed-tensorflow/">4.2 分布式部署TensorFlow</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../deploy/tensorflow-serving/">4.3 TensorFlow服务</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">5. 扩展</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../extend/architecture/">5.1 TensorFlow架构</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../extend/adding-a-new-op/">5.2 添加新的 Op</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../extend/adding-a-custom-filesystem-plugin/">5.3 添加自定义文件系统插件</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../extend/tensorflow-in-other-languages/">5.4 TensorFlow翻译</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../extend/custom-data-readers/">5.5 自定义数据读取</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../extend/creating-estimators-in-tf-contrib.learn/">5.6 用 tf.contrib.learn 建立估量</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../extend/a-tool-developers-guide-to-tensorflow-model-files/">5.7 TensorFlow模型文件的工具开发者指南</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">6. 资源</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <span class="caption-text">6.1 社区</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../resource/community/writing-tensorflow-docs/">6.1.1 编写TensorFlow文档</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../resource/community/tensorflow-style-guide/">6.1.2 TensorFlow风格指南</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">6.2 关于</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../resource/about/additional/">6.2.1 更多TF相关资源</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../resource/about/whitepaper/">6.2.2 TensorFlow白皮书</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../resource/about/tfuses/">6.2.3 TensorFlow Uses</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">7. 版本</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../version/">7.1 TensorFlow版本列表</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../version/master/">7.2 master</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../version/r1.0/">7.3 r1.0</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../version/r0.12/">7.4 r0.12</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../version/r0.11/">7.5 r0.11</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../version/r0.10/">7.6 r0.10</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">8. 本项目的说明</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../about/about-project/">8.1 关于本文档</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../about/release-notes/">8.2 更新记录</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../about/contributing/">8.3 Contributing</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../about/license/">8.4 License</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">TensorFlow 文档中文翻译</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>1. 安装 &raquo;</li>
+        
+      
+    
+    <li>1.6 迁移到TensorFlow 1.0</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/isaron/tfdocs.git/edit/master/docs/install/migration.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="transitioning-to-tensorflow-10">Transitioning to TensorFlow 1.0<a class="headerlink" href="#transitioning-to-tensorflow-10" title="Permanent link">&para;</a></h1>
+<p>The APIs in TensorFlow 1.0 have changed in ways that are not all backwards
+compatible.  That is, TensorFlow programs that worked on TensorFlow 0.n won&rsquo;t
+necessarily work on TensorFlow 1.0.  We have made this API changes to ensure an
+internally-consistent API, and do not plan to make backwards-breaking changes
+throughout the 1.N lifecycle.</p>
+<p>This guide walks you through the major changes in the API and how to
+automatically upgrade your programs for TensorFlow 1.0.  This guide not
+only steps you through the changes but also explains why we&rsquo;ve made them.</p>
+<h2 id="how-to-upgrade">How to upgrade<a class="headerlink" href="#how-to-upgrade" title="Permanent link">&para;</a></h2>
+<p>If you would like to automatically  port your code to 1.0, you can try our
+<code>tf_upgrade.py</code> script. While this script handles many cases, manual changes
+are sometimes necessary.
+  Get this script from our
+<a href="https://github.com/tensorflow/tensorflow/tree/master/tensorflow/tools/compatibility">GitHub tree</a>.</p>
+<p>To convert a single 0.n TensorFlow source file to 1.0, enter a
+command of the following format:</p>
+<pre>
+$ <b>python tf_upgrade.py --infile</b> <i>InputFile</i> <b>--outfile</b> <i>OutputFile</i>
+</pre>
+
+<p>For example, the following command converts a 0.n TensorFlow
+program named <code>test.py</code> to a 1.0 TensorFlow program named <code>test_1.0.py</code>:</p>
+<pre>
+$ <b>python tf_upgrade.py --infile test.py --outfile test_1.0.py</b>
+</pre>
+
+<p>The <code>tf_upgrade.py</code> script also generates a file named <code>report.txt</code>, which
+details all the changes it performed and makes additional suggestions about
+changes you might need to make manually.</p>
+<p>To upgrade a whole directory of 0.n TensorFlow programs to 1.0,
+enter a command having the following format:</p>
+<pre>
+$ <b>python tf_upgrade.py --intree</b> <i>InputDir</i> <b>--outtree</b> <i>OutputDir</i>
+</pre>
+
+<p>For example, the following command converts all the 0.n TensorFlow programs
+in the <code>/home/user/cool</code> directory, creating their 1.0 equivalents in
+the <code>/home/user/cool_1.0</code> directory:</p>
+<pre>
+$ <b>python tf_upgrade.py --intree /home/user/cool --outtree /home/user/cool_1.0</b>
+</pre>
+
+<h3 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h3>
+<p>There are a few things to watch out for. Specifically:</p>
+<ul>
+<li>You must manually fix any instances of <code>tf.reverse()</code>.
+   The <code>tf_upgrade.py</code> script will warn you about <code>tf.reverse()</code> in
+   stdout and in the <code>report.txt</code> file.</li>
+<li>On reordered arguments, <code>tf_upgrade.py</code> tries to minimally reformat
+   your code, so it cannot automatically change the actual argument order.
+   Instead, <code>tf_upgrade.py</code> makes your function invocations order-independent
+   by introducing keyword arguments.</li>
+<li>Constructions like <code>tf.get_variable_scope().reuse_variables()</code>
+   will likely not work. We recommend deleting those lines and replacing
+   them with lines such as the following:</li>
+</ul>
+<p><pre class="prettyprint">
+   with tf.variable_scope(tf.get_variable_scope(), reuse=True):
+     &hellip;
+   </pre></p>
+<ul>
+<li>Analogously to <code>tf.pack</code> and  <code>tf.unpack</code>, we&rsquo;re renamed
+   <code>TensorArray.pack</code> and <code>TensorArray.unpack</code> to
+   <code>TensorArray.stack</code> and <code>TensorArray.unstack</code>. However, <code>TensorArray.pack</code>
+   and <code>TensorArray.unpack</code> cannot be detected lexically since they are
+   indirectly related to the <code>tf</code> namespace e.g.
+   <code>foo = tf.TensorArray(); foo.unpack()</code></li>
+</ul>
+<h2 id="upgrading-your-code-manually">Upgrading your code manually<a class="headerlink" href="#upgrading-your-code-manually" title="Permanent link">&para;</a></h2>
+<p>Instead of running <code>tf_upgrade.py</code>, you may manually upgrade your code.
+The remainder of this document provides a comprehensive list of
+all backward incompatible changes made in TensorFlow 1.0.</p>
+<h3 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h3>
+<p>Variable functions have been made more consistent and less confusing.</p>
+<ul>
+<li><code>tf.VARIABLES</code><ul>
+<li>should be renamed to <code>tf.GLOBAL_VARIABLES</code></li>
+</ul>
+</li>
+<li><code>tf.all_variables</code><ul>
+<li>should be renamed to <code>tf.global_variables</code></li>
+</ul>
+</li>
+<li><code>tf.initialize_all_variables</code><ul>
+<li>should be renamed to <code>tf.global_variables_initializer</code></li>
+</ul>
+</li>
+<li><code>tf.initialize_local_variables</code><ul>
+<li>should be renamed to <code>tf.local_variables_initializer</code></li>
+</ul>
+</li>
+<li><code>tf.initialize_variables</code><ul>
+<li>should be renamed to <code>tf.variables_initializer</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="summary-functions">Summary functions<a class="headerlink" href="#summary-functions" title="Permanent link">&para;</a></h3>
+<p>Summary functions have been consolidated under the <code>tf.summary</code> namespace.</p>
+<ul>
+<li><code>tf.audio_summary</code><ul>
+<li>should be renamed to <code>tf.summary.audio</code></li>
+</ul>
+</li>
+<li><code>tf.contrib.deprecated.histogram_summary</code><ul>
+<li>should be renamed to <code>tf.summary.histogram</code></li>
+</ul>
+</li>
+<li><code>tf.contrib.deprecated.scalar_summary</code><ul>
+<li>should be renamed to <code>tf.summary.scalar</code></li>
+</ul>
+</li>
+<li><code>tf.histogram_summary</code><ul>
+<li>should be renamed to <code>tf.summary.histogram</code></li>
+</ul>
+</li>
+<li><code>tf.image_summary</code><ul>
+<li>should be renamed to <code>tf.summary.image</code></li>
+</ul>
+</li>
+<li><code>tf.merge_all_summaries</code><ul>
+<li>should be renamed to <code>tf.summary.merge_all</code></li>
+</ul>
+</li>
+<li><code>tf.merge_summary</code><ul>
+<li>should be renamed to <code>tf.summary.merge</code></li>
+</ul>
+</li>
+<li><code>tf.scalar_summary</code><ul>
+<li>should be renamed to <code>tf.summary.scalar</code></li>
+</ul>
+</li>
+<li><code>tf.train.SummaryWriter</code><ul>
+<li>should be renamed to <code>tf.summary.FileWriter</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="numeric-differences">Numeric differences<a class="headerlink" href="#numeric-differences" title="Permanent link">&para;</a></h3>
+<p>Integer division and <code>tf.floordiv</code> now uses flooring semantics. This is to
+make the results of <code>np.divide</code> and <code>np.mod</code> consistent with <code>tf.divide</code> and
+<code>tf.mod</code>, respectively. In addition we have changed the rounding algorithm
+used by <code>tf.round</code> to match NumPy.</p>
+<ul>
+<li>
+<p><code>tf.div</code></p>
+<ul>
+<li>
+<p>The semantics of <code>tf.divide</code> division have been changed to match Python
+semantics completely. That is, <code>/</code> in Python 3     and future division mode in
+Python 2 will produce floating point numbers always, <code>//</code> will produce floored
+division.     However, even <code>tf.div</code> will produce floored integer division.
+To force C-style truncation semantics, you must use <code>tf.truncatediv</code>.</p>
+</li>
+<li>
+<p>Consider changing your code to use <code>tf.divide</code>, which follows Python semantics for promotion.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>tf.mod</code></p>
+<ul>
+<li>The semantics of <code>tf.mod</code> have been changed to match Python semantics. In
+particular, flooring semantics are used for     integers. If you wish to have
+C-style truncation mod (remainders), you can use <code>tf.truncatemod</code></li>
+</ul>
+</li>
+</ul>
+<p>The old and new behavior of division can be summarized with this table:</p>
+<table>
+<thead>
+<tr>
+<th>Expr</th>
+<th>TF 0.11 (py2)</th>
+<th>TF 0.11 (py3)</th>
+<th>TF 1.0 (py2)</th>
+<th>TF 1.0 (py3)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tf.div(3,4)</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>tf.div(-3,4)</td>
+<td>0</td>
+<td>0</td>
+<td>-1</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>tf.mod(-3,4)</td>
+<td>-3</td>
+<td>-3</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>-3/4</td>
+<td>0</td>
+<td>-0.75</td>
+<td>-1</td>
+<td>-0.75</td>
+</tr>
+<tr>
+<td>-3/4tf.divide(-3,4)</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>-0.75</td>
+<td>-1</td>
+</tr>
+</tbody>
+</table>
+<p>The old and new behavior of rounding can be summarized with this table:</p>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Python</th>
+<th>NumPy</th>
+<th>C++ round()</th>
+<th>TensorFlow 0.11(floor(x+.5))</th>
+<th>TensorFlow 1.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-3.5</td>
+<td>-4</td>
+<td>-4</td>
+<td>-4</td>
+<td>-3</td>
+<td>-4</td>
+</tr>
+<tr>
+<td>-2.5</td>
+<td>-2</td>
+<td>-2</td>
+<td>-3</td>
+<td>-2</td>
+<td>-2</td>
+</tr>
+<tr>
+<td>-1.5</td>
+<td>-2</td>
+<td>-2</td>
+<td>-2</td>
+<td>-1</td>
+<td>-2</td>
+</tr>
+<tr>
+<td>-0.5</td>
+<td>0</td>
+<td>0</td>
+<td>-1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0.5</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1.5</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2.5</td>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3.5</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<h3 id="numpy-matching-names">NumPy matching names<a class="headerlink" href="#numpy-matching-names" title="Permanent link">&para;</a></h3>
+<p>Many functions have been renamed to match NumPy. This was done to make the
+transition between NumPy and TensorFlow as easy as possible. There are still
+numerous cases where functions do not match, so this is far from a hard and
+fast rule, but we have removed several commonly noticed inconsistencies.</p>
+<ul>
+<li><code>tf.inv</code><ul>
+<li>should be renamed to <code>tf.reciprocal</code></li>
+<li>This was done to avoid confusion with NumPy&rsquo;s matrix inverse <code>np.inv</code></li>
+</ul>
+</li>
+<li><code>tf.list_diff</code><ul>
+<li>should be renamed to <code>tf.setdiff1d</code></li>
+</ul>
+</li>
+<li><code>tf.listdiff</code><ul>
+<li>should be renamed to <code>tf.setdiff1d</code></li>
+</ul>
+</li>
+<li><code>tf.mul</code><ul>
+<li>should be renamed to <code>tf.multiply</code></li>
+</ul>
+</li>
+<li><code>tf.neg</code><ul>
+<li>should be renamed to <code>tf.negative</code></li>
+</ul>
+</li>
+<li><code>tf.select</code><ul>
+<li>should be renamed to <code>tf.where</code></li>
+<li><code>tf.where</code> now takes 3 arguments or 1 argument, just like <code>np.where</code></li>
+</ul>
+</li>
+<li><code>tf.sub</code><ul>
+<li>should be renamed to <code>tf.subtract</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="numpy-matching-arguments">NumPy matching arguments<a class="headerlink" href="#numpy-matching-arguments" title="Permanent link">&para;</a></h3>
+<p>Arguments for certain TensorFlow 1.0 methods now match arguments in certain
+NumPy methods.  To achieve this, TensorFlow 1.0 has changed keyword arguments
+and reordered some arguments. Notably, TensorFlow 1.0 now uses <code>axis</code> rather
+than <code>dimension</code>. TensorFlow 1.0 aims to keep the tensor argument first on
+operations that modify Tensors. (see the <code>tf.concat</code> change).</p>
+<ul>
+<li><code>tf.argmax</code><ul>
+<li>keyword argument <code>dimension</code> should be renamed to <code>axis</code></li>
+</ul>
+</li>
+<li><code>tf.argmin</code><ul>
+<li>keyword argument <code>dimension</code> should be renamed to <code>axis</code></li>
+</ul>
+</li>
+<li><code>tf.concat</code><ul>
+<li>keyword argument <code>concat_dim</code> should be renamed to <code>axis</code></li>
+<li>arguments have been reordered to <code>tf.concat(values, axis, name='concat')</code>.</li>
+</ul>
+</li>
+<li><code>tf.count_nonzero</code><ul>
+<li>keyword argument <code>reduction_indices</code> should be renamed to <code>axis</code></li>
+</ul>
+</li>
+<li><code>tf.expand_dims</code><ul>
+<li>keyword argument <code>dim</code> should be renamed to <code>axis</code></li>
+</ul>
+</li>
+<li><code>tf.reduce_all</code><ul>
+<li>keyword argument <code>reduction_indices</code> should be renamed to <code>axis</code></li>
+</ul>
+</li>
+<li><code>tf.reduce_any</code><ul>
+<li>keyword argument <code>reduction_indices</code> should be renamed to <code>axis</code></li>
+</ul>
+</li>
+<li><code>tf.reduce_join</code><ul>
+<li>keyword argument <code>reduction_indices</code> should be renamed to <code>axis</code></li>
+</ul>
+</li>
+<li><code>tf.reduce_logsumexp</code><ul>
+<li>keyword argument <code>reduction_indices</code> should be renamed to <code>axis</code></li>
+</ul>
+</li>
+<li><code>tf.reduce_max</code><ul>
+<li>keyword argument <code>reduction_indices</code> should be renamed to <code>axis</code></li>
+</ul>
+</li>
+<li><code>tf.reduce_mean</code><ul>
+<li>keyword argument <code>reduction_indices</code> should be renamed to <code>axis</code></li>
+</ul>
+</li>
+<li><code>tf.reduce_min</code><ul>
+<li>keyword argument <code>reduction_indices</code> should be renamed to <code>axis</code></li>
+</ul>
+</li>
+<li><code>tf.reduce_prod</code><ul>
+<li>keyword argument <code>reduction_indices</code> should be renamed to <code>axis</code></li>
+</ul>
+</li>
+<li><code>tf.reduce_sum</code><ul>
+<li>keyword argument <code>reduction_indices</code> should be renamed to <code>axis</code></li>
+</ul>
+</li>
+<li><code>tf.reverse</code><ul>
+<li><code>tf.reverse</code> used to take a 1D <code>bool</code> tensor to control which dimensions were reversed. Now we use a Tensor of axis indices.</li>
+<li>For example <code>tf.reverse(a, [True, False, True])</code> now must be <code>tf.reverse(a, [0, 2])</code></li>
+</ul>
+</li>
+<li><code>tf.reverse_sequence</code><ul>
+<li>keyword argument <code>batch_dim</code> should be renamed to <code>batch_axis</code></li>
+<li>keyword argument <code>seq_dim</code> should be renamed to <code>seq_axis</code></li>
+</ul>
+</li>
+<li><code>tf.sparse_concat</code><ul>
+<li>keyword argument <code>concat_dim</code> should be renamed to <code>axis</code></li>
+</ul>
+</li>
+<li><code>tf.sparse_reduce_sum</code><ul>
+<li>keyword argument <code>reduction_axes</code> should be renamed to <code>axis</code></li>
+</ul>
+</li>
+<li><code>tf.sparse_reduce_sum_sparse</code><ul>
+<li>keyword argument <code>reduction_axes</code> should be renamed to <code>axis</code></li>
+</ul>
+</li>
+<li><code>tf.sparse_split</code><ul>
+<li>keyword argument <code>split_dim</code> should be renamed to <code>axis</code></li>
+<li>arguments have been reordered to <code>tf.sparse_split(keyword_required=KeywordRequired(), sp_input=None, num_split=None, axis=None, name=None, split_dim=None)</code>.</li>
+</ul>
+</li>
+<li><code>tf.split</code><ul>
+<li>keyword argument <code>split_dim</code> should be renamed to <code>axis</code></li>
+<li>keyword argument <code>num_split</code> should be renamed to <code>num_or_size_splits</code></li>
+<li>arguments have been reordered to <code>tf.split(value, num_or_size_splits, axis=0, num=None, name='split')</code>.</li>
+</ul>
+</li>
+<li><code>tf.squeeze</code><ul>
+<li>keyword argument <code>squeeze_dims</code> should be renamed to <code>axis</code></li>
+</ul>
+</li>
+<li><code>tf.svd</code><ul>
+<li>arguments have been reordered to <code>tf.svd(tensor, full_matrices=False, compute_uv=True, name=None)</code>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="simplified-math-variants">Simplified math variants<a class="headerlink" href="#simplified-math-variants" title="Permanent link">&para;</a></h3>
+<p>Batched versions of math operations have been removed. Now the functionality is
+contained in the non-batched versions. Similarly,<code>tf.complex_abs</code> has had its
+functionality moved to <code>tf.abs</code></p>
+<ul>
+<li><code>tf.batch_band_part</code><ul>
+<li>should be renamed to <code>tf.band_part</code></li>
+</ul>
+</li>
+<li><code>tf.batch_cholesky</code><ul>
+<li>should be renamed to <code>tf.cholesky</code></li>
+</ul>
+</li>
+<li><code>tf.batch_cholesky_solve</code><ul>
+<li>should be renamed to <code>tf.cholesky_solve</code></li>
+</ul>
+</li>
+<li><code>tf.batch_fft</code><ul>
+<li>should be renamed to <code>tf.fft</code></li>
+</ul>
+</li>
+<li><code>tf.batch_fft3d</code><ul>
+<li>should be renamed to <code>tf.fft3d</code></li>
+</ul>
+</li>
+<li><code>tf.batch_ifft</code><ul>
+<li>should be renamed to <code>tf.ifft</code></li>
+</ul>
+</li>
+<li><code>tf.batch_ifft2d</code><ul>
+<li>should be renamed to <code>tf.ifft2d</code></li>
+</ul>
+</li>
+<li><code>tf.batch_ifft3d</code><ul>
+<li>should be renamed to <code>tf.ifft3d</code></li>
+</ul>
+</li>
+<li><code>tf.batch_matmul</code><ul>
+<li>should be renamed to <code>tf.matmul</code></li>
+</ul>
+</li>
+<li><code>tf.batch_matrix_determinant</code><ul>
+<li>should be renamed to <code>tf.matrix_determinant</code></li>
+</ul>
+</li>
+<li><code>tf.batch_matrix_diag</code><ul>
+<li>should be renamed to <code>tf.matrix_diag</code></li>
+</ul>
+</li>
+<li><code>tf.batch_matrix_inverse</code><ul>
+<li>should be renamed to <code>tf.matrix_inverse</code></li>
+</ul>
+</li>
+<li><code>tf.batch_matrix_solve</code><ul>
+<li>should be renamed to <code>tf.matrix_solve</code></li>
+</ul>
+</li>
+<li><code>tf.batch_matrix_solve_ls</code><ul>
+<li>should be renamed to <code>tf.matrix_solve_ls</code></li>
+</ul>
+</li>
+<li><code>tf.batch_matrix_transpose</code><ul>
+<li>should be renamed to <code>tf.matrix_transpose</code></li>
+</ul>
+</li>
+<li><code>tf.batch_matrix_triangular_solve</code><ul>
+<li>should be renamed to <code>tf.matrix_triangular_solve</code></li>
+</ul>
+</li>
+<li><code>tf.batch_self_adjoint_eig</code><ul>
+<li>should be renamed to <code>tf.self_adjoint_eig</code></li>
+</ul>
+</li>
+<li><code>tf.batch_self_adjoint_eigvals</code><ul>
+<li>should be renamed to <code>tf.self_adjoint_eigvals</code></li>
+</ul>
+</li>
+<li><code>tf.batch_set_diag</code><ul>
+<li>should be renamed to <code>tf.set_diag</code></li>
+</ul>
+</li>
+<li><code>tf.batch_svd</code><ul>
+<li>should be renamed to <code>tf.svd</code></li>
+</ul>
+</li>
+<li><code>tf.complex_abs</code><ul>
+<li>should be renamed to <code>tf.abs</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="misc-changes">Misc Changes<a class="headerlink" href="#misc-changes" title="Permanent link">&para;</a></h3>
+<p>Several other changes have been made, including the following:</p>
+<ul>
+<li><code>tf.image.per_image_whitening</code><ul>
+<li>should be renamed to <code>tf.image.per_image_standardization</code></li>
+</ul>
+</li>
+<li><code>tf.nn.sigmoid_cross_entropy_with_logits</code><ul>
+<li>arguments have been reordered to <code>tf.nn.sigmoid_cross_entropy_with_logits(_sentinel=None, labels=None, logits=None, name=None)</code>.</li>
+</ul>
+</li>
+<li><code>tf.nn.softmax_cross_entropy_with_logits</code><ul>
+<li>arguments have been reordered to <code>tf.nn.softmax_cross_entropy_with_logits(_sentinel=None, labels=None, logits=None, dim=-1, name=None)</code>.</li>
+</ul>
+</li>
+<li><code>tf.nn.sparse_softmax_cross_entropy_with_logits</code><ul>
+<li>arguments have been reordered to <code>tf.nn.sparse_softmax_cross_entropy_with_logits(_sentinel=None, labels=None, logits=None, name=None)</code>.</li>
+</ul>
+</li>
+<li><code>tf.ones_initializer</code><ul>
+<li>should be changed to a function call i.e. <code>tf.ones_initializer()</code></li>
+</ul>
+</li>
+<li><code>tf.pack</code><ul>
+<li>should be renamed to <code>tf.stack</code></li>
+</ul>
+</li>
+<li><code>tf.round</code><ul>
+<li>The semantics of <code>tf.round</code> now match Banker&rsquo;s rounding.</li>
+</ul>
+</li>
+<li><code>tf.unpack</code><ul>
+<li>should be renamed to <code>tf.unstack</code></li>
+</ul>
+</li>
+<li><code>tf.zeros_initializer</code><ul>
+<li>should be changed to a function call i.e. <code>tf.zeros_initializer()</code></li>
+</ul>
+</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../install_java/" class="btn btn-neutral float-right" title="1.7 安装TensorFlow for Java">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../install_sources/" class="btn btn-neutral" title="1.5 源代码安装TensorFlow"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/isaron/tfdocs.git" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../install_sources/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../install_java/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

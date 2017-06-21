@@ -8,7 +8,7 @@
   
   <meta name="author" content="黄传华(Arbor Huang)">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>1.1 综述 - TensorFlow 文档中文翻译</title>
+  <title>1.7 安装TensorFlow for Java - TensorFlow 文档中文翻译</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "1.1 \u7efc\u8ff0";
-    var mkdocs_page_input_path = "install/installing-tensorflow.md";
-    var mkdocs_page_url = "/install/installing-tensorflow/";
+    var mkdocs_page_name = "1.7 \u5b89\u88c5TensorFlow for Java";
+    var mkdocs_page_input_path = "install/install_java.md";
+    var mkdocs_page_url = "/install/install_java/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -56,32 +56,59 @@
 		
     <span class="caption-text">1. 安装</span>
     <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../">1.1 综述</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../install_linux/">1.2 在Ubuntu上安装TensorFlow</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../install_mac/">1.3 在Mac OS X上安装TensorFlow</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../install_windows/">1.4 在Windows上安装TensorFlow</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../install_sources/">1.5 源代码安装TensorFlow</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../migration/">1.6 迁移到TensorFlow 1.0</a>
+                </li>
                 <li class=" current">
                     
-    <a class="current" href="./">1.1 综述</a>
+    <a class="current" href="./">1.7 安装TensorFlow for Java</a>
     <ul class="subnav">
             
+    <li class="toctree-l3"><a href="#installing-tensorflow-for-java">Installing TensorFlow for Java</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#supported-platforms">Supported Platforms</a></li>
+        
+            <li><a class="toctree-l4" href="#using-tensorflow-with-a-maven-project">Using TensorFlow with a Maven project</a></li>
+        
+            <li><a class="toctree-l4" href="#using-tensorflow-with-jdk">Using TensorFlow with JDK</a></li>
+        
+            <li><a class="toctree-l4" href="#building-from-source-code">Building from source code</a></li>
+        
+        </ul>
+    
+
     </ul>
                 </li>
                 <li class="">
                     
-    <a class="" href="../installing-on-ubuntu/">1.2 在Ubuntu上安装TensorFlow</a>
+    <a class="" href="../install_c/">1.8 安装TensorFlow for C</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../installing-on-mac/">1.3 在Mac OS X上安装TensorFlow</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../installing-on-windows/">1.4 在Windows上安装TensorFlow</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../installing-from-sources/">1.5 源代码安装TensorFlow</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../transitioning-to-1.0/">1.6 迁移到TensorFlow 1.0</a>
+    <a class="" href="../install_go/">1.9 安装TensorFlow for Go</a>
                 </li>
     </ul>
 	    </li>
@@ -493,10 +520,10 @@
         
       
     
-    <li>1.1 综述</li>
+    <li>1.7 安装TensorFlow for Java</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/isaron/tfdocs.git/edit/master/docs/install/installing-tensorflow.md"
+        <a href="https://github.com/isaron/tfdocs.git/edit/master/docs/install/install_java.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -506,7 +533,214 @@
           <div role="main">
             <div class="section">
               
-                
+                <h1 id="installing-tensorflow-for-java">Installing TensorFlow for Java<a class="headerlink" href="#installing-tensorflow-for-java" title="Permanent link">&para;</a></h1>
+<p>TensorFlow provides APIs for use in Java programs. These APIs are particularly
+well-suited to loading models created in Python and executing them within a
+Java application. This guide explains how to install
+<a href="https://www.tensorflow.org/api_docs/java/reference/org/tensorflow/package-summary">TensorFlow for Java</a>
+and use it in a Java application.</p>
+<p><strong>WARNING:</strong> The TensorFlow Java API is <em>not</em> covered by the TensorFlow
+<a href="https://www.tensorflow.org/programmers_guide/version_semantics">API stability guarantees</a>.</p>
+<h2 id="supported-platforms">Supported Platforms<a class="headerlink" href="#supported-platforms" title="Permanent link">&para;</a></h2>
+<p>TensorFlow for Java is supported on the following operating systems:</p>
+<ul>
+<li>Linux</li>
+<li>Mac OS X</li>
+<li>Windows</li>
+<li>Android</li>
+</ul>
+<p>The installation instructions for Android are in a separate
+<a href="https://www.tensorflow.org/code/tensorflow/contrib/android">Android TensorFlow Support page</a>.
+After installation, please see this
+<a href="https://www.tensorflow.org/code/tensorflow/examples/android">complete example</a>
+of TensorFlow on Android.</p>
+<h2 id="using-tensorflow-with-a-maven-project">Using TensorFlow with a Maven project<a class="headerlink" href="#using-tensorflow-with-a-maven-project" title="Permanent link">&para;</a></h2>
+<p>If your project uses <a href="https://maven.apache.org">Apache Maven</a>, then add the
+following to the project&rsquo;s <code>pom.xml</code> to use the TensorFlow Java APIs:</p>
+<pre><code class="xml">&lt;dependency&gt;
+  &lt;groupId&gt;org.tensorflow&lt;/groupId&gt;
+  &lt;artifactId&gt;tensorflow&lt;/artifactId&gt;
+  &lt;version&gt;1.2.0-rc2&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+
+<p>That&rsquo;s all.</p>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<p>As an example, these steps will create a Maven project that uses TensorFlow:</p>
+<ol>
+<li>
+<p>Create the project&rsquo;s <code>pom.xml</code>:</p>
+<pre><code> &lt;project&gt;
+     &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+     &lt;groupId&gt;org.myorg&lt;/groupId&gt;
+     &lt;artifactId&gt;hellotf&lt;/artifactId&gt;
+     &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+     &lt;properties&gt;
+       &lt;exec.mainClass&gt;HelloTF&lt;/exec.mainClass&gt;
+       &lt;!-- The sample code requires at least JDK 1.7. --&gt;
+       &lt;!-- The maven compiler plugin defaults to a lower version --&gt;
+       &lt;maven.compiler.source&gt;1.7&lt;/maven.compiler.source&gt;
+       &lt;maven.compiler.target&gt;1.7&lt;/maven.compiler.target&gt;
+     &lt;/properties&gt;
+     &lt;dependencies&gt;
+       &lt;dependency&gt;
+         &lt;groupId&gt;org.tensorflow&lt;/groupId&gt;
+         &lt;artifactId&gt;tensorflow&lt;/artifactId&gt;
+         &lt;version&gt;1.2.0-rc2&lt;/version&gt;
+       &lt;/dependency&gt;
+     &lt;/dependencies&gt;
+ &lt;/project&gt;
+</code></pre>
+</li>
+<li>
+<p>Create the source file (<code>src/main/java/HelloTF.java</code>):</p>
+<pre><code>import org.tensorflow.Graph;
+import org.tensorflow.Session;
+import org.tensorflow.Tensor;
+import org.tensorflow.TensorFlow;
+
+public class HelloTF {
+  public static void main(String[] args) throws Exception {
+    try (Graph g = new Graph()) {
+      final String value = "Hello from " + TensorFlow.version();
+
+      // Construct the computation graph with a single operation, a constant
+      // named "MyConst" with a value "value".
+      try (Tensor t = Tensor.create(value.getBytes("UTF-8"))) {
+        // The Java API doesn't yet include convenience functions for adding operations.
+        g.opBuilder("Const", "MyConst").setAttr("dtype", t.dataType()).setAttr("value", t).build();
+      }
+
+      // Execute the "MyConst" operation in a Session.
+      try (Session s = new Session(g);
+           Tensor output = s.runner().fetch("MyConst").run().get(0)) {
+        System.out.println(new String(output.bytesValue(), "UTF-8"));
+      }
+    }
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>Compile and execute:</p>
+<p><pre> # Use -q to hide logging from the mvn tool
+ <b>mvn -q compile exec:java</b></pre></p>
+</li>
+</ol>
+<p>The preceding command should output <tt>Hello from <i>version</i></tt>. If it
+does, you&rsquo;ve successfully set up TensorFlow for Java and are ready to use it in
+Maven projects. If not, check
+<a href="http://stackoverflow.com/questions/tagged/tensorflow">Stack Overflow</a>
+for possible solutions.  You can skip reading the rest of this document.</p>
+<h2 id="using-tensorflow-with-jdk">Using TensorFlow with JDK<a class="headerlink" href="#using-tensorflow-with-jdk" title="Permanent link">&para;</a></h2>
+<p>This section describes how to use TensorFlow using the <code>java</code> and <code>javac</code>
+commands from a JDK installation. If your project uses Apache Maven, then
+refer to the simpler instructions above instead.</p>
+<h3 id="install-on-linux-or-mac-os">Install on Linux or Mac OS<a class="headerlink" href="#install-on-linux-or-mac-os" title="Permanent link">&para;</a></h3>
+<p>Take the following steps to install TensorFlow for Java on Linux or Mac OS:</p>
+<ol>
+<li>
+<p>Download
+     <a href="https://storage.googleapis.com/tensorflow/libtensorflow/libtensorflow-1.2.0-rc2.jar">libtensorflow.jar</a>,
+     which is the TensorFlow Java Archive (JAR).</p>
+</li>
+<li>
+<p>Decide whether you will run TensorFlow for Java on CPU(s) only or with
+     the help of GPU(s). To help you decide, read the section entitled
+     &ldquo;Determine which TensorFlow to install&rdquo; in one of the following guides:</p>
+<ul>
+<li>@{$install_linux#determine_which_tensorflow_to_install$Installing TensorFlow on Linux}</li>
+<li>@{$install_mac#determine_which_tensorflow_to_install$Installing TensorFlow on Mac OS}</li>
+</ul>
+</li>
+<li>
+<p>Download and extract the appropriate Java Native Interface (JNI)
+     file for your operating system and processor support by running the
+     following shell commands:</p>
+<pre><code> TF_TYPE="cpu" # Default processor is CPU. If you want GPU, set to "gpu"
+ OS=$(uname -s | tr '[:upper:]' '[:lower:]')
+ mkdir -p ./jni
+ curl -L \
+   "https://storage.googleapis.com/tensorflow/libtensorflow/libtensorflow_jni-${TF_TYPE}-${OS}-x86_64-1.2.0-rc2.tar.gz" |
+   tar -xz -C ./jni
+</code></pre>
+</li>
+</ol>
+<h3 id="install-on-windows">Install on Windows<a class="headerlink" href="#install-on-windows" title="Permanent link">&para;</a></h3>
+<p>Take the following steps to install TensorFlow for Java on Windows:</p>
+<ol>
+<li>Download
+     <a href="https://storage.googleapis.com/tensorflow/libtensorflow/libtensorflow-1.2.0-rc2.jar">libtensorflow.jar</a>,
+     which is the TensorFlow Java Archive (JAR).</li>
+<li>Download the following Java Native Interface (JNI) file appropriate for
+     <a href="https://storage.googleapis.com/tensorflow/libtensorflow/libtensorflow_jni-cpu-windows-x86_64-1.2.0-rc2.zip">TensorFlow for Java on Windows</a>.</li>
+<li>Extract this .zip file.</li>
+</ol>
+<h3 id="validate-the-installation">Validate the installation<a class="headerlink" href="#validate-the-installation" title="Permanent link">&para;</a></h3>
+<p>After installing TensorFlow for Java, validate your installation by entering
+the following code into a file named <code>HelloTF.java</code>:</p>
+<pre><code class="java">import org.tensorflow.Graph;
+import org.tensorflow.Session;
+import org.tensorflow.Tensor;
+import org.tensorflow.TensorFlow;
+
+public class HelloTF {
+  public static void main(String[] args) throws Exception {
+    try (Graph g = new Graph()) {
+      final String value = &quot;Hello from &quot; + TensorFlow.version();
+
+      // Construct the computation graph with a single operation, a constant
+      // named &quot;MyConst&quot; with a value &quot;value&quot;.
+      try (Tensor t = Tensor.create(value.getBytes(&quot;UTF-8&quot;))) {
+        // The Java API doesn't yet include convenience functions for adding operations.
+        g.opBuilder(&quot;Const&quot;, &quot;MyConst&quot;).setAttr(&quot;dtype&quot;, t.dataType()).setAttr(&quot;value&quot;, t).build();
+      }
+
+      // Execute the &quot;MyConst&quot; operation in a Session.
+      try (Session s = new Session(g);
+           Tensor output = s.runner().fetch(&quot;MyConst&quot;).run().get(0)) {
+        System.out.println(new String(output.bytesValue(), &quot;UTF-8&quot;));
+      }
+    }
+  }
+}
+</code></pre>
+
+<p>And use the instructions below to compile and run <code>HelloTF.java</code>.</p>
+<h3 id="compiling">Compiling<a class="headerlink" href="#compiling" title="Permanent link">&para;</a></h3>
+<p>When compiling a Java program that uses TensorFlow, the downloaded <code>.jar</code>
+must be part of your <code>classpath</code>. For example, you can include the
+downloaded <code>.jar</code> in your <code>classpath</code> by using the <code>-cp</code> compilation flag
+as follows:</p>
+<pre><b>javac -cp libtensorflow-1.2.0-rc2.jar HelloTF.java</b></pre>
+
+<h3 id="running">Running<a class="headerlink" href="#running" title="Permanent link">&para;</a></h3>
+<p>To execute a Java program that depends on TensorFlow, ensure that the following
+two files are available to the JVM:</p>
+<ul>
+<li>the downloaded <code>.jar</code> file</li>
+<li>the extracted JNI library</li>
+</ul>
+<p>For example, the following command line executes the <code>HelloTF</code> program on Linux
+and Mac OS X:</p>
+<pre><b>java -cp libtensorflow-1.2.0-rc2.jar:. -Djava.library.path=./jni HelloTF</b></pre>
+
+<p>And the following command line executes the <code>HelloTF</code> program on Windows:</p>
+<pre><b>java -cp libtensorflow-1.2.0-rc2.jar;. -Djava.library.path=jni HelloTF</b></pre>
+
+<p>If the program prints <tt>Hello from <i>version</i></tt>, you&rsquo;ve successfully
+installed TensorFlow for Java and are ready to use the API.  If the program
+outputs something else, check
+<a href="http://stackoverflow.com/questions/tagged/tensorflow">Stack Overflow</a> for
+possible solutions.</p>
+<h3 id="advanced-example">Advanced Example<a class="headerlink" href="#advanced-example" title="Permanent link">&para;</a></h3>
+<p>For a more sophisticated example, see
+<a href="https://www.tensorflow.org/code/tensorflow/java/src/main/java/org/tensorflow/examples/LabelImage.java">LabelImage.java</a>,
+which recognizes objects in an image.</p>
+<h2 id="building-from-source-code">Building from source code<a class="headerlink" href="#building-from-source-code" title="Permanent link">&para;</a></h2>
+<p>TensorFlow is open-source. You may build TensorFlow for Java from the
+TensorFlow source code by following the instructions in a
+<a href="https://github.com/tensorflow/tensorflow/blob/master/tensorflow/java/README.md">separate document</a>.</p>
               
             </div>
           </div>
@@ -514,10 +748,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../installing-on-ubuntu/" class="btn btn-neutral float-right" title="1.2 在Ubuntu上安装TensorFlow">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../install_c/" class="btn btn-neutral float-right" title="1.8 安装TensorFlow for C">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../.." class="btn btn-neutral" title="0. 首页"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../migration/" class="btn btn-neutral" title="1.6 迁移到TensorFlow 1.0"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -545,10 +779,10 @@
           <a href="https://github.com/isaron/tfdocs.git" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../migration/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../installing-on-ubuntu/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../install_c/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

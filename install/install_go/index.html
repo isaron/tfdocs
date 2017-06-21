@@ -8,7 +8,7 @@
   
   <meta name="author" content="黄传华(Arbor Huang)">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>1.3 在Mac OS X上安装TensorFlow - TensorFlow 文档中文翻译</title>
+  <title>1.9 安装TensorFlow for Go - TensorFlow 文档中文翻译</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "1.3 \u5728Mac OS X\u4e0a\u5b89\u88c5TensorFlow";
-    var mkdocs_page_input_path = "install/installing-on-mac.md";
-    var mkdocs_page_url = "/install/installing-on-mac/";
+    var mkdocs_page_name = "1.9 \u5b89\u88c5TensorFlow for Go";
+    var mkdocs_page_input_path = "install/install_go.md";
+    var mkdocs_page_url = "/install/install_go/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -58,30 +58,57 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../installing-tensorflow/">1.1 综述</a>
+    <a class="" href="../">1.1 综述</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../installing-on-ubuntu/">1.2 在Ubuntu上安装TensorFlow</a>
+    <a class="" href="../install_linux/">1.2 在Ubuntu上安装TensorFlow</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../install_mac/">1.3 在Mac OS X上安装TensorFlow</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../install_windows/">1.4 在Windows上安装TensorFlow</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../install_sources/">1.5 源代码安装TensorFlow</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../migration/">1.6 迁移到TensorFlow 1.0</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../install_java/">1.7 安装TensorFlow for Java</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../install_c/">1.8 安装TensorFlow for C</a>
                 </li>
                 <li class=" current">
                     
-    <a class="current" href="./">1.3 在Mac OS X上安装TensorFlow</a>
+    <a class="current" href="./">1.9 安装TensorFlow for Go</a>
     <ul class="subnav">
             
+    <li class="toctree-l3"><a href="#installing-tensorflow-for-go">Installing TensorFlow for Go</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#supported-platforms">Supported Platforms</a></li>
+        
+            <li><a class="toctree-l4" href="#installation">Installation</a></li>
+        
+            <li><a class="toctree-l4" href="#hello-world">Hello World</a></li>
+        
+            <li><a class="toctree-l4" href="#building-from-source-code">Building from source code</a></li>
+        
+        </ul>
+    
+
     </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../installing-on-windows/">1.4 在Windows上安装TensorFlow</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../installing-from-sources/">1.5 源代码安装TensorFlow</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../transitioning-to-1.0/">1.6 迁移到TensorFlow 1.0</a>
                 </li>
     </ul>
 	    </li>
@@ -493,10 +520,10 @@
         
       
     
-    <li>1.3 在Mac OS X上安装TensorFlow</li>
+    <li>1.9 安装TensorFlow for Go</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/isaron/tfdocs.git/edit/master/docs/install/installing-on-mac.md"
+        <a href="https://github.com/isaron/tfdocs.git/edit/master/docs/install/install_go.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -506,7 +533,126 @@
           <div role="main">
             <div class="section">
               
-                
+                <h1 id="installing-tensorflow-for-go">Installing TensorFlow for Go<a class="headerlink" href="#installing-tensorflow-for-go" title="Permanent link">&para;</a></h1>
+<p>TensorFlow provides APIs for use in Go programs. These APIs are particularly
+well-suited to loading models created in Python and executing them within
+a Go application. This guide explains how to install and set up the
+<a href="https://godoc.org/github.com/tensorflow/tensorflow/tensorflow/go">TensorFlow Go package</a>.</p>
+<p><strong>WARNING:</strong> The TensorFlow Go API is <em>not</em> covered by the TensorFlow
+<a href="https://www.tensorflow.org/programmers_guide/version_semantics">API stability guarantees</a>.</p>
+<h2 id="supported-platforms">Supported Platforms<a class="headerlink" href="#supported-platforms" title="Permanent link">&para;</a></h2>
+<p>You may install TensorFlow for Go on the following operating systems:</p>
+<ul>
+<li>Linux</li>
+<li>Mac OS X</li>
+</ul>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<p>TensorFlow for Go depends on the TensorFlow C library. Take the following
+steps to install this library and enable TensorFlow for Go:</p>
+<ol>
+<li>
+<p>Decide whether you will run TensorFlow for Go on CPU(s) only or with
+     the help of GPU(s). To help you decide, read the section entitled
+     &ldquo;Determine which TensorFlow to install&rdquo; in one of the following guides:</p>
+<ul>
+<li>@{$install_linux#determine_which_tensorflow_to_install$Installing TensorFlow on Linux}</li>
+<li>@{$install_mac#determine_which_tensorflow_to_install$Installing TensorFlow on Mac OS}</li>
+</ul>
+</li>
+<li>
+<p>Download and extract the TensorFlow C library into <code>/usr/local/lib</code> by
+     invoking the following shell commands:</p>
+<pre><code> TF_TYPE="cpu" # Change to "gpu" for GPU support
+ TARGET_DIRECTORY='/usr/local'
+ curl -L \
+   "https://storage.googleapis.com/tensorflow/libtensorflow/libtensorflow-${TF_TYPE}-$(go env GOOS)-x86_64-1.2.0-rc2.tar.gz" |
+ sudo tar -C $TARGET_DIRECTORY -xz
+</code></pre>
+<p>The <code>tar</code> command extracts the TensorFlow C library into the <code>lib</code>
+ subdirectory of <code>TARGET_DIRECTORY</code>. For example, specifying <code>/usr/local</code>
+ as <code>TARGET_DIRECTORY</code> causes <code>tar</code> to extract the TensorFlow C library
+ into <code>/usr/local/lib</code>.</p>
+<p>If you&rsquo;d prefer to extract the library into a different directory,
+ adjust <code>TARGET_DIRECTORY</code> accordingly.</p>
+</li>
+<li>
+<p>In Step 2, if you specified a system directory (for example, <code>/usr/local</code>)
+     as the <code>TARGET_DIRECTORY</code>, then run <code>ldconfig</code> to configure the linker.
+     For example:</p>
+<p><pre><b>sudo ldconfig</b></pre></p>
+<p>If you assigned a <code>TARGET_DIRECTORY</code> other than a system
+ directory (for example, <code>~/mydir</code>), then you must append the extraction
+ directory (for example, <code>~/mydir/lib</code>) to two environment variables
+ as follows:</p>
+<p><pre> <b>export LIBRARY_PATH=$LIBRARY_PATH:~/mydir/lib</b> # For both Linux and Mac OS X
+ <b>export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/mydir/lib</b> # For Linux only
+ <b>export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:~/mydir/lib</b> # For Mac OS X only</pre></p>
+</li>
+<li>
+<p>Now that the TensorFlow C library is installed, invoke <code>go get</code> as follows
+     to download the appropriate packages and their dependencies:</p>
+<p><pre><b>go get github.com/tensorflow/tensorflow/tensorflow/go</b></pre></p>
+</li>
+<li>
+<p>Invoke <code>go test</code> as follows to validate the TensorFlow for Go
+     installation:</p>
+<p><pre><b>go test github.com/tensorflow/tensorflow/tensorflow/go</b></pre></p>
+</li>
+</ol>
+<p>If <code>go get</code> or <code>go test</code> generate error messages, search (or post to)
+<a href="http://www.stackoverflow.com/questions/tagged/tensorflow">StackOverflow</a>
+for possible solutions.</p>
+<h2 id="hello-world">Hello World<a class="headerlink" href="#hello-world" title="Permanent link">&para;</a></h2>
+<p>After installing TensorFlow for Go, enter the following code into a
+file named <code>hello_tf.go</code>:</p>
+<pre><code class="go">package main
+
+import (
+    tf &quot;github.com/tensorflow/tensorflow/tensorflow/go&quot;
+    &quot;github.com/tensorflow/tensorflow/tensorflow/go/op&quot;
+    &quot;fmt&quot;
+)
+
+func main() {
+    // Construct a graph with an operation that produces a string constant.
+    s := op.NewScope()
+    c := op.Const(s, &quot;Hello from TensorFlow version &quot; + tf.Version())
+    graph, err := s.Finalize()
+    if err != nil {
+        panic(err)
+    }
+
+    // Execute the graph in a session.
+    sess, err := tf.NewSession(graph, nil)
+    if err != nil {
+        panic(err)
+    }
+    output, err := sess.Run(nil, []tf.Output{c}, nil)
+    if err != nil {
+        panic(err)
+    }
+    fmt.Println(output[0].Value())
+}
+</code></pre>
+
+<p>For a more advanced example of TensorFlow in Go, look at the
+<a href="https://godoc.org/github.com/tensorflow/tensorflow/tensorflow/go#ex-package">example in the API documentation</a>,
+which uses a pre-trained TensorFlow model to label contents of an image.</p>
+<h3 id="running">Running<a class="headerlink" href="#running" title="Permanent link">&para;</a></h3>
+<p>Run <code>hello_tf.go</code> by invoking the following command:</p>
+<pre><b>go run hello_tf.go</b>
+Hello from TensorFlow version <i>number</i></pre>
+
+<p>The program might also generate multiple warning messages of the
+following form, which you can ignore:</p>
+<pre>W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library
+wasn't compiled to use *Type* instructions, but these are available on your
+machine and could speed up CPU computations.</pre>
+
+<h2 id="building-from-source-code">Building from source code<a class="headerlink" href="#building-from-source-code" title="Permanent link">&para;</a></h2>
+<p>TensorFlow is open-source. You may build TensorFlow for Go from the
+TensorFlow source code by following the instructions in a
+<a href="https://github.com/tensorflow/tensorflow/blob/master/tensorflow/go/README.md">separate document</a>.</p>
               
             </div>
           </div>
@@ -514,10 +660,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../installing-on-windows/" class="btn btn-neutral float-right" title="1.4 在Windows上安装TensorFlow">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../develop/getstarted/getting-started-with-tensorflow/" class="btn btn-neutral float-right" title="2.1.1 TensorFlow快速入门">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../installing-on-ubuntu/" class="btn btn-neutral" title="1.2 在Ubuntu上安装TensorFlow"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../install_c/" class="btn btn-neutral" title="1.8 安装TensorFlow for C"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -545,10 +691,10 @@
           <a href="https://github.com/isaron/tfdocs.git" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../installing-on-ubuntu/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../install_c/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../installing-on-windows/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../develop/getstarted/getting-started-with-tensorflow/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

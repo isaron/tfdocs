@@ -8,7 +8,7 @@
   
   <meta name="author" content="黄传华(Arbor Huang)">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>1.5 源代码安装TensorFlow - TensorFlow 文档中文翻译</title>
+  <title>1.8 安装TensorFlow for C - TensorFlow 文档中文翻译</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "1.5 \u6e90\u4ee3\u7801\u5b89\u88c5TensorFlow";
-    var mkdocs_page_input_path = "install/installing-from-sources.md";
-    var mkdocs_page_url = "/install/installing-from-sources/";
+    var mkdocs_page_name = "1.8 \u5b89\u88c5TensorFlow for C";
+    var mkdocs_page_input_path = "install/install_c.md";
+    var mkdocs_page_url = "/install/install_c/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -58,30 +58,55 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../installing-tensorflow/">1.1 综述</a>
+    <a class="" href="../">1.1 综述</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../installing-on-ubuntu/">1.2 在Ubuntu上安装TensorFlow</a>
+    <a class="" href="../install_linux/">1.2 在Ubuntu上安装TensorFlow</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../installing-on-mac/">1.3 在Mac OS X上安装TensorFlow</a>
+    <a class="" href="../install_mac/">1.3 在Mac OS X上安装TensorFlow</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../installing-on-windows/">1.4 在Windows上安装TensorFlow</a>
+    <a class="" href="../install_windows/">1.4 在Windows上安装TensorFlow</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../install_sources/">1.5 源代码安装TensorFlow</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../migration/">1.6 迁移到TensorFlow 1.0</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../install_java/">1.7 安装TensorFlow for Java</a>
                 </li>
                 <li class=" current">
                     
-    <a class="current" href="./">1.5 源代码安装TensorFlow</a>
+    <a class="current" href="./">1.8 安装TensorFlow for C</a>
     <ul class="subnav">
             
+    <li class="toctree-l3"><a href="#installing-tensorflow-for-c">Installing TensorFlow for C</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#supported-platforms">Supported Platforms</a></li>
+        
+            <li><a class="toctree-l4" href="#installation">Installation</a></li>
+        
+            <li><a class="toctree-l4" href="#validate-your-installation">Validate your installation</a></li>
+        
+        </ul>
+    
+
     </ul>
                 </li>
                 <li class="">
                     
-    <a class="" href="../transitioning-to-1.0/">1.6 迁移到TensorFlow 1.0</a>
+    <a class="" href="../install_go/">1.9 安装TensorFlow for Go</a>
                 </li>
     </ul>
 	    </li>
@@ -493,10 +518,10 @@
         
       
     
-    <li>1.5 源代码安装TensorFlow</li>
+    <li>1.8 安装TensorFlow for C</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/isaron/tfdocs.git/edit/master/docs/install/installing-from-sources.md"
+        <a href="https://github.com/isaron/tfdocs.git/edit/master/docs/install/install_c.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -506,7 +531,100 @@
           <div role="main">
             <div class="section">
               
-                
+                <h1 id="installing-tensorflow-for-c">Installing TensorFlow for C<a class="headerlink" href="#installing-tensorflow-for-c" title="Permanent link">&para;</a></h1>
+<p>TensorFlow provides a C API defined in
+<a href="https://github.com/tensorflow/tensorflow/tree/master/c/c_api.h"><code>c_api.h</code></a>,
+which is suitable for
+<a href="https://www.tensorflow.org/extend/language_bindings">building bindings for other languages</a>.
+The API leans towards simplicity and uniformity rather than convenience.</p>
+<h2 id="supported-platforms">Supported Platforms<a class="headerlink" href="#supported-platforms" title="Permanent link">&para;</a></h2>
+<p>You may install TensorFlow for C on the following operating systems:</p>
+<ul>
+<li>Linux</li>
+<li>Mac OS X</li>
+</ul>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<p>Take the following steps to install the TensorFlow for C library and
+enable TensorFlow for C:</p>
+<ol>
+<li>
+<p>Decide whether you will run TensorFlow for C on CPU(s) only or
+     with the help of GPU(s). To help you decide, read the section
+     entitled &ldquo;Determine which TensorFlow to install&rdquo; in one of the
+     following guides:</p>
+<ul>
+<li>@{$install_linux#determine_which_tensorflow_to_install$Installing TensorFlow on Linux}</li>
+<li>@{$install_mac#determine_which_tensorflow_to_install$Installing TensorFlow on Mac OS}</li>
+</ul>
+</li>
+<li>
+<p>Download and extract the TensorFlow C library into <code>/usr/local/lib</code> by
+     invoking the following shell commands:</p>
+<pre><code> TF_TYPE="cpu" # Change to "gpu" for GPU support
+ OS="linux" # Change to "darwin" for Mac OS
+ TARGET_DIRECTORY="/usr/local"
+ curl -L \
+   "https://storage.googleapis.com/tensorflow/libtensorflow/libtensorflow-${TF_TYPE}-${OS}-x86_64-1.2.0-rc2.tar.gz" |
+   sudo tar -C $TARGET_DIRECTORY -xz
+</code></pre>
+<p>The <code>tar</code> command extracts the TensorFlow C library into the <code>lib</code>
+ subdirectory of <code>TARGET_DIRECTORY</code>. For example, specifying <code>/usr/local</code>
+ as <code>TARGET_DIRECTORY</code> causes <code>tar</code> to extract the TensorFlow C library
+ into <code>/usr/local/lib</code>.</p>
+<p>If you&rsquo;d prefer to extract the library into a different directory,
+ adjust <code>TARGET_DIRECTORY</code> accordingly.</p>
+</li>
+<li>
+<p>In Step 2, if you specified a system directory (for example, <code>/usr/local</code>)
+     as the <code>TARGET_DIRECTORY</code>, then run <code>ldconfig</code> to configure the linker.
+     For example:</p>
+<p><pre><b>sudo ldconfig</b></pre></p>
+<p>If you assigned a <code>TARGET_DIRECTORY</code> other than a system
+ directory (for example, <code>~/mydir</code>), then you must append the extraction
+ directory (for example, <code>~/mydir/lib</code>) to two environment variables.
+ For example:</p>
+<p><pre> <b>export LIBRARY_PATH=$LIBRARY_PATH:~/mydir/lib</b> # For both Linux and Mac OS X
+ <b>export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/mydir/lib</b> # For Linux only
+ <b>export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:~/mydir/lib</b> # For Mac OS X only</pre></p>
+</li>
+</ol>
+<h2 id="validate-your-installation">Validate your installation<a class="headerlink" href="#validate-your-installation" title="Permanent link">&para;</a></h2>
+<p>After installing TensorFlow for C, enter the following code into a file named
+<code>hello_tf.c</code>:</p>
+<pre><code class="c">#include &lt;stdio.h&gt;
+#include &lt;tensorflow/c/c_api.h&gt;
+
+int main() {
+  printf(&quot;Hello from TensorFlow C library version %s\n&quot;, TF_Version());
+  return 0;
+}
+</code></pre>
+
+<h3 id="build-and-run">Build and Run<a class="headerlink" href="#build-and-run" title="Permanent link">&para;</a></h3>
+<p>Build <code>hello_tf.c</code> by invoking the following command:</p>
+<pre><b>gcc hello_tf.c</b></pre>
+
+<p>Running the resulting executable should output the following message:</p>
+<pre><b>a.out</b>
+Hello from TensorFlow C library version <i>number</i></pre>
+
+<h3 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h3>
+<p>If building the program fails, the most likely culprit is that <code>gcc</code> cannot
+find the TensorFlow C library.  One way to fix this problem is to specify
+the <code>-I</code> and <code>-L</code> options to <code>gcc</code>.  For example, if the <code>TARGET_LIBRARY</code>
+was <code>/usr/local</code>, you would invoke <code>gcc</code> as follows:</p>
+<pre><b>gcc -I/usr/local/include -L/usr/local/lib hello_tf.c -ltensorflow</b></pre>
+
+<p>If executing <code>a.out</code> fails, ask yourself the following questions:</p>
+<ul>
+<li>Did the program build without error?</li>
+<li>Have you assigned the correct directory to the environment variables
+    noted in Step 3 of <a href="#installation">Installation</a>?</li>
+<li>Did you export those environment variables?</li>
+</ul>
+<p>If you are still seeing build or execution error messages, search (or post to)
+<a href="../www.stackoverflow.com/questions/tagged/tensorflow">StackOverflow</a> for
+possible solutions.</p>
               
             </div>
           </div>
@@ -514,10 +632,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../transitioning-to-1.0/" class="btn btn-neutral float-right" title="1.6 迁移到TensorFlow 1.0">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../install_go/" class="btn btn-neutral float-right" title="1.9 安装TensorFlow for Go">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../installing-on-windows/" class="btn btn-neutral" title="1.4 在Windows上安装TensorFlow"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../install_java/" class="btn btn-neutral" title="1.7 安装TensorFlow for Java"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -545,10 +663,10 @@
           <a href="https://github.com/isaron/tfdocs.git" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../installing-on-windows/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../install_java/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../transitioning-to-1.0/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../install_go/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

@@ -8,7 +8,7 @@
   
   <meta name="author" content="黄传华(Arbor Huang)">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>1.6 迁移到TensorFlow 1.0 - TensorFlow 文档中文翻译</title>
+  <title>1.4 在Windows上安装TensorFlow - TensorFlow 文档中文翻译</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "1.6 \u8fc1\u79fb\u5230TensorFlow 1.0";
-    var mkdocs_page_input_path = "install/transitioning-to-1.0.md";
-    var mkdocs_page_url = "/install/transitioning-to-1.0/";
+    var mkdocs_page_name = "1.4 \u5728Windows\u4e0a\u5b89\u88c5TensorFlow";
+    var mkdocs_page_input_path = "install/install_windows.md";
+    var mkdocs_page_url = "/install/install_windows/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -58,30 +58,61 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../installing-tensorflow/">1.1 综述</a>
+    <a class="" href="../">1.1 综述</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../installing-on-ubuntu/">1.2 在Ubuntu上安装TensorFlow</a>
+    <a class="" href="../install_linux/">1.2 在Ubuntu上安装TensorFlow</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../installing-on-mac/">1.3 在Mac OS X上安装TensorFlow</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../installing-on-windows/">1.4 在Windows上安装TensorFlow</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../installing-from-sources/">1.5 源代码安装TensorFlow</a>
+    <a class="" href="../install_mac/">1.3 在Mac OS X上安装TensorFlow</a>
                 </li>
                 <li class=" current">
                     
-    <a class="current" href="./">1.6 迁移到TensorFlow 1.0</a>
+    <a class="current" href="./">1.4 在Windows上安装TensorFlow</a>
     <ul class="subnav">
             
+    <li class="toctree-l3"><a href="#installing-tensorflow-on-windows">Installing TensorFlow on Windows</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#determine-which-tensorflow-to-install">Determine which TensorFlow to install</a></li>
+        
+            <li><a class="toctree-l4" href="#determine-how-to-install-tensorflow">Determine how to install TensorFlow</a></li>
+        
+            <li><a class="toctree-l4" href="#installing-with-native-pip">Installing with native pip</a></li>
+        
+            <li><a class="toctree-l4" href="#installing-with-anaconda">Installing with Anaconda</a></li>
+        
+            <li><a class="toctree-l4" href="#validate-your-installation">Validate your installation</a></li>
+        
+            <li><a class="toctree-l4" href="#common-installation-problems">Common installation problems</a></li>
+        
+        </ul>
+    
+
     </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../install_sources/">1.5 源代码安装TensorFlow</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../migration/">1.6 迁移到TensorFlow 1.0</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../install_java/">1.7 安装TensorFlow for Java</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../install_c/">1.8 安装TensorFlow for C</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../install_go/">1.9 安装TensorFlow for Go</a>
                 </li>
     </ul>
 	    </li>
@@ -493,10 +524,10 @@
         
       
     
-    <li>1.6 迁移到TensorFlow 1.0</li>
+    <li>1.4 在Windows上安装TensorFlow</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/isaron/tfdocs.git/edit/master/docs/install/transitioning-to-1.0.md"
+        <a href="https://github.com/isaron/tfdocs.git/edit/master/docs/install/install_windows.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -506,7 +537,188 @@
           <div role="main">
             <div class="section">
               
-                
+                <h1 id="installing-tensorflow-on-windows">Installing TensorFlow on Windows<a class="headerlink" href="#installing-tensorflow-on-windows" title="Permanent link">&para;</a></h1>
+<p>This guide explains how to install TensorFlow on Windows.</p>
+<h2 id="determine-which-tensorflow-to-install">Determine which TensorFlow to install<a class="headerlink" href="#determine-which-tensorflow-to-install" title="Permanent link">&para;</a></h2>
+<p>You must choose one of the following types of TensorFlow to install:</p>
+<ul>
+<li><strong>TensorFlow with CPU support only</strong>. If your system does not have a
+    NVIDIA® GPU, you must install this version. Note that this version of
+    TensorFlow is typically much easier to install (typically,
+    in 5 or 10 minutes), so even if you have an NVIDIA GPU, we recommend
+    installing this version first.</li>
+<li><strong>TensorFlow with GPU support</strong>. TensorFlow programs typically run
+    significantly faster on a GPU than on a CPU. Therefore, if your
+    system has a NVIDIA® GPU meeting the prerequisites shown below
+    and you need to run performance-critical applications, you should
+    ultimately install this version.</li>
+</ul>
+<h3 id="requirements-to-run-tensorflow-with-gpu-support">Requirements to run TensorFlow with GPU support<a class="headerlink" href="#requirements-to-run-tensorflow-with-gpu-support" title="Permanent link">&para;</a></h3>
+<p>If you are installing TensorFlow with GPU support using one of the mechanisms
+described in this guide, then the following NVIDIA software must be
+installed on your system:</p>
+<ul>
+<li>CUDA® Toolkit 8.0. For details, see
+    <a href="http://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/">NVIDIA&rsquo;s
+    documentation</a>
+    Ensure that you append the relevant Cuda pathnames to the <code>%PATH%</code>
+    environment variable as described in the NVIDIA documentation.</li>
+<li>The NVIDIA drivers associated with CUDA Toolkit 8.0.</li>
+<li>cuDNN v5.1. For details, see
+    <a href="https://developer.nvidia.com/cudnn">NVIDIA&rsquo;s documentation</a>.
+    Note that cuDNN is typically installed in a different location from the
+    other CUDA DLLs. Ensure that you add the directory where you installed
+    the cuDNN DLL to your <code>%PATH%</code> environment variable.</li>
+<li>GPU card with CUDA Compute Capability 3.0 or higher.  See
+    <a href="https://developer.nvidia.com/cuda-gpus">NVIDIA documentation</a> for a
+    list of supported GPU cards.</li>
+</ul>
+<p>If you have an earlier version of the preceding packages, please
+upgrade to the specified versions.</p>
+<h2 id="determine-how-to-install-tensorflow">Determine how to install TensorFlow<a class="headerlink" href="#determine-how-to-install-tensorflow" title="Permanent link">&para;</a></h2>
+<p>You must pick the mechanism by which you install TensorFlow. The
+supported choices are as follows:</p>
+<ul>
+<li>&ldquo;native&rdquo; pip</li>
+<li>Anaconda</li>
+</ul>
+<p>Native pip installs TensorFlow directly on your system without going
+through a virtual environment.  Since a native pip installation is not
+walled-off in a separate container, the pip installation might interfere
+with other Python-based installations on your system. However, if you
+understand pip and your Python environment, a native pip installation
+often entails only a single command! Furthermore, if you install with
+native pip, users can run TensorFlow programs from any directory on
+the system.</p>
+<p>In Anaconda, you may use conda to create a virtual environment.
+However, within Anaconda, we recommend installing TensorFlow with the
+<code>pip install</code> command, not with the <code>conda install</code> command.</p>
+<p><strong>NOTE:</strong> The conda package is community supported, not officially supported.
+That is, the TensorFlow team neither tests nor maintains this conda package.
+Use that package at your own risk.</p>
+<h2 id="installing-with-native-pip">Installing with native pip<a class="headerlink" href="#installing-with-native-pip" title="Permanent link">&para;</a></h2>
+<p>If the following version of Python is not installed on your machine,
+install it now:</p>
+<ul>
+<li><a href="https://www.python.org/downloads/release/python-352/">Python 3.5.x from python.org</a></li>
+</ul>
+<p>TensorFlow only supports version 3.5.x of Python on Windows.
+Note that Python 3.5.x comes with the pip3 package manager, which is the
+program you&rsquo;ll use to install TensorFlow.</p>
+<p>To install TensorFlow, start a terminal. Then issue the appropriate
+<tt>pip3 install</tt> command in that terminal.  To install the CPU-only
+version of TensorFlow, enter the following command:</p>
+<pre>C:\> <b>pip3 install --upgrade tensorflow</b></pre>
+
+<p>To install the GPU version of TensorFlow, enter the following command:</p>
+<pre>C:\> <b>pip3 install --upgrade tensorflow-gpu</b></pre>
+
+<h2 id="installing-with-anaconda">Installing with Anaconda<a class="headerlink" href="#installing-with-anaconda" title="Permanent link">&para;</a></h2>
+<p><strong>The Anaconda installation is community supported, not officially supported.</strong></p>
+<p>Take the following steps to install TensorFlow in an Anaconda environment:</p>
+<ol>
+<li>
+<p>Follow the instructions on the
+     <a href="https://www.continuum.io/downloads">Anaconda download site</a>
+     to download and install Anaconda.</p>
+</li>
+<li>
+<p>Create a conda environment named <tt>tensorflow</tt>
+     by invoking the following command:</p>
+<p><pre>C:> <b>conda create -n tensorflow python=3.5</b> </pre></p>
+</li>
+<li>
+<p>Activate the conda environment by issuing the following command:</p>
+<p><pre>C:> <b>activate tensorflow</b>
+ (tensorflow)C:>  # Your prompt should change </pre></p>
+</li>
+<li>
+<p>Issue the appropriate command to install TensorFlow inside your conda
+     environment. To install the CPU-only version of TensorFlow, enter the
+     following command:</p>
+<p><pre>(tensorflow)C:> <b>pip install &ndash;ignore-installed &ndash;upgrade https://storage.googleapis.com/tensorflow/windows/cpu/tensorflow-1.2.0rc2-cp35-cp35m-win_amd64.whl</b> </pre></p>
+<p>To install the GPU version of TensorFlow, enter the following command
+ (on a single line):</p>
+<p><pre>(tensorflow)C:> <b>pip install &ndash;ignore-installed &ndash;upgrade https://storage.googleapis.com/tensorflow/windows/gpu/tensorflow_gpu-1.2.0rc2-cp35-cp35m-win_amd64.whl</b> </pre></p>
+</li>
+</ol>
+<h2 id="validate-your-installation">Validate your installation<a class="headerlink" href="#validate-your-installation" title="Permanent link">&para;</a></h2>
+<p>Start a terminal.</p>
+<p>If you installed through Anaconda, activate your Anaconda environment.</p>
+<p>Invoke python from your shell as follows:</p>
+<pre>$ <b>python</b></pre>
+
+<p>Enter the following short program inside the python interactive shell:</p>
+<pre><code class="python">&gt;&gt;&gt; import tensorflow as tf
+&gt;&gt;&gt; hello = tf.constant('Hello, TensorFlow!')
+&gt;&gt;&gt; sess = tf.Session()
+&gt;&gt;&gt; print(sess.run(hello))
+</code></pre>
+
+<p>If the system outputs the following, then you are ready to begin writing
+TensorFlow programs:</p>
+<pre>Hello, TensorFlow!</pre>
+
+<p>If you are new to TensorFlow, see @{$get_started/get_started$Getting Started with
+TensorFlow}.</p>
+<p>If the system outputs an error message instead of a greeting, see <a href="#common_installation_problems">Common
+installation problems</a>.</p>
+<h2 id="common-installation-problems">Common installation problems<a class="headerlink" href="#common-installation-problems" title="Permanent link">&para;</a></h2>
+<p>We are relying on Stack Overflow to document TensorFlow installation problems
+and their remedies.  The following table contains links to Stack Overflow
+answers for some common installation problems.
+If you encounter an error message or other
+installation problem not listed in the following table, search for it
+on Stack Overflow.  If Stack Overflow doesn&rsquo;t show the error message,
+ask a new question about it on Stack Overflow and specify
+the <code>tensorflow</code> tag.</p>
+<table>
+<tr> <th>Stack Overflow Link</th> <th>Error Message</th> </tr>
+
+<tr>
+  <td><a href="https://stackoverflow.com/q/41007279">41007279</a></td>
+  <td>
+  <pre>[...\stream_executor\dso_loader.cc] Couldn't open CUDA library nvcuda.dll</pre>
+  </td>
+</tr>
+
+<tr>
+  <td><a href="https://stackoverflow.com/q/41007279">41007279</a></td>
+  <td>
+  <pre>[...\stream_executor\cuda\cuda_dnn.cc] Unable to load cuDNN DSO</pre>
+  </td>
+</tr>
+
+<tr>
+  <td><a href="http://stackoverflow.com/q/42006320">42006320</a></td>
+  <td><pre>ImportError: Traceback (most recent call last):
+File "...\tensorflow\core\framework\graph_pb2.py", line 6, in <module>
+from google.protobuf import descriptor as _descriptor
+ImportError: cannot import name 'descriptor'</pre>
+  </td>
+</tr>
+
+<tr>
+  <td><a href="https://stackoverflow.com/q/42011070">42011070</a></td>
+  <td><pre>No module named "pywrap_tensorflow"</pre></td>
+</tr>
+
+<tr>
+  <td><a href="https://stackoverflow.com/q/42217532">42217532</a></td>
+  <td>
+  <pre>OpKernel ('op: "BestSplits" device_type: "CPU"') for unknown op: BestSplits</pre>
+  </td>
+</tr>
+
+<tr>
+  <td><a href="https://stackoverflow.com/q/43134753">43134753</a></td>
+  <td>
+  <pre>The TensorFlow library wasn't compiled to use SSE instructions</pre>
+  </td>
+</tr>
+
+
+</table>
               
             </div>
           </div>
@@ -514,10 +726,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../develop/getstarted/getting-started-with-tensorflow/" class="btn btn-neutral float-right" title="2.1.1 TensorFlow快速入门">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../install_sources/" class="btn btn-neutral float-right" title="1.5 源代码安装TensorFlow">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../installing-from-sources/" class="btn btn-neutral" title="1.5 源代码安装TensorFlow"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../install_mac/" class="btn btn-neutral" title="1.3 在Mac OS X上安装TensorFlow"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -545,10 +757,10 @@
           <a href="https://github.com/isaron/tfdocs.git" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../installing-from-sources/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../install_mac/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../develop/getstarted/getting-started-with-tensorflow/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../install_sources/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
