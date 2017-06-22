@@ -14,6 +14,12 @@
 
 ### 迁移到TensorFlow 1.0
 
+### 安装TensorFlow for Java
+
+### 安装TensorFlow for C
+
+### 安装TensorFlow for Go
+
 ## 开发
 
 ### 新手入门

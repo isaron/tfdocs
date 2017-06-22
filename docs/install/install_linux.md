@@ -7,8 +7,8 @@
 
 选择以下之一类型的 TensorFlow 来安装:
 
-  * **仅支持 CPU 运算的 TensorFlow **。如果系统中没有NVIDIA® GPU，那么必须安装这个版本。请注意，这个版本的TensorFlow一般来说更容易安装(只需要5到10分钟)，因此，即使你的系统中有NVIDIA® GPU，我们也建议首先安装这个版本。
-  * **支持 GPU 运算的 TensorFlow **。TensorFlow程序一般运行在GPU上比运行在CPU上要快很多。因此，如果系统中有NVIDIA® GPU同时也满足如下所示的先决条件，并且需要运行性能关键型应用程序，那么最终您还是安装这个版本吧。
+  * **仅支持 CPU 运算的 TensorFlow **。如果系统中没有NVIDIA® GPU，那么必须安装这个版本。这个版本的TensorFlow一般来说更容易安装（只需要5到10分钟），因此，即使你的系统中有NVIDIA® GPU，我们也建议首先安装这个版本。
+  * **支持 GPU 运算的 TensorFlow **。TensorFlow程序一般运行在GPU上比运行在CPU上要快很多。因此，如果系统中有NVIDIA® GPU同时也满足如下所示的先决条件，并且需要运行性能关键型应用程序，那么还是安装这个版本吧。
 
 <a name="NVIDIARequirements"></a>
 ### 运行支持 GPU 运算的 TensorFlow 必须满足的先决条件
@@ -49,7 +49,7 @@
   * [Anaconda](#InstallingAnaconda)
   * 还有从源代码安装，这个有一个[单独的文档](install_sources)。
 
-**(官方)强烈建议采用第一种方法：virtualenv**
+**(官方)强烈建议采用第一种方法：virtualenv。**
 [Virtualenv](https://virtualenv.pypa.io/en/stable/)是一个虚拟的Python环境，用以隔离同一台设备上的Python开发和运行环境，使Python程序不干扰其它Python程序的运行，同时也不被其他Python程序所影响。在基于virtualenv的安装过程中，你不仅会安装TensorFlow同时也会所有TensorFlow需要的软件包。(所以，用这种方法安装TensorFlow真的是非常容易的。)要让TensorFlow开始工作，你需要做的仅仅是“激活（activate）”虚拟环境就可以了。总之,virtualenv提供了安全安装和运行TensorFlow的可靠机制。
 
 Native pip installs TensorFlow directly on your system without going
