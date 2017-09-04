@@ -17,6 +17,9 @@ It's NOT OFFICIAL TensorFlow documents.
 
 本文档部署于：[https://huangch.me/tfdocs](https://huangch.me/tfdocs)。
 
+## Changelog
+
+    2017.8.20 Update installation documents to r1.3
 
 ## 内容来源
 
