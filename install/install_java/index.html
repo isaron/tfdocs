@@ -560,7 +560,7 @@ following to the project&rsquo;s <code>pom.xml</code> to use the TensorFlow Java
 <pre><code class="xml">&lt;dependency&gt;
   &lt;groupId&gt;org.tensorflow&lt;/groupId&gt;
   &lt;artifactId&gt;tensorflow&lt;/artifactId&gt;
-  &lt;version&gt;1.2.0-rc2&lt;/version&gt;
+  &lt;version&gt;1.3.0&lt;/version&gt;
 &lt;/dependency&gt;
 </code></pre>
 
@@ -586,7 +586,7 @@ following to the project&rsquo;s <code>pom.xml</code> to use the TensorFlow Java
        &lt;dependency&gt;
          &lt;groupId&gt;org.tensorflow&lt;/groupId&gt;
          &lt;artifactId&gt;tensorflow&lt;/artifactId&gt;
-         &lt;version&gt;1.2.0-rc2&lt;/version&gt;
+         &lt;version&gt;1.3.0&lt;/version&gt;
        &lt;/dependency&gt;
      &lt;/dependencies&gt;
  &lt;/project&gt;
@@ -641,7 +641,7 @@ refer to the simpler instructions above instead.</p>
 <ol>
 <li>
 <p>Download
-     <a href="https://storage.googleapis.com/tensorflow/libtensorflow/libtensorflow-1.2.0-rc2.jar">libtensorflow.jar</a>,
+     <a href="https://storage.googleapis.com/tensorflow/libtensorflow/libtensorflow-1.3.0.jar">libtensorflow.jar</a>,
      which is the TensorFlow Java Archive (JAR).</p>
 </li>
 <li>
@@ -661,7 +661,7 @@ refer to the simpler instructions above instead.</p>
  OS=$(uname -s | tr '[:upper:]' '[:lower:]')
  mkdir -p ./jni
  curl -L \
-   "https://storage.googleapis.com/tensorflow/libtensorflow/libtensorflow_jni-${TF_TYPE}-${OS}-x86_64-1.2.0-rc2.tar.gz" |
+   "https://storage.googleapis.com/tensorflow/libtensorflow/libtensorflow_jni-${TF_TYPE}-${OS}-x86_64-1.3.0.tar.gz" |
    tar -xz -C ./jni
 </code></pre>
 </li>
@@ -670,10 +670,10 @@ refer to the simpler instructions above instead.</p>
 <p>Take the following steps to install TensorFlow for Java on Windows:</p>
 <ol>
 <li>Download
-     <a href="https://storage.googleapis.com/tensorflow/libtensorflow/libtensorflow-1.2.0-rc2.jar">libtensorflow.jar</a>,
+     <a href="https://storage.googleapis.com/tensorflow/libtensorflow/libtensorflow-1.3.0.jar">libtensorflow.jar</a>,
      which is the TensorFlow Java Archive (JAR).</li>
 <li>Download the following Java Native Interface (JNI) file appropriate for
-     <a href="https://storage.googleapis.com/tensorflow/libtensorflow/libtensorflow_jni-cpu-windows-x86_64-1.2.0-rc2.zip">TensorFlow for Java on Windows</a>.</li>
+     <a href="https://storage.googleapis.com/tensorflow/libtensorflow/libtensorflow_jni-cpu-windows-x86_64-1.3.0.zip">TensorFlow for Java on Windows</a>.</li>
 <li>Extract this .zip file.</li>
 </ol>
 <h3 id="validate-the-installation">Validate the installation<a class="headerlink" href="#validate-the-installation" title="Permanent link">&para;</a></h3>
@@ -712,7 +712,7 @@ public class HelloTF {
 must be part of your <code>classpath</code>. For example, you can include the
 downloaded <code>.jar</code> in your <code>classpath</code> by using the <code>-cp</code> compilation flag
 as follows:</p>
-<pre><b>javac -cp libtensorflow-1.2.0-rc2.jar HelloTF.java</b></pre>
+<pre><b>javac -cp libtensorflow-1.3.0.jar HelloTF.java</b></pre>
 
 <h3 id="running">Running<a class="headerlink" href="#running" title="Permanent link">&para;</a></h3>
 <p>To execute a Java program that depends on TensorFlow, ensure that the following
@@ -723,10 +723,10 @@ two files are available to the JVM:</p>
 </ul>
 <p>For example, the following command line executes the <code>HelloTF</code> program on Linux
 and Mac OS X:</p>
-<pre><b>java -cp libtensorflow-1.2.0-rc2.jar:. -Djava.library.path=./jni HelloTF</b></pre>
+<pre><b>java -cp libtensorflow-1.3.0.jar:. -Djava.library.path=./jni HelloTF</b></pre>
 
 <p>And the following command line executes the <code>HelloTF</code> program on Windows:</p>
-<pre><b>java -cp libtensorflow-1.2.0-rc2.jar;. -Djava.library.path=jni HelloTF</b></pre>
+<pre><b>java -cp libtensorflow-1.3.0.jar;. -Djava.library.path=jni HelloTF</b></pre>
 
 <p>If the program prints <tt>Hello from <i>version</i></tt>, you&rsquo;ve successfully
 installed TensorFlow for Java and are ready to use the API.  If the program
