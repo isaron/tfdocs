@@ -4,7 +4,7 @@
 
 本文档基于[TensorFlow官方文档](https://www.tensorflow.org/) [1.0 版本]()进行翻译，尽量与官方网站的文档目录保持一致。
 
-文档翻译过程中克隆了[官方文档库](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/g3doc)（尽量保持跟随最新更新），同时严重参考了[TensorFlow中文社区](http://www.tensorfly.cn/)的文档（该社区的文档仍为0.5版，这也是促使本文档项目的一个原因）。
+文档翻译过程中克隆了[官方文档库](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/docs_src)（尽量保持跟随最新更新），同时严重参考了[TensorFlow中文社区](http://www.tensorfly.cn/)的文档（该社区的文档仍为0.5版，这也是促使本文档项目的一个原因）。
 
 本文档使用[MkDocs文档系统](http://mkdocs.org)构建，界面主题为[Read the Docs](https://readthedocs.org/)。
 
