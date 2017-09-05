@@ -28,8 +28,6 @@ TensorFlow中文社区：
 极客学院TensorFlow文档中文版翻译计划：
     https://github.com/jikexueyuanwiki/tensorflow-zh
 
----
-
 ## Changelog
 
     2017.8.20 Update installation documents to r1.3
