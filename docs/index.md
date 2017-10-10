@@ -8,6 +8,7 @@
 
 本文档使用[MkDocs文档系统](http://mkdocs.org)构建，界面主题为[Read the Docs](https://readthedocs.org/)。
 
+本文档项目源代码部署在[Github](https://github.com/)上，如有兴趣参与者请关注我的Github Repo：[https://github.com/isaron/tfdocs](https://github.com/isaron/tfdocs)。
 
 ## 文档目录
 尽量与官方网站的文档目录保持一致，已翻译完成的章节会及时更新链接
