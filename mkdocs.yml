@@ -112,8 +112,9 @@ pages:
         - 8.4 License: about/license.md
 
 # Build directories
-theme: readthedocs
-theme_dir: custom_theme
+theme:
+    name: readthedocs
+    custom_dir: custom_theme/
 # theme: null
 # theme_dir: cinder
 #docs_dir:
