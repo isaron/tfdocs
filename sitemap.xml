@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,55 +13,55 @@
         
     <url>
      <loc>/install/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/install/install_linux/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/install/install_mac/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/install/install_windows/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/install/install_sources/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/install/migration/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/install/install_java/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/install/install_c/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/install/install_go/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -99,31 +99,31 @@
         
     <url>
      <loc>/apidoc/overview/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/apidoc/python-api/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/apidoc/cpp-api/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/apidoc/java-api/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/apidoc/go-api/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -133,19 +133,19 @@
         
     <url>
      <loc>/deploy/how-to-run-tensorflow-on-hadoop/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/deploy/distributed-tensorflow/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/deploy/tensorflow-serving/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -155,43 +155,43 @@
         
     <url>
      <loc>/extend/architecture/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/extend/adding-a-new-op/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/extend/adding-a-custom-filesystem-plugin/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/extend/tensorflow-in-other-languages/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/extend/custom-data-readers/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/extend/creating-estimators-in-tf-contrib.learn/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/extend/a-tool-developers-guide-to-tensorflow-model-files/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -217,37 +217,37 @@
         
     <url>
      <loc>/version/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/version/master/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/version/r1.0/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/version/r0.12/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/version/r0.11/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/version/r0.10/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -257,25 +257,25 @@
         
     <url>
      <loc>/about/about-project/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/about/release-notes/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/about/contributing/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/about/license/</loc>
-     <lastmod>2017-10-10</lastmod>
+     <lastmod>2017-10-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
