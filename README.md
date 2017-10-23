@@ -3,10 +3,11 @@ Chinese translation for TensorFlow r1.0 documents.
 
 It's **NOT OFFICIAL** TensorFlow documents.
 
+
 本文档并非官方文档，为个人兴趣而建立的。如需查询TensorFlow官方文档，请至 [https://www.tensorflow.org/](https://www.tensorflow.org/)，或者到 [TensorFlow中文社区](http://www.tensorfly.cn/) 查询完整的中文文档。
 
 
-本文档基于 [TensorFlow官方文档](https://www.tensorflow.org/) 1.0 版本进行翻译，尽量与官方网站的目录保持一致。
+本文档基于 [TensorFlow官方文档](https://www.tensorflow.org/) 1.0 （最新版本已经1.3了）版本进行翻译，尽量与官方网站的目录保持一致。
 
 
 文档翻译过程中克隆了 [官方文档库](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/docs_src)（尽量保持跟随最新更新），同时严重参考了 [TensorFlow中文社区](http://www.tensorfly.cn/) 的文档（该社区的文档仍为0.5版，这也是促使本文档项目的一个原因）。
