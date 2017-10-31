@@ -1,14 +1,15 @@
 # 在 Ubuntu 上安装 TensorFlow
 
-本指南解释了如何在 Ubuntu 操作系统安装 TensorFlow。这些安装步骤和操作指令也可能在其他Linux变体中有效，但官方只测试了(同时官方也只支持)这些安装步骤和操作指令在Ubuntu 14.04或更高版本的有效性。
+本指南解释了如何在 Ubuntu 操作系统安装 TensorFlow。这些安装步骤和操作指令也可能在其他Linux变体中有效，但官方只测试了(同时官方也只支持)这些安装步骤和操作指令在Ubuntu 14.04或更高版本中的有效性。
 
 
 ## 确定需要安装的 TensorFlow 的类型
 
 选择以下之一类型的 TensorFlow 来安装:
 
-  * **仅支持 CPU 运算的 TensorFlow **。如果系统中没有NVIDIA® GPU，那么必须安装这个版本。这个版本的TensorFlow一般来说更容易安装（只需要5到10分钟），因此，即使你的系统中有NVIDIA® GPU，我们也建议首先安装这个版本。
-  * **支持 GPU 运算的 TensorFlow **。TensorFlow程序一般运行在GPU上比运行在CPU上要快很多。因此，如果系统中有NVIDIA® GPU同时也满足如下所示的先决条件，并且需要运行性能关键型应用程序，那么还是安装这个版本吧。
+  * **仅支持 CPU 运算的 TensorFlow**。如果系统中没有NVIDIA® GPU，那么必须安装这个版本。这个版本的TensorFlow一般来说更容易安装（只需要5到10分钟），因此，即使你的系统中有NVIDIA® GPU，我们也建议首先安装这个版本。
+  * **支持 GPU 运算的 TensorFlow**。TensorFlow程序一般运行在GPU上比运行在CPU上要快很多。因此，如果系统中有NVIDIA® GPU同时也满足如下所示的先决条件，并且需要运行性能关键型应用程序，那么还是安装这个版本吧。
+
 
 <a name="NVIDIARequirements"></a>
 ### 运行支持 GPU 运算的 TensorFlow 必须满足的先决条件
@@ -50,31 +51,15 @@
   * 还有从源代码安装，这个有一个[单独的文档](install_sources)。
 
 **(官方)强烈建议采用第一种方法：virtualenv。**
-[Virtualenv](https://virtualenv.pypa.io/en/stable/)是一个虚拟的Python环境，用以隔离同一台设备上的Python开发和运行环境，使Python程序不干扰其它Python程序的运行，同时也不被其他Python程序所影响。在基于virtualenv的安装过程中，你不仅会安装TensorFlow同时也会所有TensorFlow需要的软件包。(所以，用这种方法安装TensorFlow真的是非常容易的。)要让TensorFlow开始工作，你需要做的仅仅是“激活（activate）”虚拟环境就可以了。总之，virtualenv提供了安全安装和运行TensorFlow的可靠机制。
+[Virtualenv](https://virtualenv.pypa.io/en/stable/)是一个虚拟的Python环境，用以隔离同一台设备上的Python开发和运行环境，使Python程序不干扰其它Python程序的运行，同时也不被其他Python程序所影响。在基于virtualenv的安装过程中，你不仅会安装TensorFlow、同时也会安装TensorFlow需要的所有软件包(所以，用这种方法安装TensorFlow真的是非常容易的)。要让TensorFlow开始工作，你需要做的仅仅是“激活（activate）”虚拟环境就可以了。总之，virtualenv提供了安全安装和运行TensorFlow的可靠机制。
 
-Native pip installs TensorFlow directly on your system without going
-through any container system. **We recommend the native pip install for
-system administrators aiming to make TensorFlow available to everyone on a
-multi-user system.** Since a native pip installation is not walled-off in
-a separate container, the pip installation might interfere with other
-Python-based installations on your system. However, if you understand pip
-and your Python environment, a native pip installation often entails only
-a single command.
+不通过任何容器系统，而是直接通过本地pip命令安装TensorFlow。 **对于希望在多用户系统环境中快速部署TensorFlow的系统管理员们，我们推荐使用本地pip安装的方式。** 需要注意的是，由于本地pip命令的安装过程并没有被隔离在任何的容器环境中，所以可能会干扰同一系统里其他的基于python的安装过程。但是，如果你了解pip以及Python环境的话，同样就会知道，基于本地pip的安装通常只需要一个命令。
 
-Docker completely isolates the TensorFlow installation
-from pre-existing packages on your machine. The Docker container contains
-TensorFlow and all its dependencies. Note that the Docker image can be quite
-large (hundreds of MBs). You might choose the Docker installation if you are
-incorporating TensorFlow into a larger application architecture that already
-uses Docker.
+Docker在您的设备上为TensorFlow建立了完全隔离的环境。预安装了软件包的Docker容器中，包含了TensorFlow本身及其所有的依赖项。请注意，Docker映像可能会很大(几百MB)。如果您希望在一个规模比较大、而且已经使用了Docker的应用架构中建立TensorFlow，那么您可以选择基于Docker的安装。
 
-In Anaconda, you may use conda to create a virtual environment.
-However, within Anaconda, we recommend installing TensorFlow with the
-`pip install` command, not with the `conda install` command.
+在Anaconda中，您可以使用`conda`来创建虚拟环境。然而，对于Anaconda计算环境，我们还是建议使用`pip install`命令，而不是`conda install`命令来安装TensorFlow。
 
-**NOTE:** The conda package is community supported, not officially supported.
-That is, the TensorFlow team neither tests nor maintains the conda package.
-Use that package at your own risk.
+**注意：**conda安装包是由社区支持的，而不是官方支持的。也就是说，TensorFlow团队既不测试也不维护conda包。其中可能的风险自担。
 
 
 <a name="InstallingVirtualenv"></a>
