@@ -51,13 +51,13 @@
   * 还有从源代码安装，这个有一个[单独的文档](install_sources)。
 
 **(官方)强烈建议采用第一种方法：virtualenv。**
-[Virtualenv](https://virtualenv.pypa.io/en/stable/)是一个虚拟的Python环境，用以隔离同一台设备上的Python开发和运行环境，使Python程序不干扰其它Python程序的运行，同时也不被其他Python程序所影响。在基于virtualenv的安装过程中，你不仅会安装TensorFlow、同时也会安装TensorFlow需要的所有软件包(所以，用这种方法安装TensorFlow真的是非常容易的)。要让TensorFlow开始工作，你需要做的仅仅是“激活（activate）”虚拟环境就可以了。总之，virtualenv提供了安全安装和运行TensorFlow的可靠机制。
+[Virtualenv](https://virtualenv.pypa.io/en/stable/)是一个虚拟的Python环境，用以隔离同一台设备上的Python开发和运行环境，使Python程序不干扰其它Python程序的运行，同时也不被其他Python程序所影响。在基于virtualenv的安装过程中，你不仅会安装TensorFlow、同时也会安装TensorFlow需要的所有软件包（所以，用这种方法安装TensorFlow真的是非常容易的）。要让TensorFlow开始工作，你需要做的仅仅是“激活（activate）”虚拟环境就可以了。总之，virtualenv提供了安全安装和运行TensorFlow的可靠机制。
 
 不通过任何容器系统，而是直接通过本地pip命令安装TensorFlow。 **对于希望在多用户系统环境中快速部署TensorFlow的系统管理员们，我们推荐使用本地pip安装的方式。** 需要注意的是，由于本地pip命令的安装过程并没有被隔离在任何的容器环境中，所以可能会干扰同一系统里其他的基于python的安装过程。但是，如果你了解pip以及Python环境的话，同样就会知道，基于本地pip的安装通常只需要一个命令。
 
-Docker在您的设备上为TensorFlow建立了完全隔离的环境。预安装了软件包的Docker容器中，包含了TensorFlow本身及其所有的依赖项。请注意，Docker映像可能会很大(几百MB)。如果您希望在一个规模比较大、而且已经使用了Docker的应用架构中建立TensorFlow，那么您可以选择基于Docker的安装。
+Docker在你的设备上为TensorFlow建立了完全隔离的环境。预安装了软件包的Docker容器中，包含了TensorFlow本身及其所有的依赖项。请注意，Docker映像可能会很大(几百MB)。如果你希望在一个规模比较大、而且已经使用了Docker的应用架构中建立TensorFlow，那么你可以选择基于Docker的安装。
 
-在Anaconda中，您可以使用`conda`来创建虚拟环境。然而，对于Anaconda计算环境，我们还是建议使用`pip install`命令，而不是`conda install`命令来安装TensorFlow。
+在Anaconda中，你可以使用`conda`来创建虚拟环境。然而，对于Anaconda计算环境，我们还是建议使用`pip install`命令，而不是`conda install`命令来安装TensorFlow。
 
 **注意：**conda安装包是由社区支持的，而不是官方支持的。也就是说，TensorFlow团队既不测试也不维护conda包。其中可能的风险自担。
 
