@@ -1,5 +1,13 @@
 # 安装 TensorFlow
 
+我们已经在以下64位操作系统的笔记本/台式机上构建并测试了TensorFlow：
+
+  * MacOS X 10.11(El Capitan)或更高版本
+  * Ubuntu 14.04或更高版本
+  * Windows 7或更高版本
+
+虽然你可以在其他系统上安装TensorFlow，但目前我们只支持上述系统配置，并且也只解决在上述系统上出现的问题。
+
 这一章详细讲解了如何安装一个可快速开始编写 Python 应用程序的 TensorFlow 版本：
 
   * [在 Ubuntu 上安装 TensorFlow](install_linux)

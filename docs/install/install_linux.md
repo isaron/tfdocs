@@ -63,24 +63,21 @@ Docker在你的设备上为TensorFlow建立了完全隔离的环境。预安装�
 
 
 <a name="InstallingVirtualenv"></a>
-## Installing with virtualenv
+## 基于 virtualenv 安装
 
-Take the following steps to install TensorFlow with Virtualenv:
+采取以下步骤来基于Virtualenv安装TensorFlow：
 
-  1. Install pip and virtualenv by issuing one of the following commands:
+  1. 通过以下命令来安装pip和virtualenv：
 
      <pre>$ <b>sudo apt-get install python-pip python-dev python-virtualenv</b> # for Python 2.7
      $ <b>sudo apt-get install python3-pip python3-dev python-virtualenv</b> # for Python 3.n</pre>
 
-  2. Create a virtualenv environment by issuing one of the following commands:
+  2. 通过以下命令来创建一个virtualenv环境：
 
      <pre>$ <b>virtualenv --system-site-packages</b> <i>targetDirectory</i> # for Python 2.7
      $ <b>virtualenv --system-site-packages -p python3</b> <i>targetDirectory</i> # for Python 3.n</pre>
 
-     where <code><em>targetDirectory</em></code> specifies the top of the
-     virtualenv tree.  Our instructions assume that
-     <code><em>targetDirectory</em></code> is `~/tensorflow`, but you may
-     choose any directory.
+     <code><em>targetDirectory</em></code> 指定了 virtualenv 目录所在，<code><em>targetDirectory</em></code> 的默认值是 `~/tensorflow`，当然你可以选择任何目录。
 
   3. Activate the virtualenv environment by issuing one of the following
      commands:
