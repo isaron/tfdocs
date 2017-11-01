@@ -8,7 +8,7 @@
   
   <meta name="author" content="黄传华(Arbor Huang)">
   <link rel="shortcut icon" href="../../../img/favicon.ico">
-  <title>2.1.1 TensorFlow快速入门 - TensorFlow 文档中文翻译</title>
+  <title>2.1.2 TensorFlow快速入门 - TensorFlow 文档中文翻译</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
@@ -17,7 +17,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "2.1.1 TensorFlow\u5feb\u901f\u5165\u95e8";
+    var mkdocs_page_name = "2.1.2 TensorFlow\u5feb\u901f\u5165\u95e8";
     var mkdocs_page_input_path = "develop/getstarted/getting-started-with-tensorflow.md";
     var mkdocs_page_url = "/develop/getstarted/getting-started-with-tensorflow/";
   </script>
@@ -103,48 +103,70 @@
                     
     <span class="caption-text">2.1 新手入门</span>
     <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../">2.1.1 快速入门</a>
+                </li>
                 <li class="toctree-l3 current">
                     
-    <a class="current" href="./">2.1.1 TensorFlow快速入门</a>
+    <a class="current" href="./">2.1.2 TensorFlow快速入门</a>
     <ul class="subnav">
             
+    <li class="toctree-l4"><a href="#getting-started-with-tensorflow">Getting Started With TensorFlow</a></li>
+    
+
+    <li class="toctree-l4"><a href="#tensors">Tensors</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#tensorflow-core-tutorial">TensorFlow Core tutorial</a></li>
+        
+            <li><a class="toctree-l5" href="#tftrain-api">tf.train API</a></li>
+        
+            <li><a class="toctree-l5" href="#tfestimator">tf.estimator</a></li>
+        
+            <li><a class="toctree-l5" href="#next-steps">Next steps</a></li>
+        
+        </ul>
+    
+
     </ul>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../mnist-for-ml-beginners/">2.1.2 MNIST入门</a>
+    <a class="" href="../mnist-for-ml-beginners/">2.1.3 MNIST入门</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../deep-mnist-for-experts/">2.1.3 MNIST进阶</a>
+    <a class="" href="../deep-mnist-for-experts/">2.1.4 MNIST进阶</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../mechanics101/">2.1.4 TensorFlow 运作方式 101</a>
+    <a class="" href="../mechanics101/">2.1.5 TensorFlow 运作方式 101</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../tf-contrib-learn-quickstart/">2.1.5 tf.contrib.learn：快速开始</a>
+    <a class="" href="../tf-contrib-learn-quickstart/">2.1.6 tf.contrib.learn：快速开始</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../tf-contrib-learn-function/">2.1.6 tf.contrib.learn：创建输入函数</a>
+    <a class="" href="../tf-contrib-learn-function/">2.1.7 tf.contrib.learn：创建输入函数</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../tensorboard-visualizing-learning/">2.1.7 TensorBoard：可视化学习</a>
+    <a class="" href="../tensorboard-visualizing-learning/">2.1.8 TensorBoard：可视化学习</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../tensorboard-embedding-visualization/">2.1.8 TensorBoard：内嵌可视化</a>
+    <a class="" href="../tensorboard-embedding-visualization/">2.1.9 TensorBoard：内嵌可视化</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../tensorboard-graph-visualization/">2.1.9 TensorBoard：图表可视化</a>
+    <a class="" href="../tensorboard-graph-visualization/">2.1.10 TensorBoard：图表可视化</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../tf-contrib-learn-logging-and-monitoring/">2.1.10 tf.contrib.learn：日志和监控基础</a>
+    <a class="" href="../tf-contrib-learn-logging-and-monitoring/">2.1.11 tf.contrib.learn：日志和监控基础</a>
                 </li>
     </ul>
                 </li>
@@ -154,51 +176,55 @@
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="../../programmer/reading-data/">2.2.1 读取数据</a>
+    <a class="" href="../../programmer/">2.2.1 程序员手册</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../programmer/threading-and-queues/">2.2.2 线程和队列</a>
+    <a class="" href="../../programmer/reading-data/">2.2.2 读取数据</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../programmer/sharing-variables/">2.2.3 共享参数</a>
+    <a class="" href="../../programmer/threading-and-queues/">2.2.3 线程和队列</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../programmer/version-semantics/">2.2.4 TensorFlow的版本语义</a>
+    <a class="" href="../../programmer/sharing-variables/">2.2.4 共享参数</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../programmer/data-versioning-graphdefs-and-checkpoints/">2.2.5 TensorFlow数据版本化：GraphDefs and Checkpoints</a>
+    <a class="" href="../../programmer/version-semantics/">2.2.5 TensorFlow的版本语义</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../programmer/supervisor-training-helper/">2.2.6 Supervisor：Training Helper for Days-Long Trainings</a>
+    <a class="" href="../../programmer/data-versioning-graphdefs-and-checkpoints/">2.2.6 TensorFlow数据版本化：GraphDefs and Checkpoints</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../programmer/tfdbg-cli-tutorial/">2.2.7 TensorFlow Debugger (tfdbg) 命令行指南：MNIST</a>
+    <a class="" href="../../programmer/supervisor-training-helper/">2.2.7 Supervisor：Training Helper for Days-Long Trainings</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../programmer/how-to-use-tfdbg-with-tf-contib-learn/">2.2.8 TensorFlow Debugger (tfdbg) 与 tf.contrib.learn 结合使用</a>
+    <a class="" href="../../programmer/tfdbg-cli-tutorial/">2.2.8 TensorFlow Debugger (tfdbg) 命令行指南：MNIST</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../programmer/exporting-and-importing-metagraph/">2.2.9 导入导出MetaGraph</a>
+    <a class="" href="../../programmer/how-to-use-tfdbg-with-tf-contib-learn/">2.2.9 TensorFlow Debugger (tfdbg) 与 tf.contrib.learn 结合使用</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../programmer/frequently-asked-questions/">2.2.10 常见问题</a>
+    <a class="" href="../../programmer/exporting-and-importing-metagraph/">2.2.10 导入导出MetaGraph</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../programmer/tensor-ranks-shapes-and-types/">2.2.11 Tensor排名、形状和类型</a>
+    <a class="" href="../../programmer/frequently-asked-questions/">2.2.11 常见问题</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../programmer/variables-creation-initialization-saving-and-loading/">2.2.12 变量：创建、初始化、保存和加载</a>
+    <a class="" href="../../programmer/tensor-ranks-shapes-and-types/">2.2.12 Tensor排名、形状和类型</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../programmer/variables-creation-initialization-saving-and-loading/">2.2.13 变量：创建、初始化、保存和加载</a>
                 </li>
     </ul>
                 </li>
@@ -208,55 +234,59 @@
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="../../tutorials/mandelbrot-set/">2.3.1 曼德布洛特(Mandelbrot)集合</a>
+    <a class="" href="../../tutorials/">2.3.1 教程</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../tutorials/partial-differential-equations/">2.3.2 偏微分方程(PDEs)</a>
+    <a class="" href="../../tutorials/mandelbrot-set/">2.3.2 曼德布洛特(Mandelbrot)集合</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../tutorials/convolutional-neural-networks/">2.3.3 卷积神经网络</a>
+    <a class="" href="../../tutorials/partial-differential-equations/">2.3.3 偏微分方程(PDEs)</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../tutorials/image-recognition/">2.3.4 图像识别</a>
+    <a class="" href="../../tutorials/convolutional-neural-networks/">2.3.4 卷积神经网络</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../tutorials/how-to-retrain-inceptions-final-layer-for-new-categories/">2.3.5 如何训练 Inception’s Final Layer for New Categories</a>
+    <a class="" href="../../tutorials/image-recognition/">2.3.5 图像识别</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../tutorials/vector-representations-of-words/">2.3.6 字词的向量表示</a>
+    <a class="" href="../../tutorials/how-to-retrain-inceptions-final-layer-for-new-categories/">2.3.6 如何训练 Inception’s Final Layer for New Categories</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../tutorials/recurrent-neural-networks/">2.3.7 递归神经网络</a>
+    <a class="" href="../../tutorials/vector-representations-of-words/">2.3.7 字词的向量表示</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../tutorials/sequence-to-sequence-models/">2.3.8 Sequence-to-Sequence 模型</a>
+    <a class="" href="../../tutorials/recurrent-neural-networks/">2.3.8 递归神经网络</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../tutorials/a-guide-to-tf-layers-buiding-a-convolutional-neural-network/">2.3.9 TF Layers 指南：创建卷积神经网络</a>
+    <a class="" href="../../tutorials/sequence-to-sequence-models/">2.3.9 Sequence-to-Sequence 模型</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../tutorials/large-scale-linear-models-with-tensorflow/">2.3.10 大规模线性模型与 TensorFlow</a>
+    <a class="" href="../../tutorials/a-guide-to-tf-layers-buiding-a-convolutional-neural-network/">2.3.10 TF Layers 指南：创建卷积神经网络</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../tutorials/tensorflow-linear-model-tutorial/">2.3.11 TensorFlow 线性模型指导</a>
+    <a class="" href="../../tutorials/large-scale-linear-models-with-tensorflow/">2.3.11 大规模线性模型与 TensorFlow</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../tutorials/tensorflow-wide-deep-learning-tutorial/">2.3.12 TensorFlow 广度与深度学习指导</a>
+    <a class="" href="../../tutorials/tensorflow-linear-model-tutorial/">2.3.12 TensorFlow 线性模型指导</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../tutorials/using-gpus/">2.3.13 使用 GPU</a>
+    <a class="" href="../../tutorials/tensorflow-wide-deep-learning-tutorial/">2.3.13 TensorFlow 广度与深度学习指导</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../tutorials/using-gpus/">2.3.14 使用 GPU</a>
                 </li>
     </ul>
                 </li>
@@ -266,39 +296,43 @@
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="../../performance/performance/">2.4.1 总览</a>
+    <a class="" href="../../performance/">2.4.1 性能优化</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../performance/xla-overview/">2.4.2 XLA 概览</a>
+    <a class="" href="../../performance/performance/">2.4.2 指南</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../performance/broadcasting-semantics/">2.4.3 广播语义</a>
+    <a class="" href="../../performance/xla-overview/">2.4.3 XLA 概览</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../performance/developing-a-new-backend-for-xla/">2.4.4 开发新的 XLA 后端</a>
+    <a class="" href="../../performance/broadcasting-semantics/">2.4.4 广播语义</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../performance/using-jit-compilation/">2.4.5 使用 JIT 编译</a>
+    <a class="" href="../../performance/developing-a-new-backend-for-xla/">2.4.5 开发新的 XLA 后端</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../performance/operation-semantics/">2.4.6 运算语义</a>
+    <a class="" href="../../performance/using-jit-compilation/">2.4.6 使用 JIT 编译</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../performance/shapes-and-layout/">2.4.7 Shapes and Layout</a>
+    <a class="" href="../../performance/operation-semantics/">2.4.7 运算语义</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../performance/using-aot-compilation/">2.4.8 使用 AOT 编译</a>
+    <a class="" href="../../performance/shapes-and-layout/">2.4.8 Shapes and Layout</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../performance/how-to-quantize-neural-networks-with-tensorflow/">2.4.9 如何量化神经网络</a>
+    <a class="" href="../../performance/using-aot-compilation/">2.4.9 使用 AOT 编译</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../performance/how-to-quantize-neural-networks-with-tensorflow/">2.4.10 如何量化神经网络</a>
                 </li>
     </ul>
                 </li>
@@ -338,15 +372,15 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../../deploy/how-to-run-tensorflow-on-hadoop/">4.1 在Hadoop上运行TensorFlow</a>
+    <a class="" href="../../../deploy/">4.1 部署</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../../deploy/distributed-tensorflow/">4.2 分布式部署TensorFlow</a>
+    <a class="" href="../../../deploy/how-to-run-tensorflow-on-hadoop/">4.2 在Hadoop上运行TensorFlow</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../../deploy/tensorflow-serving/">4.3 TensorFlow服务</a>
+    <a class="" href="../../../deploy/distributed-tensorflow/">4.3 分布式部署TensorFlow</a>
                 </li>
     </ul>
 	    </li>
@@ -357,31 +391,35 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../../extend/architecture/">5.1 TensorFlow架构</a>
+    <a class="" href="../../../extend/">5.1 扩展</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../../extend/adding-a-new-op/">5.2 添加新的 Op</a>
+    <a class="" href="../../../extend/architecture/">5.2 TensorFlow架构</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../../extend/adding-a-custom-filesystem-plugin/">5.3 添加自定义文件系统插件</a>
+    <a class="" href="../../../extend/adding-a-new-op/">5.3 添加新的 Op</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../../extend/tensorflow-in-other-languages/">5.4 TensorFlow翻译</a>
+    <a class="" href="../../../extend/adding-a-custom-filesystem-plugin/">5.4 添加自定义文件系统插件</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../../extend/custom-data-readers/">5.5 自定义数据读取</a>
+    <a class="" href="../../../extend/tensorflow-in-other-languages/">5.5 TensorFlow翻译</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../../extend/creating-estimators-in-tf-contrib.learn/">5.6 用 tf.contrib.learn 建立估量</a>
+    <a class="" href="../../../extend/custom-data-readers/">5.6 自定义数据读取</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../../extend/a-tool-developers-guide-to-tensorflow-model-files/">5.7 TensorFlow模型文件的工具开发者指南</a>
+    <a class="" href="../../../extend/creating-estimators-in-tf-contrib.learn/">5.7 用 tf.contrib.learn 建立估量</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../extend/a-tool-developers-guide-to-tensorflow-model-files/">5.8 TensorFlow模型文件的工具开发者指南</a>
                 </li>
     </ul>
 	    </li>
@@ -396,11 +434,23 @@
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="../../../resource/community/writing-tensorflow-docs/">6.1.1 编写TensorFlow文档</a>
+    <a class="" href="../../../resource/community/">6.1.1 社区</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../../resource/community/tensorflow-style-guide/">6.1.2 TensorFlow风格指南</a>
+    <a class="" href="../../../resource/community/welcome/">6.1.2 欢迎来到TensorFlow社区</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../resource/community/writing-tensorflow-docs/">6.1.3 编写TensorFlow文档</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../resource/community/tensorflow-style-guide/">6.1.4 TensorFlow风格指南</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../resource/community/benchmarks/">6.1.5 基准测试</a>
                 </li>
     </ul>
                 </li>
@@ -408,6 +458,10 @@
                     
     <span class="caption-text">6.2 关于</span>
     <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../../resource/about/">6.2.1 关于</a>
+                </li>
                 <li class="toctree-l3">
                     
     <a class="" href="../../../resource/about/additional/">6.2.1 更多TF相关资源</a>
@@ -509,7 +563,7 @@
         
       
     
-    <li>2.1.1 TensorFlow快速入门</li>
+    <li>2.1.2 TensorFlow快速入门</li>
     <li class="wy-breadcrumbs-aside">
       
         <a href="https://github.com/isaron/tfdocs.git/edit/master/docs/develop/getstarted/getting-started-with-tensorflow.md"
@@ -522,7 +576,414 @@
           <div role="main">
             <div class="section">
               
-                
+                <h1 id="getting-started-with-tensorflow">Getting Started With TensorFlow<a class="headerlink" href="#getting-started-with-tensorflow" title="Permanent link">&para;</a></h1>
+<p>This guide gets you started programming in TensorFlow. Before using this guide,
+@{$install$install TensorFlow}. To get the most out of
+this guide, you should know the following:</p>
+<ul>
+<li>How to program in Python.</li>
+<li>At least a little bit about arrays.</li>
+<li>Ideally, something about machine learning. However, if you know little or
+    nothing about machine learning, then this is still the first guide you
+    should read.</li>
+</ul>
+<p>TensorFlow provides multiple APIs. The lowest level API&ndash;TensorFlow Core&ndash;
+provides you with complete programming control. We recommend TensorFlow Core for
+machine learning researchers and others who require fine levels of control over
+their models. The higher level APIs are built on top of TensorFlow Core. These
+higher level APIs are typically easier to learn and use than TensorFlow Core. In
+addition, the higher level APIs make repetitive tasks easier and more consistent
+between different users. A high-level API like tf.estimator helps you manage
+data sets, estimators, training and inference.</p>
+<p>This guide begins with a tutorial on TensorFlow Core. Later, we
+demonstrate how to implement the same model in tf.estimator. Knowing
+TensorFlow Core principles will give you a great mental model of how things are
+working internally when you use the more compact higher level API.</p>
+<h1 id="tensors">Tensors<a class="headerlink" href="#tensors" title="Permanent link">&para;</a></h1>
+<p>The central unit of data in TensorFlow is the <strong>tensor</strong>. A tensor consists of a
+set of primitive values shaped into an array of any number of dimensions. A
+tensor&rsquo;s <strong>rank</strong> is its number of dimensions. Here are some examples of
+tensors:</p>
+<pre><code class="python">3 # a rank 0 tensor; a scalar with shape []
+[1., 2., 3.] # a rank 1 tensor; a vector with shape [3]
+[[1., 2., 3.], [4., 5., 6.]] # a rank 2 tensor; a matrix with shape [2, 3]
+[[[1., 2., 3.]], [[7., 8., 9.]]] # a rank 3 tensor with shape [2, 1, 3]
+</code></pre>
+
+<h2 id="tensorflow-core-tutorial">TensorFlow Core tutorial<a class="headerlink" href="#tensorflow-core-tutorial" title="Permanent link">&para;</a></h2>
+<h3 id="importing-tensorflow">Importing TensorFlow<a class="headerlink" href="#importing-tensorflow" title="Permanent link">&para;</a></h3>
+<p>The canonical import statement for TensorFlow programs is as follows:</p>
+<pre><code class="python">import tensorflow as tf
+</code></pre>
+
+<p>This gives Python access to all of TensorFlow&rsquo;s classes, methods, and symbols.
+Most of the documentation assumes you have already done this.</p>
+<h3 id="the-computational-graph">The Computational Graph<a class="headerlink" href="#the-computational-graph" title="Permanent link">&para;</a></h3>
+<p>You might think of TensorFlow Core programs as consisting of two discrete
+sections:</p>
+<ol>
+<li>Building the computational graph.</li>
+<li>Running the computational graph.</li>
+</ol>
+<p>A <strong>computational graph</strong> is a series of TensorFlow operations arranged into a
+graph of nodes.
+Let&rsquo;s build a simple computational graph. Each node takes zero
+or more tensors as inputs and produces a tensor as an output. One type of node
+is a constant. Like all TensorFlow constants, it takes no inputs, and it outputs
+a value it stores internally. We can create two floating point Tensors <code>node1</code>
+and <code>node2</code> as follows:</p>
+<pre><code class="python">node1 = tf.constant(3.0, dtype=tf.float32)
+node2 = tf.constant(4.0) # also tf.float32 implicitly
+print(node1, node2)
+</code></pre>
+
+<p>The final print statement produces</p>
+<pre><code>Tensor(&quot;Const:0&quot;, shape=(), dtype=float32) Tensor(&quot;Const_1:0&quot;, shape=(), dtype=float32)
+</code></pre>
+
+<p>Notice that printing the nodes does not output the values <code>3.0</code> and <code>4.0</code> as you
+might expect. Instead, they are nodes that, when evaluated, would produce 3.0
+and 4.0, respectively. To actually evaluate the nodes, we must run the
+computational graph within a <strong>session</strong>. A session encapsulates the control and
+state of the TensorFlow runtime.</p>
+<p>The following code creates a <code>Session</code> object and then invokes its <code>run</code> method
+to run enough of the computational graph to evaluate <code>node1</code> and <code>node2</code>. By
+running the computational graph in a session as follows:</p>
+<pre><code class="python">sess = tf.Session()
+print(sess.run([node1, node2]))
+</code></pre>
+
+<p>we see the expected values of 3.0 and 4.0:</p>
+<pre><code>[3.0, 4.0]
+</code></pre>
+
+<p>We can build more complicated computations by combining <code>Tensor</code> nodes with
+operations (Operations are also nodes). For example, we can add our two
+constant nodes and produce a new graph as follows:</p>
+<pre><code class="python">from __future__ import print_function
+node3 = tf.add(node1, node2)
+print(&quot;node3:&quot;, node3)
+print(&quot;sess.run(node3):&quot;, sess.run(node3))
+</code></pre>
+
+<p>The last two print statements produce</p>
+<pre><code>node3: Tensor(&quot;Add:0&quot;, shape=(), dtype=float32)
+sess.run(node3): 7.0
+</code></pre>
+
+<p>TensorFlow provides a utility called TensorBoard that can display a picture of
+the computational graph. Here is a screenshot showing how TensorBoard
+visualizes the graph:</p>
+<p><img alt="TensorBoard screenshot" src="https://www.tensorflow.org/images/getting_started_add.png" /></p>
+<p>As it stands, this graph is not especially interesting because it always
+produces a constant result. A graph can be parameterized to accept external
+inputs, known as <strong>placeholders</strong>. A <strong>placeholder</strong> is a promise to provide a
+value later.</p>
+<pre><code class="python">a = tf.placeholder(tf.float32)
+b = tf.placeholder(tf.float32)
+adder_node = a + b  # + provides a shortcut for tf.add(a, b)
+</code></pre>
+
+<p>The preceding three lines are a bit like a function or a lambda in which we
+define two input parameters (a and b) and then an operation on them. We can
+evaluate this graph with multiple inputs by using the feed_dict argument to
+the <a href="https://www.tensorflow.org/api_docs/python/tf/Session#run">run method</a>
+to feed concrete values to the placeholders:</p>
+<pre><code class="python">print(sess.run(adder_node, {a: 3, b: 4.5}))
+print(sess.run(adder_node, {a: [1, 3], b: [2, 4]}))
+</code></pre>
+
+<p>resulting in the output</p>
+<pre><code>7.5
+[ 3.  7.]
+</code></pre>
+
+<p>In TensorBoard, the graph looks like this:</p>
+<p><img alt="TensorBoard screenshot" src="https://www.tensorflow.org/images/getting_started_adder.png" /></p>
+<p>We can make the computational graph more complex by adding another operation.
+For example,</p>
+<pre><code class="python">add_and_triple = adder_node * 3.
+print(sess.run(add_and_triple, {a: 3, b: 4.5}))
+</code></pre>
+
+<p>produces the output</p>
+<pre><code>22.5
+</code></pre>
+
+<p>The preceding computational graph would look as follows in TensorBoard:</p>
+<p><img alt="TensorBoard screenshot" src="https://www.tensorflow.org/images/getting_started_triple.png" /></p>
+<p>In machine learning we will typically want a model that can take arbitrary
+inputs, such as the one above.  To make the model trainable, we need to be able
+to modify the graph to get new outputs with the same input.  <strong>Variables</strong> allow
+us to add trainable parameters to a graph.  They are constructed with a type and
+initial value:</p>
+<pre><code class="python">W = tf.Variable([.3], dtype=tf.float32)
+b = tf.Variable([-.3], dtype=tf.float32)
+x = tf.placeholder(tf.float32)
+linear_model = W*x + b
+</code></pre>
+
+<p>Constants are initialized when you call <code>tf.constant</code>, and their value can never
+change. By contrast, variables are not initialized when you call <code>tf.Variable</code>.
+To initialize all the variables in a TensorFlow program, you must explicitly
+call a special operation as follows:</p>
+<pre><code class="python">init = tf.global_variables_initializer()
+sess.run(init)
+</code></pre>
+
+<p>It is important to realize <code>init</code> is a handle to the TensorFlow sub-graph that
+initializes all the global variables. Until we call <code>sess.run</code>, the variables
+are uninitialized.</p>
+<p>Since <code>x</code> is a placeholder, we can evaluate <code>linear_model</code> for several values of
+<code>x</code> simultaneously as follows:</p>
+<pre><code class="python">print(sess.run(linear_model, {x: [1, 2, 3, 4]}))
+</code></pre>
+
+<p>to produce the output</p>
+<pre><code>[ 0.          0.30000001  0.60000002  0.90000004]
+</code></pre>
+
+<p>We&rsquo;ve created a model, but we don&rsquo;t know how good it is yet. To evaluate the
+model on training data, we need a <code>y</code> placeholder to provide the desired values,
+and we need to write a loss function.</p>
+<p>A loss function measures how far apart the
+current model is from the provided data. We&rsquo;ll use a standard loss model for
+linear regression, which sums the squares of the deltas between the current
+model and the provided data. <code>linear_model - y</code> creates a vector where each
+element is the corresponding example&rsquo;s error delta. We call <code>tf.square</code> to
+square that error. Then, we sum all the squared errors to create a single scalar
+that abstracts the error of all examples using <code>tf.reduce_sum</code>:</p>
+<pre><code class="python">y = tf.placeholder(tf.float32)
+squared_deltas = tf.square(linear_model - y)
+loss = tf.reduce_sum(squared_deltas)
+print(sess.run(loss, {x: [1, 2, 3, 4], y: [0, -1, -2, -3]}))
+</code></pre>
+
+<p>producing the loss value</p>
+<pre><code>23.66
+</code></pre>
+
+<p>We could improve this manually by reassigning the values of <code>W</code> and <code>b</code> to the
+perfect values of -1 and 1. A variable is initialized to the value provided to
+<code>tf.Variable</code> but can be changed using operations like <code>tf.assign</code>. For example,
+<code>W=-1</code> and <code>b=1</code> are the optimal parameters for our model. We can change <code>W</code> and
+<code>b</code> accordingly:</p>
+<pre><code class="python">fixW = tf.assign(W, [-1.])
+fixb = tf.assign(b, [1.])
+sess.run([fixW, fixb])
+print(sess.run(loss, {x: [1, 2, 3, 4], y: [0, -1, -2, -3]}))
+</code></pre>
+
+<p>The final print shows the loss now is zero.</p>
+<pre><code>0.0
+</code></pre>
+
+<p>We guessed the &ldquo;perfect&rdquo; values of <code>W</code> and <code>b</code>, but the whole point of machine
+learning is to find the correct model parameters automatically.  We will show
+how to accomplish this in the next section.</p>
+<h2 id="tftrain-api">tf.train API<a class="headerlink" href="#tftrain-api" title="Permanent link">&para;</a></h2>
+<p>A complete discussion of machine learning is out of the scope of this tutorial.
+However, TensorFlow provides <strong>optimizers</strong> that slowly change each variable in
+order to minimize the loss function. The simplest optimizer is <strong>gradient
+descent</strong>. It modifies each variable according to the magnitude of the
+derivative of loss with respect to that variable. In general, computing symbolic
+derivatives manually is tedious and error-prone. Consequently, TensorFlow can
+automatically produce derivatives given only a description of the model using
+the function <code>tf.gradients</code>. For simplicity, optimizers typically do this
+for you. For example,</p>
+<pre><code class="python">optimizer = tf.train.GradientDescentOptimizer(0.01)
+train = optimizer.minimize(loss)
+</code></pre>
+
+<pre><code class="python">sess.run(init) # reset values to incorrect defaults.
+for i in range(1000):
+  sess.run(train, {x: [1, 2, 3, 4], y: [0, -1, -2, -3]})
+
+print(sess.run([W, b]))
+</code></pre>
+
+<p>results in the final model parameters:</p>
+<pre><code>[array([-0.9999969], dtype=float32), array([ 0.99999082], dtype=float32)]
+</code></pre>
+
+<p>Now we have done actual machine learning!  Although this simple linear
+regression model does not require much TensorFlow core code, more complicated
+models and methods to feed data into your models necessitate more code. Thus,
+TensorFlow provides higher level abstractions for common patterns, structures,
+and functionality. We will learn how to use some of these abstractions in the
+next section.</p>
+<h3 id="complete-program">Complete program<a class="headerlink" href="#complete-program" title="Permanent link">&para;</a></h3>
+<p>The completed trainable linear regression model is shown here:</p>
+<pre><code class="python">import tensorflow as tf
+
+# Model parameters
+W = tf.Variable([.3], dtype=tf.float32)
+b = tf.Variable([-.3], dtype=tf.float32)
+# Model input and output
+x = tf.placeholder(tf.float32)
+linear_model = W*x + b
+y = tf.placeholder(tf.float32)
+
+# loss
+loss = tf.reduce_sum(tf.square(linear_model - y)) # sum of the squares
+# optimizer
+optimizer = tf.train.GradientDescentOptimizer(0.01)
+train = optimizer.minimize(loss)
+
+# training data
+x_train = [1, 2, 3, 4]
+y_train = [0, -1, -2, -3]
+# training loop
+init = tf.global_variables_initializer()
+sess = tf.Session()
+sess.run(init) # reset values to wrong
+for i in range(1000):
+  sess.run(train, {x: x_train, y: y_train})
+
+# evaluate training accuracy
+curr_W, curr_b, curr_loss = sess.run([W, b, loss], {x: x_train, y: y_train})
+print(&quot;W: %s b: %s loss: %s&quot;%(curr_W, curr_b, curr_loss))
+</code></pre>
+
+<p>When run, it produces</p>
+<pre><code>W: [-0.9999969] b: [ 0.99999082] loss: 5.69997e-11
+</code></pre>
+
+<p>Notice that the loss is a very small number (very close to zero). If you run
+this program, your loss may not be exactly the same as the aforementioned loss
+because the model is initialized with pseudorandom values.</p>
+<p>This more complicated program can still be visualized in TensorBoard
+<img alt="TensorBoard final model visualization" src="https://www.tensorflow.org/images/getting_started_final.png" /></p>
+<h2 id="tfestimator"><code>tf.estimator</code><a class="headerlink" href="#tfestimator" title="Permanent link">&para;</a></h2>
+<p><code>tf.estimator</code> is a high-level TensorFlow library that simplifies the
+mechanics of machine learning, including the following:</p>
+<ul>
+<li>running training loops</li>
+<li>running evaluation loops</li>
+<li>managing data sets</li>
+</ul>
+<p>tf.estimator defines many common models.</p>
+<h3 id="basic-usage">Basic usage<a class="headerlink" href="#basic-usage" title="Permanent link">&para;</a></h3>
+<p>Notice how much simpler the linear regression program becomes with
+<code>tf.estimator</code>:</p>
+<pre><code class="python"># NumPy is often used to load, manipulate and preprocess data.
+import numpy as np
+import tensorflow as tf
+
+# Declare list of features. We only have one numeric feature. There are many
+# other types of columns that are more complicated and useful.
+feature_columns = [tf.feature_column.numeric_column(&quot;x&quot;, shape=[1])]
+
+# An estimator is the front end to invoke training (fitting) and evaluation
+# (inference). There are many predefined types like linear regression,
+# linear classification, and many neural network classifiers and regressors.
+# The following code provides an estimator that does linear regression.
+estimator = tf.estimator.LinearRegressor(feature_columns=feature_columns)
+
+# TensorFlow provides many helper methods to read and set up data sets.
+# Here we use two data sets: one for training and one for evaluation
+# We have to tell the function how many batches
+# of data (num_epochs) we want and how big each batch should be.
+x_train = np.array([1., 2., 3., 4.])
+y_train = np.array([0., -1., -2., -3.])
+x_eval = np.array([2., 5., 8., 1.])
+y_eval = np.array([-1.01, -4.1, -7, 0.])
+input_fn = tf.estimator.inputs.numpy_input_fn(
+    {&quot;x&quot;: x_train}, y_train, batch_size=4, num_epochs=None, shuffle=True)
+train_input_fn = tf.estimator.inputs.numpy_input_fn(
+    {&quot;x&quot;: x_train}, y_train, batch_size=4, num_epochs=1000, shuffle=False)
+eval_input_fn = tf.estimator.inputs.numpy_input_fn(
+    {&quot;x&quot;: x_eval}, y_eval, batch_size=4, num_epochs=1000, shuffle=False)
+
+# We can invoke 1000 training steps by invoking the  method and passing the
+# training data set.
+estimator.train(input_fn=input_fn, steps=1000)
+
+# Here we evaluate how well our model did.
+train_metrics = estimator.evaluate(input_fn=train_input_fn)
+eval_metrics = estimator.evaluate(input_fn=eval_input_fn)
+print(&quot;train metrics: %r&quot;% train_metrics)
+print(&quot;eval metrics: %r&quot;% eval_metrics)
+</code></pre>
+
+<p>When run, it produces something like</p>
+<pre><code>train metrics: {'average_loss': 1.4833182e-08, 'global_step': 1000, 'loss': 5.9332727e-08}
+eval metrics: {'average_loss': 0.0025353201, 'global_step': 1000, 'loss': 0.01014128}
+</code></pre>
+
+<p>Notice how our eval data has a higher loss, but it is still close to zero.
+That means we are learning properly.</p>
+<h3 id="a-custom-model">A custom model<a class="headerlink" href="#a-custom-model" title="Permanent link">&para;</a></h3>
+<p><code>tf.estimator</code> does not lock you into its predefined models. Suppose we
+wanted to create a custom model that is not built into TensorFlow. We can still
+retain the high level abstraction of data set, feeding, training, etc. of
+<code>tf.estimator</code>. For illustration, we will show how to implement our own
+equivalent model to <code>LinearRegressor</code> using our knowledge of the lower level
+TensorFlow API.</p>
+<p>To define a custom model that works with <code>tf.estimator</code>, we need to use
+<code>tf.estimator.Estimator</code>. <code>tf.estimator.LinearRegressor</code> is actually
+a sub-class of <code>tf.estimator.Estimator</code>. Instead of sub-classing
+<code>Estimator</code>, we simply provide <code>Estimator</code> a function <code>model_fn</code> that tells
+<code>tf.estimator</code> how it can evaluate predictions, training steps, and
+loss. The code is as follows:</p>
+<pre><code class="python">import numpy as np
+import tensorflow as tf
+
+# Declare list of features, we only have one real-valued feature
+def model_fn(features, labels, mode):
+  # Build a linear model and predict values
+  W = tf.get_variable(&quot;W&quot;, [1], dtype=tf.float64)
+  b = tf.get_variable(&quot;b&quot;, [1], dtype=tf.float64)
+  y = W*features['x'] + b
+  # Loss sub-graph
+  loss = tf.reduce_sum(tf.square(y - labels))
+  # Training sub-graph
+  global_step = tf.train.get_global_step()
+  optimizer = tf.train.GradientDescentOptimizer(0.01)
+  train = tf.group(optimizer.minimize(loss),
+                   tf.assign_add(global_step, 1))
+  # EstimatorSpec connects subgraphs we built to the
+  # appropriate functionality.
+  return tf.estimator.EstimatorSpec(
+      mode=mode,
+      predictions=y,
+      loss=loss,
+      train_op=train)
+
+estimator = tf.estimator.Estimator(model_fn=model_fn)
+# define our data sets
+x_train = np.array([1., 2., 3., 4.])
+y_train = np.array([0., -1., -2., -3.])
+x_eval = np.array([2., 5., 8., 1.])
+y_eval = np.array([-1.01, -4.1, -7., 0.])
+input_fn = tf.estimator.inputs.numpy_input_fn(
+    {&quot;x&quot;: x_train}, y_train, batch_size=4, num_epochs=None, shuffle=True)
+train_input_fn = tf.estimator.inputs.numpy_input_fn(
+    {&quot;x&quot;: x_train}, y_train, batch_size=4, num_epochs=1000, shuffle=False)
+eval_input_fn = tf.estimator.inputs.numpy_input_fn(
+    {&quot;x&quot;: x_eval}, y_eval, batch_size=4, num_epochs=1000, shuffle=False)
+
+# train
+estimator.train(input_fn=input_fn, steps=1000)
+# Here we evaluate how well our model did.
+train_metrics = estimator.evaluate(input_fn=train_input_fn)
+eval_metrics = estimator.evaluate(input_fn=eval_input_fn)
+print(&quot;train metrics: %r&quot;% train_metrics)
+print(&quot;eval metrics: %r&quot;% eval_metrics)
+</code></pre>
+
+<p>When run, it produces</p>
+<pre><code>train metrics: {'loss': 1.227995e-11, 'global_step': 1000}
+eval metrics: {'loss': 0.01010036, 'global_step': 1000}
+</code></pre>
+
+<p>Notice how the contents of the custom <code>model_fn()</code> function are very similar
+to our manual model training loop from the lower level API.</p>
+<h2 id="next-steps">Next steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<p>Now you have a working knowledge of the basics of TensorFlow. We have several
+more tutorials that you can look at to learn more. If you are a beginner in
+machine learning see @{$beginners$MNIST for beginners},
+otherwise see @{$pros$Deep MNIST for experts}.</p>
               
             </div>
           </div>
@@ -530,10 +991,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../mnist-for-ml-beginners/" class="btn btn-neutral float-right" title="2.1.2 MNIST入门">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../mnist-for-ml-beginners/" class="btn btn-neutral float-right" title="2.1.3 MNIST入门">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../../install/install_go/" class="btn btn-neutral" title="1.9 安装TensorFlow for Go"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../" class="btn btn-neutral" title="2.1.1 快速入门"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -561,7 +1022,7 @@
           <a href="https://github.com/isaron/tfdocs.git/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../../../install/install_go/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
         <span style="margin-left: 15px"><a href="../mnist-for-ml-beginners/" style="color: #fcfcfc">Next &raquo;</a></span>

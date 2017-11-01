@@ -132,6 +132,12 @@
     
         
     <url>
+     <loc>/deploy/</loc>
+     <lastmod>2017-11-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>/deploy/how-to-run-tensorflow-on-hadoop/</loc>
      <lastmod>2017-11-01</lastmod>
      <changefreq>daily</changefreq>
@@ -143,15 +149,15 @@
      <changefreq>daily</changefreq>
     </url>
         
-    <url>
-     <loc>/deploy/tensorflow-serving/</loc>
-     <lastmod>2017-11-01</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
     
 
     
+        
+    <url>
+     <loc>/extend/</loc>
+     <lastmod>2017-11-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
         
     <url>
      <loc>/extend/architecture/</loc>

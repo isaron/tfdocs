@@ -8,7 +8,7 @@
   
   <meta name="author" content="黄传华(Arbor Huang)">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>5.7 TensorFlow模型文件的工具开发者指南 - TensorFlow 文档中文翻译</title>
+  <title>5.8 TensorFlow模型文件的工具开发者指南 - TensorFlow 文档中文翻译</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,7 +17,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "5.7 TensorFlow\u6a21\u578b\u6587\u4ef6\u7684\u5de5\u5177\u5f00\u53d1\u8005\u6307\u5357";
+    var mkdocs_page_name = "5.8 TensorFlow\u6a21\u578b\u6587\u4ef6\u7684\u5de5\u5177\u5f00\u53d1\u8005\u6307\u5357";
     var mkdocs_page_input_path = "extend/a-tool-developers-guide-to-tensorflow-model-files.md";
     var mkdocs_page_url = "/extend/a-tool-developers-guide-to-tensorflow-model-files/";
   </script>
@@ -105,43 +105,47 @@
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/getstarted/getting-started-with-tensorflow/">2.1.1 TensorFlow快速入门</a>
+    <a class="" href="../../develop/getstarted/">2.1.1 快速入门</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/getstarted/mnist-for-ml-beginners/">2.1.2 MNIST入门</a>
+    <a class="" href="../../develop/getstarted/getting-started-with-tensorflow/">2.1.2 TensorFlow快速入门</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/getstarted/deep-mnist-for-experts/">2.1.3 MNIST进阶</a>
+    <a class="" href="../../develop/getstarted/mnist-for-ml-beginners/">2.1.3 MNIST入门</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/getstarted/mechanics101/">2.1.4 TensorFlow 运作方式 101</a>
+    <a class="" href="../../develop/getstarted/deep-mnist-for-experts/">2.1.4 MNIST进阶</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/getstarted/tf-contrib-learn-quickstart/">2.1.5 tf.contrib.learn：快速开始</a>
+    <a class="" href="../../develop/getstarted/mechanics101/">2.1.5 TensorFlow 运作方式 101</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/getstarted/tf-contrib-learn-function/">2.1.6 tf.contrib.learn：创建输入函数</a>
+    <a class="" href="../../develop/getstarted/tf-contrib-learn-quickstart/">2.1.6 tf.contrib.learn：快速开始</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/getstarted/tensorboard-visualizing-learning/">2.1.7 TensorBoard：可视化学习</a>
+    <a class="" href="../../develop/getstarted/tf-contrib-learn-function/">2.1.7 tf.contrib.learn：创建输入函数</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/getstarted/tensorboard-embedding-visualization/">2.1.8 TensorBoard：内嵌可视化</a>
+    <a class="" href="../../develop/getstarted/tensorboard-visualizing-learning/">2.1.8 TensorBoard：可视化学习</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/getstarted/tensorboard-graph-visualization/">2.1.9 TensorBoard：图表可视化</a>
+    <a class="" href="../../develop/getstarted/tensorboard-embedding-visualization/">2.1.9 TensorBoard：内嵌可视化</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/getstarted/tf-contrib-learn-logging-and-monitoring/">2.1.10 tf.contrib.learn：日志和监控基础</a>
+    <a class="" href="../../develop/getstarted/tensorboard-graph-visualization/">2.1.10 TensorBoard：图表可视化</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/getstarted/tf-contrib-learn-logging-and-monitoring/">2.1.11 tf.contrib.learn：日志和监控基础</a>
                 </li>
     </ul>
                 </li>
@@ -151,51 +155,55 @@
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/programmer/reading-data/">2.2.1 读取数据</a>
+    <a class="" href="../../develop/programmer/">2.2.1 程序员手册</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/programmer/threading-and-queues/">2.2.2 线程和队列</a>
+    <a class="" href="../../develop/programmer/reading-data/">2.2.2 读取数据</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/programmer/sharing-variables/">2.2.3 共享参数</a>
+    <a class="" href="../../develop/programmer/threading-and-queues/">2.2.3 线程和队列</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/programmer/version-semantics/">2.2.4 TensorFlow的版本语义</a>
+    <a class="" href="../../develop/programmer/sharing-variables/">2.2.4 共享参数</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/programmer/data-versioning-graphdefs-and-checkpoints/">2.2.5 TensorFlow数据版本化：GraphDefs and Checkpoints</a>
+    <a class="" href="../../develop/programmer/version-semantics/">2.2.5 TensorFlow的版本语义</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/programmer/supervisor-training-helper/">2.2.6 Supervisor：Training Helper for Days-Long Trainings</a>
+    <a class="" href="../../develop/programmer/data-versioning-graphdefs-and-checkpoints/">2.2.6 TensorFlow数据版本化：GraphDefs and Checkpoints</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/programmer/tfdbg-cli-tutorial/">2.2.7 TensorFlow Debugger (tfdbg) 命令行指南：MNIST</a>
+    <a class="" href="../../develop/programmer/supervisor-training-helper/">2.2.7 Supervisor：Training Helper for Days-Long Trainings</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/programmer/how-to-use-tfdbg-with-tf-contib-learn/">2.2.8 TensorFlow Debugger (tfdbg) 与 tf.contrib.learn 结合使用</a>
+    <a class="" href="../../develop/programmer/tfdbg-cli-tutorial/">2.2.8 TensorFlow Debugger (tfdbg) 命令行指南：MNIST</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/programmer/exporting-and-importing-metagraph/">2.2.9 导入导出MetaGraph</a>
+    <a class="" href="../../develop/programmer/how-to-use-tfdbg-with-tf-contib-learn/">2.2.9 TensorFlow Debugger (tfdbg) 与 tf.contrib.learn 结合使用</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/programmer/frequently-asked-questions/">2.2.10 常见问题</a>
+    <a class="" href="../../develop/programmer/exporting-and-importing-metagraph/">2.2.10 导入导出MetaGraph</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/programmer/tensor-ranks-shapes-and-types/">2.2.11 Tensor排名、形状和类型</a>
+    <a class="" href="../../develop/programmer/frequently-asked-questions/">2.2.11 常见问题</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/programmer/variables-creation-initialization-saving-and-loading/">2.2.12 变量：创建、初始化、保存和加载</a>
+    <a class="" href="../../develop/programmer/tensor-ranks-shapes-and-types/">2.2.12 Tensor排名、形状和类型</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/programmer/variables-creation-initialization-saving-and-loading/">2.2.13 变量：创建、初始化、保存和加载</a>
                 </li>
     </ul>
                 </li>
@@ -205,55 +213,59 @@
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/tutorials/mandelbrot-set/">2.3.1 曼德布洛特(Mandelbrot)集合</a>
+    <a class="" href="../../develop/tutorials/">2.3.1 教程</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/tutorials/partial-differential-equations/">2.3.2 偏微分方程(PDEs)</a>
+    <a class="" href="../../develop/tutorials/mandelbrot-set/">2.3.2 曼德布洛特(Mandelbrot)集合</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/tutorials/convolutional-neural-networks/">2.3.3 卷积神经网络</a>
+    <a class="" href="../../develop/tutorials/partial-differential-equations/">2.3.3 偏微分方程(PDEs)</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/tutorials/image-recognition/">2.3.4 图像识别</a>
+    <a class="" href="../../develop/tutorials/convolutional-neural-networks/">2.3.4 卷积神经网络</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/tutorials/how-to-retrain-inceptions-final-layer-for-new-categories/">2.3.5 如何训练 Inception’s Final Layer for New Categories</a>
+    <a class="" href="../../develop/tutorials/image-recognition/">2.3.5 图像识别</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/tutorials/vector-representations-of-words/">2.3.6 字词的向量表示</a>
+    <a class="" href="../../develop/tutorials/how-to-retrain-inceptions-final-layer-for-new-categories/">2.3.6 如何训练 Inception’s Final Layer for New Categories</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/tutorials/recurrent-neural-networks/">2.3.7 递归神经网络</a>
+    <a class="" href="../../develop/tutorials/vector-representations-of-words/">2.3.7 字词的向量表示</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/tutorials/sequence-to-sequence-models/">2.3.8 Sequence-to-Sequence 模型</a>
+    <a class="" href="../../develop/tutorials/recurrent-neural-networks/">2.3.8 递归神经网络</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/tutorials/a-guide-to-tf-layers-buiding-a-convolutional-neural-network/">2.3.9 TF Layers 指南：创建卷积神经网络</a>
+    <a class="" href="../../develop/tutorials/sequence-to-sequence-models/">2.3.9 Sequence-to-Sequence 模型</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/tutorials/large-scale-linear-models-with-tensorflow/">2.3.10 大规模线性模型与 TensorFlow</a>
+    <a class="" href="../../develop/tutorials/a-guide-to-tf-layers-buiding-a-convolutional-neural-network/">2.3.10 TF Layers 指南：创建卷积神经网络</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/tutorials/tensorflow-linear-model-tutorial/">2.3.11 TensorFlow 线性模型指导</a>
+    <a class="" href="../../develop/tutorials/large-scale-linear-models-with-tensorflow/">2.3.11 大规模线性模型与 TensorFlow</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/tutorials/tensorflow-wide-deep-learning-tutorial/">2.3.12 TensorFlow 广度与深度学习指导</a>
+    <a class="" href="../../develop/tutorials/tensorflow-linear-model-tutorial/">2.3.12 TensorFlow 线性模型指导</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/tutorials/using-gpus/">2.3.13 使用 GPU</a>
+    <a class="" href="../../develop/tutorials/tensorflow-wide-deep-learning-tutorial/">2.3.13 TensorFlow 广度与深度学习指导</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/tutorials/using-gpus/">2.3.14 使用 GPU</a>
                 </li>
     </ul>
                 </li>
@@ -263,39 +275,43 @@
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/performance/performance/">2.4.1 总览</a>
+    <a class="" href="../../develop/performance/">2.4.1 性能优化</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/performance/xla-overview/">2.4.2 XLA 概览</a>
+    <a class="" href="../../develop/performance/performance/">2.4.2 指南</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/performance/broadcasting-semantics/">2.4.3 广播语义</a>
+    <a class="" href="../../develop/performance/xla-overview/">2.4.3 XLA 概览</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/performance/developing-a-new-backend-for-xla/">2.4.4 开发新的 XLA 后端</a>
+    <a class="" href="../../develop/performance/broadcasting-semantics/">2.4.4 广播语义</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/performance/using-jit-compilation/">2.4.5 使用 JIT 编译</a>
+    <a class="" href="../../develop/performance/developing-a-new-backend-for-xla/">2.4.5 开发新的 XLA 后端</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/performance/operation-semantics/">2.4.6 运算语义</a>
+    <a class="" href="../../develop/performance/using-jit-compilation/">2.4.6 使用 JIT 编译</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/performance/shapes-and-layout/">2.4.7 Shapes and Layout</a>
+    <a class="" href="../../develop/performance/operation-semantics/">2.4.7 运算语义</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/performance/using-aot-compilation/">2.4.8 使用 AOT 编译</a>
+    <a class="" href="../../develop/performance/shapes-and-layout/">2.4.8 Shapes and Layout</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../develop/performance/how-to-quantize-neural-networks-with-tensorflow/">2.4.9 如何量化神经网络</a>
+    <a class="" href="../../develop/performance/using-aot-compilation/">2.4.9 使用 AOT 编译</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../develop/performance/how-to-quantize-neural-networks-with-tensorflow/">2.4.10 如何量化神经网络</a>
                 </li>
     </ul>
                 </li>
@@ -335,15 +351,15 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../deploy/how-to-run-tensorflow-on-hadoop/">4.1 在Hadoop上运行TensorFlow</a>
+    <a class="" href="../../deploy/">4.1 部署</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../deploy/distributed-tensorflow/">4.2 分布式部署TensorFlow</a>
+    <a class="" href="../../deploy/how-to-run-tensorflow-on-hadoop/">4.2 在Hadoop上运行TensorFlow</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../deploy/tensorflow-serving/">4.3 TensorFlow服务</a>
+    <a class="" href="../../deploy/distributed-tensorflow/">4.3 分布式部署TensorFlow</a>
                 </li>
     </ul>
 	    </li>
@@ -354,33 +370,56 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../architecture/">5.1 TensorFlow架构</a>
+    <a class="" href="../">5.1 扩展</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../adding-a-new-op/">5.2 添加新的 Op</a>
+    <a class="" href="../architecture/">5.2 TensorFlow架构</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../adding-a-custom-filesystem-plugin/">5.3 添加自定义文件系统插件</a>
+    <a class="" href="../adding-a-new-op/">5.3 添加新的 Op</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../tensorflow-in-other-languages/">5.4 TensorFlow翻译</a>
+    <a class="" href="../adding-a-custom-filesystem-plugin/">5.4 添加自定义文件系统插件</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../custom-data-readers/">5.5 自定义数据读取</a>
+    <a class="" href="../tensorflow-in-other-languages/">5.5 TensorFlow翻译</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../creating-estimators-in-tf-contrib.learn/">5.6 用 tf.contrib.learn 建立估量</a>
+    <a class="" href="../custom-data-readers/">5.6 自定义数据读取</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../creating-estimators-in-tf-contrib.learn/">5.7 用 tf.contrib.learn 建立估量</a>
                 </li>
                 <li class=" current">
                     
-    <a class="current" href="./">5.7 TensorFlow模型文件的工具开发者指南</a>
+    <a class="current" href="./">5.8 TensorFlow模型文件的工具开发者指南</a>
     <ul class="subnav">
             
+    <li class="toctree-l3"><a href="#a-tool-developers-guide-to-tensorflow-model-files">A Tool Developer's Guide to TensorFlow Model Files</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#protocol-buffers">Protocol Buffers</a></li>
+        
+            <li><a class="toctree-l4" href="#graphdef">GraphDef</a></li>
+        
+            <li><a class="toctree-l4" href="#text-or-binary">Text or Binary?</a></li>
+        
+            <li><a class="toctree-l4" href="#nodes">Nodes</a></li>
+        
+            <li><a class="toctree-l4" href="#freezing">Freezing</a></li>
+        
+            <li><a class="toctree-l4" href="#weight-formats">Weight Formats</a></li>
+        
+        </ul>
+    
+
     </ul>
                 </li>
     </ul>
@@ -396,11 +435,23 @@
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="../../resource/community/writing-tensorflow-docs/">6.1.1 编写TensorFlow文档</a>
+    <a class="" href="../../resource/community/">6.1.1 社区</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../../resource/community/tensorflow-style-guide/">6.1.2 TensorFlow风格指南</a>
+    <a class="" href="../../resource/community/welcome/">6.1.2 欢迎来到TensorFlow社区</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../resource/community/writing-tensorflow-docs/">6.1.3 编写TensorFlow文档</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../resource/community/tensorflow-style-guide/">6.1.4 TensorFlow风格指南</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../resource/community/benchmarks/">6.1.5 基准测试</a>
                 </li>
     </ul>
                 </li>
@@ -408,6 +459,10 @@
                     
     <span class="caption-text">6.2 关于</span>
     <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../resource/about/">6.2.1 关于</a>
+                </li>
                 <li class="toctree-l3">
                     
     <a class="" href="../../resource/about/additional/">6.2.1 更多TF相关资源</a>
@@ -505,7 +560,7 @@
         
       
     
-    <li>5.7 TensorFlow模型文件的工具开发者指南</li>
+    <li>5.8 TensorFlow模型文件的工具开发者指南</li>
     <li class="wy-breadcrumbs-aside">
       
         <a href="https://github.com/isaron/tfdocs.git/edit/master/docs/extend/a-tool-developers-guide-to-tensorflow-model-files.md"
@@ -518,7 +573,170 @@
           <div role="main">
             <div class="section">
               
-                
+                <h1 id="a-tool-developers-guide-to-tensorflow-model-files">A Tool Developer&rsquo;s Guide to TensorFlow Model Files<a class="headerlink" href="#a-tool-developers-guide-to-tensorflow-model-files" title="Permanent link">&para;</a></h1>
+<p>Most users shouldn&rsquo;t need to care about the internal details of how TensorFlow
+stores data on disk, but you might if you&rsquo;re a tool developer. For example, you
+may want to analyze models, or convert back and forth between TensorFlow and
+other formats. This guide tries to explain some of the details of how you can
+work with the main files that hold model data, to make it easier to develop
+those kind of tools.</p>
+<div class="toc">
+<ul>
+<li><a href="#a-tool-developers-guide-to-tensorflow-model-files">A Tool Developer&rsquo;s Guide to TensorFlow Model Files</a><ul>
+<li><a href="#protocol-buffers">Protocol Buffers</a></li>
+<li><a href="#graphdef">GraphDef</a></li>
+<li><a href="#text-or-binary">Text or Binary?</a></li>
+<li><a href="#nodes">Nodes</a><ul>
+<li><a href="#name">name</a></li>
+<li><a href="#op">op</a></li>
+<li><a href="#input">input</a></li>
+<li><a href="#device">device</a></li>
+<li><a href="#attr">attr</a></li>
+</ul>
+</li>
+<li><a href="#freezing">Freezing</a></li>
+<li><a href="#weight-formats">Weight Formats</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="protocol-buffers">Protocol Buffers<a class="headerlink" href="#protocol-buffers" title="Permanent link">&para;</a></h2>
+<p>All of TensorFlow&rsquo;s file formats are based on
+<a href="https://developers.google.com/protocol-buffers/?hl=en">Protocol Buffers</a>, so to
+start it&rsquo;s worth getting familiar with how they work. The summary is that you
+define data structures in text files, and the protobuf tools generate classes in
+C, Python, and other languages that can load, save, and access the data in a
+friendly way. We often refer to Protocol Buffers as protobufs, and I&rsquo;ll use
+that convention in this guide.</p>
+<h2 id="graphdef">GraphDef<a class="headerlink" href="#graphdef" title="Permanent link">&para;</a></h2>
+<p>The foundation of computation in TensorFlow is the <code>Graph</code> object. This holds a
+network of nodes, each representing one operation, connected to each other as
+inputs and outputs. After you&rsquo;ve created a <code>Graph</code> object, you can save it out
+by calling <code>as_graph_def()</code>, which returns a <code>GraphDef</code> object.</p>
+<p>The GraphDef class is an object created by the ProtoBuf library from the
+definition in
+<a href="https://github.com/tensorflow/tensorflow/blob/master/tensorflow/core/framework/graph.proto">tensorflow/core/framework/graph.proto</a>. The protobuf tools parse
+this text file, and generate the code to load, store, and manipulate graph
+definitions. If you see a standalone TensorFlow file representing a model, it&rsquo;s
+likely to contain a serialized version of one of these <code>GraphDef</code> objects
+saved out by the protobuf code.</p>
+<p>This generated code is used to save and load the GraphDef files from disk. The code that actually loads the model looks like this:</p>
+<pre><code class="python">graph_def = graph_pb2.GraphDef()
+</code></pre>
+
+<p>This line creates an empty <code>GraphDef</code> object, the class that&rsquo;s been created
+from the textual definition in graph.proto. This is the object we&rsquo;re going to
+populate with the data from our file.</p>
+<pre><code class="python">with open(FLAGS.graph, &quot;rb&quot;) as f:
+</code></pre>
+
+<p>Here we get a file handle for the path we&rsquo;ve passed in to the script</p>
+<pre><code class="python">  if FLAGS.input_binary:
+    graph_def.ParseFromString(f.read())
+  else:
+    text_format.Merge(f.read(), graph_def)
+</code></pre>
+
+<h2 id="text-or-binary">Text or Binary?<a class="headerlink" href="#text-or-binary" title="Permanent link">&para;</a></h2>
+<p>There are actually two different formats that a ProtoBuf can be saved in.
+TextFormat is a human-readable form, which makes it nice for debugging and
+editing, but can get large when there&rsquo;s numerical data like weights stored in
+it. You can see a small example of that in
+<a href="https://github.com/tensorflow/tensorboard/blob/master/tensorboard/demo/data/graph_run_run2.pbtxt">graph_run_run2.pbtxt</a>.</p>
+<p>Binary format files are a lot smaller than their text equivalents, even though
+they&rsquo;re not as readable for us. In this script, we ask the user to supply a
+flag indicating whether the input file is binary or text, so we know the right
+function to call. You can find an example of a large binary file inside the
+<a href="https://storage.googleapis.com/download.tensorflow.org/models/inception_v3_2016_08_28_frozen.pb.tar.gz">inception_v3 archive</a>,
+as <code>inception_v3_2016_08_28_frozen.pb</code>.</p>
+<p>The API itself can be a bit confusing - the binary call is actually
+<code>ParseFromString()</code>, whereas you use a utility function from the <code>text_format</code>
+module to load textual files.</p>
+<h2 id="nodes">Nodes<a class="headerlink" href="#nodes" title="Permanent link">&para;</a></h2>
+<p>Once you&rsquo;ve loaded a file into the <code>graph_def</code> variable, you can now access the
+data inside it. For most practical purposes, the important section is the list
+of nodes stored in the node member. Here&rsquo;s the code that loops through those:</p>
+<pre><code class="python">for node in graph_def.node
+</code></pre>
+
+<p>Each node is a <code>NodeDef</code> object, defined in
+<a href="https://github.com/tensorflow/tensorflow/blob/master/tensorflow/core/framework/node_def.proto">tensorflow/core/framework/node_def.proto</a>. These
+are the fundamental building blocks of TensorFlow graphs, with each one defining
+a single operation along with its input connections. Here are the members of a
+<code>NodeDef</code>, and what they mean.</p>
+<h3 id="name"><code>name</code><a class="headerlink" href="#name" title="Permanent link">&para;</a></h3>
+<p>Every node should have a unique identifier that&rsquo;s not used by any other nodes
+in the graph. If you don&rsquo;t specify one as you&rsquo;re building a graph using the
+Python API, one reflecting the name of operation, such as &ldquo;MatMul&rdquo;,
+concatenated with a monotonically increasing number, such as &ldquo;5&rdquo;, will be
+picked for you. The name is used when defining the connections between nodes,
+and when setting inputs and outputs for the whole graph when it&rsquo;s run.</p>
+<h3 id="op"><code>op</code><a class="headerlink" href="#op" title="Permanent link">&para;</a></h3>
+<p>This defines what operation to run, for example <code>"Add"</code>, <code>"MatMul"</code>, or
+<code>"Conv2D"</code>. When a graph is run, this op name is looked up in a registry to
+find an implementation. The registry is populated by calls to the
+<code>REGISTER_OP()</code> macro, like those in
+<a href="https://github.com/tensorflow/tensorflow/blob/master/tensorflow/core/ops/nn_ops.cc">tensorflow/core/ops/nn_ops.cc</a>.</p>
+<h3 id="input"><code>input</code><a class="headerlink" href="#input" title="Permanent link">&para;</a></h3>
+<p>A list of strings, each one of which is the name of another node, optionally
+followed by a colon and an output port number. For example, a node with two
+inputs might have a list like <code>["some_node_name", "another_node_name"]</code>, which
+is equivalent to <code>["some_node_name:0", "another_node_name:0"]</code>, and defines the
+node&rsquo;s first input as the first output from the node with the name
+<code>"some_node_name"</code>, and a second input from the first output of
+<code>"another_node_name"</code></p>
+<h3 id="device"><code>device</code><a class="headerlink" href="#device" title="Permanent link">&para;</a></h3>
+<p>In most cases you can ignore this, since it defines where to run a node in a
+distributed environment, or when you want to force the operation onto CPU or
+GPU.</p>
+<h3 id="attr"><code>attr</code><a class="headerlink" href="#attr" title="Permanent link">&para;</a></h3>
+<p>This is a key/value store holding all the attributes of a node. These are the
+permanent properties of nodes, things that don&rsquo;t change at runtime such as the
+size of filters for convolutions, or the values of constant ops. Because there
+can be so many different types of attribute values, from strings, to ints, to
+arrays of tensor values, there&rsquo;s a separate protobuf file defining the data
+structure that holds them, in
+<a href="https://github.com/tensorflow/tensorflow/blob/master/tensorflow/core/framework/attr_value.proto">tensorflow/core/framework/attr_value.proto</a>.</p>
+<p>Each attribute has a unique name string, and the expected attributes are listed
+when the operation is defined. If an attribute isn&rsquo;t present in a node, but it
+has a default listed in the operation definition, that default is used when the
+graph is created.</p>
+<p>You can access all of these members by calling <code>node.name</code>, <code>node.op</code>, etc. in
+Python. The list of nodes stored in the <code>GraphDef</code> is a full definition of the
+model architecture.</p>
+<h2 id="freezing">Freezing<a class="headerlink" href="#freezing" title="Permanent link">&para;</a></h2>
+<p>One confusing part about this is that the weights usually aren&rsquo;t stored inside
+the file format during training. Instead, they&rsquo;re held in separate checkpoint
+files, and there are <code>Variable</code> ops in the graph that load the latest values
+when they&rsquo;re initialized. It&rsquo;s often not very convenient to have separate files
+when you&rsquo;re deploying to production, so there&rsquo;s the
+<a href="https://github.com/tensorflow/tensorflow/blob/master/tensorflow/python/tools/freeze_graph.py">freeze_graph.py</a> script that takes a graph definition and a set
+of checkpoints and freezes them together into a single file.</p>
+<p>What this does is load the <code>GraphDef</code>, pull in the values for all the variables
+from the latest checkpoint file, and then replace each <code>Variable</code> op with a
+<code>Const</code> that has the numerical data for the weights stored in its attributes
+It then strips away all the extraneous nodes that aren&rsquo;t used for forward
+inference, and saves out the resulting <code>GraphDef</code> into an output file.</p>
+<h2 id="weight-formats">Weight Formats<a class="headerlink" href="#weight-formats" title="Permanent link">&para;</a></h2>
+<p>If you&rsquo;re dealing with TensorFlow models that represent neural networks, one of
+the most common problems is extracting and interpreting the weight values. A
+common way to store them, for example in graphs created by the freeze_graph
+script, is as <code>Const</code> ops containing the weights as <code>Tensors</code>. These are
+defined in
+<a href="https://github.com/tensorflow/tensorflow/blob/master/tensorflow/core/framework/tensor.proto">tensorflow/core/framework/tensor.proto</a>, and contain information
+about the size and type of the data, as well as the values themselves. In
+Python, you get a <code>TensorProto</code> object from a <code>NodeDef</code> representing a <code>Const</code>
+op by calling something like <code>some_node_def.attr['value'].tensor</code>.</p>
+<p>This will give you an object representing the weights data. The data itself
+will be stored in one of the lists with the suffix _val as indicated by the
+type of the object, for example <code>float_val</code> for 32-bit float data types.</p>
+<p>The ordering of convolution weight values is often tricky to deal with when
+converting between different frameworks. In TensorFlow, the filter weights for
+the <code>Conv2D</code> operation are stored on the second input, and are expected to be
+in the order <code>[filter_height, filter_width, input_depth, output_depth]</code>, where
+filter_count increasing by one means moving to an adjacent value in memory.</p>
+<p>Hopefully this rundown gives you a better idea of what&rsquo;s going on inside
+TensorFlow model files, and will help you if you ever need to manipulate them.</p>
               
             </div>
           </div>
@@ -526,10 +744,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../resource/community/writing-tensorflow-docs/" class="btn btn-neutral float-right" title="6.1.1 编写TensorFlow文档">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../resource/community/" class="btn btn-neutral float-right" title="6.1.1 社区">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../creating-estimators-in-tf-contrib.learn/" class="btn btn-neutral" title="5.6 用 tf.contrib.learn 建立估量"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../creating-estimators-in-tf-contrib.learn/" class="btn btn-neutral" title="5.7 用 tf.contrib.learn 建立估量"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -560,7 +778,7 @@
         <span><a href="../creating-estimators-in-tf-contrib.learn/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../resource/community/writing-tensorflow-docs/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../resource/community/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
