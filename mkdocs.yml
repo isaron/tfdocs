@@ -104,9 +104,9 @@ pages:
             - 6.1.5 基准测试: resource/community/benchmarks.md
         - 6.2 关于:
             - 6.2.1 关于: resource/about/index.md
-            - 6.2.1 更多TF相关资源: resource/about/additional.md
-            - 6.2.2 TensorFlow白皮书: resource/about/whitepaper.md
-            - 6.2.3 TensorFlow Uses: resource/about/tfuses.md
+            - 6.2.1 版权说明: resource/about/attribution.md
+            - 6.2.2 白皮书: resource/about/bib.md
+            - 6.2.3 Uses: resource/about/uses.md
     - 7. 版本:
         - 7.1 TensorFlow版本列表: version/index.md
         - 7.2 master: version/master.md
